@@ -41,7 +41,7 @@ This hackathon adopts a challenge-based format, offering you a unique opportunit
     - Code Review and Security Check.
     - CI/CD Pipeline Setup and Infrastructure Deployment.
       
-5. **Challenge 04: Implementing Monitoring Solutions for Contoso Traders**
+5. **Challenge 05: Implementing Monitoring Solutions for Contoso Traders**
    - Integrate Azure Monitor and Application Insights.
    - Configure key performance metrics and alerting mechanisms.
    - Design dashboards for monitoring application health.
