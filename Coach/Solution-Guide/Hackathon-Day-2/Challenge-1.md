@@ -1,6 +1,6 @@
 # Challenge 01: Continuous Integration and Deployment for Contoso Traders using GitHub Actions
 
-<p align="right">Last Updated Mar 25, 2025</p>
+<p align="right">Last Updated May 08, 2025</p>
 
 ## Introduction
 This challenge is designed to evaluate the attendee/user skills in creating a robust CI/CD pipeline leveraging GitHub Actions. It aims to assess your capability to not only establish a seamless pipeline but also to guarantee the successful deployment of the application. Through this challenge, the attendee/user will set up a GitHub repository, implement a CI/CD workflow using GitHub Actions, deploy a .NET application to Azure, and make rolling updates to the application.
