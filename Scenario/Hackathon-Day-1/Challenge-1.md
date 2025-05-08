@@ -9,7 +9,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 ## Accessing GitHub
 
-1. To access and login to GitHub, open the Edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
+1. To access and log in to GitHub, open the Edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
 
 2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
 
@@ -21,14 +21,18 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
    - **Password:** <inject key="GitHubPassword"></inject>
 
+1. For the Device Verification Code, use the same credentials as in the previous step, open http://outlook.office.com/ in a private window, and enter the username and password used for the GitHub Account login. Copy the verification code and paste it into Device verification.
+
 ## Accessing the Azure Portal
 
 1. To access the Azure Portal, open the Edge browser from inside the environment and navigate to **[Azure Portal](https://portal.azure.com)**.
 
 1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username and then click on **Next**. 
+
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
         
 1. Now enter the following password and click on **Sign in**.
+
    * Password: <inject key="AzureAdUserPassword"></inject>
      
 1. If you see the pop-up **Stay Signed in?**, click No.
