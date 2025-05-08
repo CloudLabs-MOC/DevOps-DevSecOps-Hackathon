@@ -48,11 +48,11 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 1. **Setup a GitHub repository:**
    - Create a new GitHub repository with public access permission.
      
-      <validation step="5b252fb5-a2f0-4c4c-8b1d-af806a115039" />
+   <validation step="5b252fb5-a2f0-4c4c-8b1d-af806a115039" />
       
-         - You are provided with an e-commerce application named Contoso Traders, which needs to be deployed and hosted on Azure.
-         - You can navigate to the `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files` directory and find the complete code base of the application.
-         - Using Visual Studio Code, connect to the GitHub repository that you created in the earlier step and push the application code base to your GitHub repository.
+      - You are provided with an e-commerce application named Contoso Traders, which needs to be deployed and hosted on Azure.
+      - You can navigate to the `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files` directory and find the complete code base of the application.
+      - Using Visual Studio Code, connect to the GitHub repository that you created in the earlier step and push the application code base to your GitHub repository.
       
       <validation step="d239841d-b8fe-43cb-8170-54bf67f11c8c" />
 
