@@ -287,30 +287,6 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
    
    ![](../media1/2dgn165.png)
    
-   > **Note**: If the workflow **fails** due to the **npm install** job, follow steps from 10 to 12. Otherwise, continue from **Task 4**. 
-   
-1. From the GitHub browser tab, follow the steps given below and click on **Create codespace on main** ***(3)***.
-
-   - Click on **Code** ***(1)***, 
-   - Select the **Codespace** ***(2)*** tab
-
-     ![](../media/ex2-kc-codespace.png)
-   
-1. Run the below-mentioned commands in the **Terminal**. You'll set the node version to node 14.
-
-   ```pwsh
-   cd src
-   cd ContosoTraders.Ui.Website
-   nvm install 14
-   nvm use 14
-   npm i
-   git add . 
-   git commit -m "updated node version"
-   git push
-   ```
-    
-1. From your GitHub repository, select the **Actions** ***(1)*** tab. You'll see an Action named **Updated node version** ***(2)*** executing. Please wait until the execution is complete.
-
 ## Task 4: Test the application and perform rolling updates
 
 1. Navigate to Azure Portal, and click on **Resource Groups** from the Navigate panel to see the resource groups.
