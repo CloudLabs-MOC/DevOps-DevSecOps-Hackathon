@@ -28,7 +28,7 @@ In this task, you will enforce compliance with Azure Policy by assigning a polic
 
 4. On the **Assign Policy** page and **Basics** tab, perform the following steps:
    
-   - Select the **Scope** by selecting the ellipsis and selecting either a management group or subscription **(1)**. Optionally, select a **Resource Group (2)**. A scope determines what resources or grouping of resources the policy assignment gets enforced on.
+   - Select the **Scope** by selecting the **ellipsis** **(1)** and selecting either a management group or subscription. Optionally, select a **Resource Group (2)**. A scope determines what resources or grouping of resources the policy assignment gets enforced on.
    - Click on **Select (3)** at the bottom of the Scope pane.
 
      ![](../media/ex8-task1-3.png)
