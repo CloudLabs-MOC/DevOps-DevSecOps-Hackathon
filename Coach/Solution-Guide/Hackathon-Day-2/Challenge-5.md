@@ -56,7 +56,7 @@ In this task, you'll create an Azure Load Testing instance and run a test using 
    
    **Note**: In case the test fails due to `The test was stopped due to a high error rate, check your script and try again. If the issue persists, raise a ticket with a support error. This is expected, as sometimes the load on the application exceeds the defined throughput.
      
-## Task 2: Create an experiment and target using Azure Chaos studio
+## Task 2: Create an experiment and target using Azure Chaos Studio
 
 In this task, your objective is to incorporate Targets and establish an Experiment within Azure Chaos Studio. This process aims to assess the resilience of the web application we developed by introducing real faults and observing how our applications react to real-world disruptions.
 
@@ -135,7 +135,7 @@ In this task, your objective is to incorporate Targets and establish an Experime
   
    ![](../media/2dgn121.png)
   
-1. In the **Add role assignment** page, under the **Role** tab, select **Privileged administrator roles**. Select **Owner (1)** and then **Next (2)**.
+1. In the **Add role assignment** page, under the **Role** tab, select **Privileged administrator roles**  **(1)**. Select **Owner** **(2)** and then **Next** **(3)**.
   
    ![](../media/ex6-task3-step18.png)
   
