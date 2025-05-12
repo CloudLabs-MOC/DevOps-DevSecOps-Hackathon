@@ -108,11 +108,11 @@ In this task, you will connect your GitHub organizations on the **Environment se
 
 ### Task 2: Configure the Microsoft Security DevOps GitHub Action
 
-Microsoft Security DevOps is a command line application that integrates static analysis tools into the development lifecycle. Security DevOps installs, configures, and runs the latest versions of static analysis tools such as, SDL, security and compliance tools. Security DevOps is data-driven with portable configurations that enable deterministic execution across multiple environments.
+Microsoft Security DevOps is a command-line application that integrates static analysis tools into the development lifecycle. Security DevOps installs, configures, and runs the latest versions of static analysis tools such as SDL, security, and compliance tools. Security DevOps is data-driven with portable configurations that enable deterministic execution across multiple environments.
 
 1. Sign in to GitHub using the credentials provided in the environment detail tab of the integrated lab environment.
 
-2. Select the `devops` repository that was created as a part of the earlier challenges.
+2. Select the `devsecops` repository that was created as a part of the earlier challenges.
 
 3. Select the **Actions (1)** tab from your repository home page and then click on **New Workflow (2)**.
 
