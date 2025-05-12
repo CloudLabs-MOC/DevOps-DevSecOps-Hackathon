@@ -34,7 +34,7 @@ Here is the solution guide, which provides all the specific, step-by-step direct
 1. Navigate to the **[OpenAI](https://platform.openai.com/login?launch)** in order to login to **OpenAI Account.**
    
 3. Within the **Welcome back** page,
-    - If you already have an OpenAI account pre-created, you can go ahead signing into OpenAI using the following sign-in options as shown in the below screenshot.
+    - If you already have an OpenAI account pre-created, you can go ahead and sign into OpenAI using the following sign-in options as shown in the screenshot below.
 
       ![](../media/cl6-ex1-t1-s2-a.png)
 
@@ -226,7 +226,7 @@ Here is the solution guide, which provides all the specific, step-by-step direct
 
     ![](../media/ex6-task1-14.png)
 
-1. on the `ai-code-review.yml` file click on **pencil icon** at the top right corner in order to edit the file.
+7. on the `ai-code-review.yml` file click on **pencil icon** at the top right corner in order to edit the file.
 
    ![](../media/ex6-task1-17.png)
 
@@ -234,11 +234,11 @@ Here is the solution guide, which provides all the specific, step-by-step direct
 
    ![](../media/ex6-task1-15.png)
 
-1. Click on **Commit changes.**
+9. Click on **Commit changes.**
 
    ![](../media/ex6-task1-16.png)
 
-10. To Create a Pull request to merge the changes made from the `test` to  `main` branch. Click on **Pull requests**
+10. To create a Pull request to merge the changes made from the `test` to  the `main` branch. Click on **Pull requests**
 
     ![](../media/ex6-task1-18.png)
 
@@ -246,9 +246,13 @@ Here is the solution guide, which provides all the specific, step-by-step direct
 
    ![](../media/ex6-task1-19.png)
 
-1. Here at the Comparing changes page, make sure you have selected **main (1)** for the base and **Test (2)** for compare , Then click on **Create pull request (3).**
+1. Here at the Comparing changes page, make sure you have selected **main** **(1)** for the base and **Test** **(2)** for compare, then click on **Create pull request** **(3)**.
 
    ![](../media/ex6-task1-20.png)
+
+1. In the GitHub browser tab and select the **Pull requests** tab.
+
+1. Open the PR created from the **Test** branch and select **Merge pull request**.
 
 1. Click on the **Actions** tab and then notice that `AI Code Reviewer` workflow has been automatically initiated. Ensure that the workflow does not fail. If so, there may be some vulnerabilities in the code within the recent pull request.  
 
