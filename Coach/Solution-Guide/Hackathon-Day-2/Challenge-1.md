@@ -51,6 +51,34 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 1. When **Action Required** window pop up click on **Ask Later**.
 
     ![](../media1/Active-image3.png)
+
+   >**NOTE:** If you don't have the Microsoft Authenticator app installed on your mobile device, select **Download** now and follow the steps.
+
+1. On the Set up your account page, select **Next.**
+
+   ![](../media/mfa3.png)
+
+1. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code. Select **Next**.
+
+   ![](../media/mfa4.png)
+
+1. On the Keep your account secure page. Enter the code, which is shown on the Authenticator app.
+
+   ![](../media/mfa5.png)
+
+1. Once the code is entered. click **Next**
+
+   ![](../media/mfa6.png)
+
+1. Select Done on the Success! page.
+
+   ![](../media/mfa7.png)
+
+1. If you see the pop-up **Stay Signed in?**, click **No**.
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
    
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
