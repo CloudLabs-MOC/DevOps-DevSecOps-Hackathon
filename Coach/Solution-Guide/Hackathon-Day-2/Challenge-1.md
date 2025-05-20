@@ -56,7 +56,7 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 1. On the Set up your account page, select **Next.**
 
-   ![](../media/mfa3.png)
+   ![](../../../Scenario/media/mfa3.png)
 
 1. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code. Select **Next**.
 
@@ -189,13 +189,14 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
 1. In the GitHub repository, navigate to the setting and add github action secreat and variable. To create GitHub secrets, in your GitHub lab files repository, click on the **Settings** tab.
 
-      ![](../media/cl1-t2-s2.png)
+   ![](./../media/cl1-t2-s2.png)
 
 2. Navigate to **Environment** **(1)**, click on **Service Principal Details** **(2)**, and copy the **Subscription ID**, **Tenant ID (Directory ID)**, **Application ID (Client ID)**, and **Secret Key (Client Secret)**.
 
       ![](../media/ad7.png)
    
       - Replace the values that you copied in the below JSON. You will be using them in this step.
+      - The Application ID refers to the Client ID, and the Secret Key corresponds to the Client Secret.
       
       ```json
       {

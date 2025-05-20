@@ -12,11 +12,11 @@ This is the solution guide, which provides all the specific, step-by-step direct
 
 In this task, you will use Dependabot to track the versions of the packages we use in our GitHub repository and create pull requests to update packages for us.
 
-1. In your lab files GitHub repository, navigate to the **Settings** ***(1)*** tab and select the **Code security** ***(2)*** under Security from the side blade. Make sure **Dependabot alerts** is **Enabled** ***(3)***, if not, click on **Enable** to Enable Dependabot alerts. Click on **Enable** ***(4)*** to Enable Dependabot security updates.
+1. In your lab files GitHub repository, navigate to the **Settings** ***(1)*** tab and select the **Advanced security** ***(2)*** under Security from the side blade. Make sure **Dependabot alerts** is **Enabled** ***(3)***, if not, click on **Enable** to Enable Dependabot alerts. Click on **Enable** ***(4)*** to Enable Dependabot security updates.
 
    > **Note**: Enabling the `Dependabot security updates` will also automatically enable `Dependency graph` and `Dependabot alerts`.
 
-   ![The GitHub Repository Security Overview tab.](../media/ex3-task1-1.png "GitHub Repository Security Overview")
+   ![The GitHub Repository Security Overview tab.](../media/ex3-task1-1a.png "GitHub Repository Security Overview")
 
    > **Note**: The alerts for the repository may take some time to appear. The rest of the steps for this task rely on the alerts being present. You can continue with the next exercise, as this is an independent task and doesn't affect the lab. Please visit this task later and complete it.
 
@@ -68,9 +68,9 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
    ![](../media/ch34u.png)
     
-1. Select **Code security** from the sidebar.
+1. Select **Advanced security** from the sidebar.
 
-   ![](../media/ex3-task2-1.png)
+   ![](../media/ex3-task2-1a.png)
 
 1. Scroll down ,make sure **Secret Protection is enabled**.
 

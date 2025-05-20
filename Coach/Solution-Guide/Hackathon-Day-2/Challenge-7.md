@@ -53,6 +53,10 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/ad12.png)
 
+   >**Note:** If you don’t see any option here, you can click the icon at the bottom right and select **Sign in to use Copilot**.
+
+   ![Picture1](../media/ad12a.png)
+
 1. If you get the popup, click on **Allow**.
 
    ![Picture1](../media/cl7-ex1-t1-s3.png)
@@ -111,7 +115,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
     >**Note:** If you wish to continue to manually edit the raw project, follow the steps from step 7.
 
-1. Create a new file named `AboutUs.css` **(1)** in your `src` directory ie., within the path `ContosoTraders.Ui.Website.V2\src\components` and then add the following code **(2)**:
+1. Create a new file named `AboutUs.css` **(1)** in your `src` directory ie., within the path `ContosoTraders.Ui.Website.V2\src\` and then add the following code **(2)**:
 
    ```
    .about-us {
@@ -133,7 +137,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. Save the newly created `AboutUs.css` file.
 
-1. Now let's build a new component for the application. Create a new file named `AboutUs.js` **(1)** in your `src` directory i.e., within the path `ContosoTraders.Ui.Website.V2\src\components` and then add the following code **(2)**:
+1. Now let's build a new component for the application. Create a new file named `AboutUs.js` **(1)** in your `src` directory i.e., within the path `ContosoTraders.Ui.Website.V2\src\` and then add the following code **(2)**:
 
    ```
    import React from "react";
@@ -238,6 +242,8 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 3. Now create a new file named `WelcomePopup.test.js` under the path `ContosoTraders.Ui.Website.V2\src\components`.
 
    ![Picture1](../media/CL7-EX2-T1-S3.png)
+
+   >**Note:** You may need to reselect the code from **WelcomePopup.js** and rerun the `/tests` command. There’s a possibility that the test code gets generated directly in the **WelcomePopup.test.js** file.
 
 4. Navigate back to the GitHub Copilot chat panel and copy the unit test that has been generated using Copilot for the `WelcomePopup` component. Ensure to paste these unit test cases within the newly created file - `WelcomePopup.test.js` under the `components` folder and save the file.
 
