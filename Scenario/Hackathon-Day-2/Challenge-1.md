@@ -131,6 +131,7 @@ To complete this challenge successfully:
 
 Here are a few documents and guides to assist you in completing the challenge.
 - [GitHub Actions](https://docs.github.com/en/actions)
+- [Azure Login](https://github.com/marketplace/actions/azure-login)
 - [Why CI/CD](https://resources.github.com/ci-cd/).
 - [Continuous Deployment with Github Actions: An Example](https://www.dolthub.com/blog/2020-11-23-continous-deployment-with-github-actions/).
 - [How to build a CI/CD pipeline with GitHub Actions in four simple steps](https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/).
