@@ -38,7 +38,7 @@ Your task is to implement Microsoft Defender for Cloud DevOps security measures 
 To complete this challenge successfully:
 
 - Appropriate integration and configuration of Microsoft Security DevOps GitHub Action.
-- Successful connection of GitHub environment to Microsoft Defender for Cloud.
+- Successful connection of the GitHub environment to Microsoft Defender for Cloud.
 
 ## Additional Resources:
 
@@ -46,10 +46,11 @@ To complete this challenge successfully:
 - Refer to [Overview of Microsoft Defender for Cloud DevOps Security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction) for reference.
 - Refer to [Configure the Microsoft Security DevOps GitHub action](https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-action) for reference.
 - Refer to [Connect your GitHub Environment to Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-github) for reference.
+- Refer to [Configure the Microsoft Security DevOps GitHub action](https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-action) for reference.
 
 
 ## Conclusion
-Congratulations on completing the **Securing DevOps with Microsoft Defender for Cloud** challenge! Through this challenge you have seamlessly integrated and configured Microsoft Defender for Cloud within a DevOps context, ensuring a secure and resilient software development lifecycle.
+Congratulations on completing the **Securing DevOps with Microsoft Defender for Cloud** challenge! Through this challenge, you have seamlessly integrated and configured Microsoft Defender for Cloud within a DevOps context, ensuring a secure and resilient software development lifecycle.
 
 Congratulations! You have successfully completed all the challenges.
 
