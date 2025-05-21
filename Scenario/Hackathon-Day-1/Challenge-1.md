@@ -9,7 +9,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 ## Accessing GitHub
 
-1. To access and log in to GitHub, open the Edge browser from inside the environment VM and navigate to **https://github.com/login**.
+1. To access and log in to GitHub, open the Edge browser from inside the environment VM and navigate to ```https://github.com/login```.
 
 2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
 
@@ -25,7 +25,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 ## Accessing the Azure Portal
 
-1. To access the Azure Portal, open the Edge browser from inside the environment VM and navigate to **https://portal.azure.com**.
+1. To access the Azure Portal, open the Edge browser from inside the environment VM and navigate to ```https://portal.azure.com```.
 
 1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username and then click on **Next**. 
 
