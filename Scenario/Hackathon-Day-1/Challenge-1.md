@@ -90,14 +90,14 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
         - **SERVICEPRINCIPAL**: Create a secret to store service principal details. You can find the details in the Environment details tab of your environment.
           - Below is the format that you need to use to create the secret for SPN, replace the values that you copied in the below JSON. 
       
-         ```json
-         {
-            "clientId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
-            "clientSecret": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
-            "tenantId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
-            "subscriptionId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz"
-         }
-         ```
+            ```json
+            {
+               "clientId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+               "clientSecret": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+               "tenantId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+               "subscriptionId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz"
+            }
+            ```
          
         - **SQLPASSWORD**: You need to enter any unique password with a combination of Alphanumeric letters. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
      
