@@ -21,7 +21,7 @@ In the previous challenge, you configured a few of the GitHub Advanced security 
   
 3. **Implement Secret Scanning:**
    - Enable the Secret Scanning security feature to the existing GitHub repository.
-   - Check the working of the feature by exposing the application ID of a service principal and resolving the alerts.
+   - Check the working of the feature by exposing the application secret of a service principal and resolving the alerts.
   
 ## Success criteria:
 To complete this challenge successfully:

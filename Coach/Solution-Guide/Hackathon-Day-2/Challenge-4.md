@@ -88,7 +88,9 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 1. From the **Overview (1)** of **contoso-traders-ai<inject key="Deploymentid" enableCopy="false" />** Application Insights resource, you can set the **Show data for last (2)** as per your requirement of monitoring insights.
 
    ![](../media/ex4-task1-7.png)
-   
+
+   >**Note:** It may take a few hours for the data to appear.
+
 1. In the first graph, you can see the number of failed requests for Application access.
 
    ![](../media/upd-ex6-t1-failedrequests.png)
