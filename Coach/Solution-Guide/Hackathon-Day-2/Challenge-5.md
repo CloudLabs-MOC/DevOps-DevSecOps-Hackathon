@@ -24,36 +24,23 @@ In this task, you'll create an Azure Load Testing instance and run a test using 
 
    ![](../media/loadtesting.png)
 
-1. Click on **+ Create**.
-
-   ![](../media/createloadtesting.png)
-
-1. Within the **Basics** tab of the **Create a load testing resource**, enter the following details. Click on **Review + create**
-   
-   - **Subscription**: Select the available subscription provided **(1)**.
-   - **Resource group**: Select **contoso-traders-rg<inject key="DeploymentID" /> (2)**
-   - **Name**: Enter **contoso-traders-loadtest-<inject key="DeploymentID" /> (3)**
-   - **Region**: **East US (4)**
-   - Click on **Review + create (5)**
-   - Finally, click on **Create**.
-
-     ![](../media/ex5-task1-2.png)
-
 1. After the resource is created, click on Go to Resource. In the left-hand pane, expand **Tests (1)**, then select **Tests (2)**. Click on **+ Create (3)** and choose **Create a URL-based test (4)**.
 
    ![](../media/ex5-task1-3.png)
 
-1. On the **Create a URL-based test** page, under the Basics tab, uncheck **Enable advanced settings** to reveal the Test URL setting. Paste the **Endpoint URL** a copied in point 2 as **Test URL**, leave the rest as default, and then click on **Review + create (2)**, followed by **Create**.
+1. On the **Create a URL-based test** page, under the Basics tab, uncheck **Enable advanced settings** **(1)** to reveal the Test URL setting. Paste the **Endpoint URL** a copied in point 2 as **Test URL** **(2)**, leave the rest as default, and then click on **Review + create (3)**, followed by **Create**.
 
    ![](../media/url-load-test-1.png)
 
 1. Once the test run starts, wait until it completes. When the test run finishes, the status will update to **Done**. At this point, you’ll be able to view the Client-side metrics. Explore the given metrics output.
 
+   >**Note:** This process may take up to 30 minutes to complete.
+
    ![](../media/ex5-task1-4.png)
 
    ![](../media/ex5-task1-5.png) 
    
-   **Note**: In case the test fails due to `The test was stopped due to a high error rate, check your script and try again. If the issue persists, raise a ticket with a support error. This is expected, as sometimes the load on the application exceeds the defined throughput.
+   **Note**: In case the test fails due to `The test was stopped due to a high error rate, check your script and try again. This is expected, as sometimes the load on the application exceeds the defined throughput.
      
 ## Task 2: Create an experiment and target using Azure Chaos Studio
 
@@ -133,7 +120,7 @@ In this task, your objective is to incorporate Targets and establish an Experime
 1. Navigate back to the **contoso-traders-aksXXXXXX** container instance and select **Access control (IAM) (1)**, click on **+ Add (2)**, and select **Add role assignment (3)**. 
   
    ![](../media/2dgn121.png)
-  
+
 1. In the **Add role assignment** page, under the **Role** tab, select **Privileged administrator roles**  **(1)**. Select **Owner** **(2)** and then **Next** **(3)**.
   
    ![](../media/ex6-task3-step18.png)

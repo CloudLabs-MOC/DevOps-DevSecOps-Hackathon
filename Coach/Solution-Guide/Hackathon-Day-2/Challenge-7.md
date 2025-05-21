@@ -107,6 +107,10 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. Within the **CHAT: GITHUB COPILOT** pane, type: `Help me create the new About Us" page in ContosoTraders.Ui.Website.V2\src` and observe the AI response. You can follow the instructions provided by GitHub Copilot towards successfully adding the About Us page as a part of the sample React application that you have imported into VS Code.
 
+   >**Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **AboutUs.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
+
+   ![Picture1](../media/CL7-EX1-T2-S4a.png)
+
    ![Picture1](../media/CL7-EX1-T2-S4.png)
 
     >**Disclaimer:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the labguide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Applications which may be needed as you proceed with this exercise.
@@ -138,6 +142,8 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 1. Save the newly created `AboutUs.css` file.
 
 1. Now let's build a new component for the application. Create a new file named `AboutUs.js` **(1)** in your `src` directory i.e., within the path `ContosoTraders.Ui.Website.V2\src\` and then add the following code **(2)**:
+
+   >**Note:** If the **AboutUs.js** file has already been created by Copilot, you only need to update its contents with the code provided below to maintain consistency.
 
    ```
    import React from "react";
@@ -203,7 +209,8 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
       ```
       cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2
       ``` 
-      - Once you're in your project directory, you can start the application with the `npm start` **(5)** because we need npm to create the Contoso Traders Application. After running the following command within the terminal, your application should start, and you can view it in your web browser at http://localhost:3000.   
+      - Once you're in your project directory, you can start the application with the `npm start` **(5)** because we need npm to create the Contoso Traders Application. After running the following command within the terminal, your application should start, and you can view it in your web browser at http://localhost:3000.  
+       
       ```
       npm run start
       ```
@@ -220,6 +227,10 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
      - After the installation of all the dependencies, execute the command - `npm run start` to start the application. This open a new browser tab over the url path, `http://localhost:3000/`.
 
+1. Click on **Get Started** and scroll down within your static web app to view the integrated **About Us** page.
+
+   ![Picture1](../media/CL7-EX1-T2-S15a.png)
+
 1. Observe that the new "About Us" component has been added at the end of the webpage.
 
      ![Picture1](../media/CL7-EX1-T2-S15.png)
@@ -233,24 +244,27 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
    ![Picture1](../media/CL7-EX2-T1-S1.png)
 
 2. Select all code lines `[CTRL+A]` of `WelcomePopup.js` file **(1)** and then paste the following prompt **(2)** within the GitHub Copilot Chat Panel and press enter:
+
    ```
    /tests
    ```
 
+   >**Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **WelcomePopup.test.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
+
    ![Picture1](../media/ad18.png)
+
+   ![Picture1](../media/ad18a.png)
 
 3. Now create a new file named `WelcomePopup.test.js` under the path `ContosoTraders.Ui.Website.V2\src\components`.
 
-   ![Picture1](../media/CL7-EX2-T1-S3.png)
+   >**Note:** If the file has already been created by Copilot, there is no need to create it again.
 
-   >**Note:** You may need to reselect the code from **WelcomePopup.js** and rerun the `/tests` command. There’s a possibility that the test code gets generated directly in the **WelcomePopup.test.js** file.
+   ![Picture1](../media/CL7-EX2-T1-S3.png)
 
 4. Navigate back to the GitHub Copilot chat panel and copy the unit test that has been generated using Copilot for the `WelcomePopup` component. Ensure to paste these unit test cases within the newly created file - `WelcomePopup.test.js` under the `components` folder and save the file.
 
-   **Disclaimer:** Please be aware that the unit test cases produced by GitHub Copilot may not be accurate. There could be issues within the test cases, such as lacking code logic. It's advisable to thoroughly review the generated code before integrating it into your project.
+   >**Note:** If the file has already been created by Copilot, you can skip this step. This step is only needed if the result appears in the Copilot chat window—then you'll need to copy and paste the generated code into your file.
 
-   **Note:** Below is an example unit test cases generated by GitHub Copilot which upon running leads to successful test case passes. This following unit test file is being provided for the easy execution using the `react-app/jest` framework.
-   
    ![Picture1](../media/CL7-EX2-T1-S4-a.png)
 
    ![Picture1](../media/CL7-EX2-T1-S4-b.png)
@@ -270,6 +284,8 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
    ```
 
 7. Post execution of the above unit test, you must ensure to have a successful - `PASS` test runs with no errors. If you are produced with errors, please understand the intricacies of the error as mentioned within the terminal and work towards a successful unit test run.
+
+   >**Note:** You may need to scroll up in your output window to view the results.
 
    ![Picture1](../media/CL7-EX2-T1-S7.png)
 
@@ -342,9 +358,9 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 1. Login to GitHub where the `devsecops-2` repository was created.
 
-2. Select the **settings** ***(1)*** tab from the GitHub browser tab. Click on **Code security** ***(2)*** under the security side blade.
+2. Select the **settings** ***(1)*** tab from the GitHub browser tab. Click on **Advanced security** ***(2)*** under the security side blade.
 
-   ![](../media/ex2-task1-1.png) 
+   ![](../media/ex2-task1-1a.png) 
 
 3. Click on the **Set up** **(1)** button to enable CodeQL analysis, and select the **Advanced** **(2)** option for creating a CodeQL Analysis YAML file.
 
@@ -455,6 +471,10 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
    - **Plan type:** Select **Free (4)**.
    - **Source:** Select **GitHub (5)**
    - **GitHub account:** Click on **Click here to login**. Connect to your GitHub account which has the `devsecops-2` repository with the React application files **(6)**.
+   
+      ![](../media/ex7-task1-6a.png)
+
+      ![](../media/ex7-task1-8.png)
 
       - Click on **Authorize AzureApp service**
 
@@ -473,10 +493,6 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
       >**Note:** `/` refers to the root directory of the GitHub repository. Ensure that the location is specified appropriately as per your GitHub file structure.
    
    - Leave the other fields at default and then click on **Review + Create (12)**.
-   
-     ![](../media/ex7-task1-6.png)
-   
-     ![](../media/ex7-task1-8.png)
 
      ![](../media/ex7-task1-7.png)
 

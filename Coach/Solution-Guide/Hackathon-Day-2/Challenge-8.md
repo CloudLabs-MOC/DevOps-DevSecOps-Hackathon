@@ -178,6 +178,8 @@ Now that you've assigned a built-in policy definition, you can do more with Azur
    - Click on **Add Secret (3)**
    
      ![](../media1/azure-cred.png)
+   
+   >
 
 ### Task 2: Implement Azure Policy Compliance Scan
 

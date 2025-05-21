@@ -13,11 +13,17 @@ In this challenge, you will be improving a React Application. As a DevOps engine
    - You are provided with a simple React application which needs to be deployed and hosted on Azure.
    - You can navigate to the `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\ContosoTraders.Ui.Website.V2.Raw` directory and then ensure to select the `ContosoTraders.Ui.Website.V2` folder to import the complete code base of the application.
    - Enhance the user interface by designing and integrating an **About Us** page app component within the existing imported React application using **GitHub Copilot**.
+   
+     >**Note:** GitHub Copilot may not only provide code suggestions but can also generate the required file automatically.
+
    - Ensure that the React Application is up and running with the newly integrated **About Us** page, locally on `http://localhost:3000/`.
 
 2. **Generate and run Unit Test cases using GitHub Coplilot:**
    - Generate Unit Test cases using GitHub Copilot for the `WelcomePopup.js` file present in the path `ContosoTraders.Ui.Wesite.V2/src/`.
    - Create a new test file named `WelcomePopup.test.js` to run the unit test cases.
+
+     >**Note:** GitHub Copilot may not only provide code suggestions but can also generate the required file automatically here **WelcomePopup.test.js**.
+
    - Ensure that the generated test cases are aligning with the code analogy with successful test passes.
    - Resolve any unit test failures with the help of GitHub Copilot chat. 
 
