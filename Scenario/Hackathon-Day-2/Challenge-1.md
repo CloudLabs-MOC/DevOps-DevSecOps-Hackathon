@@ -9,7 +9,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 ## Accessing GitHub
 
-1. To access and login to GitHub, open the Edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
+1. To access and log in to GitHub, open the Edge browser from inside the environment VM and navigate to ```https://github.com/login```.
 
 2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
 
@@ -21,7 +21,8 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
    - **Password:** <inject key="GitHubPassword"></inject>
 
-1. For the Device Verification Code, use the same credentials as in the previous step, open http://outlook.office.com/ in a private window, and enter the username and password used for the GitHub Account login. Copy the verification code and paste it into Device verification.
+1. For the Device Verification Code, use the same credentials as in the previous step, open and log in to ```http://outlook.office.com/``` in a private window, and enter the username and password used for the GitHub Account login. Copy the verification code and paste it into Device verification.
+
 
 ## Accessing the Azure Portal
 
@@ -86,6 +87,16 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
    - In the GitHub repository, navigate to the settings and add GitHub action secret and variable as below.
      - Create GitHub secrets with the same name as mentioned below.
         - **SERVICEPRINCIPAL**: Create a secret to store service principal details. You can find the details in the Environment details tab of your environment.
+          
+          ```json
+          {
+            "clientId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+            "clientSecret": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+            "tenantId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+            "subscriptionId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz"
+          }
+          ```  
+  
         - **SQLPASSWORD**: You need to enter any unique password with a combination of Alphanumeric letters. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
      
      - Create GitHub variables with the same name as mentioned below.   
