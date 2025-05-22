@@ -17,7 +17,7 @@ Before you begin, ensure that you have the following prerequisites installed and
    1. Install PowerShell (https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1).
    1. Install .NET 6.0 SDK [(https://dotnet.microsoft.com/download/dotnet/6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)).
    1. Install Node v16.8.0  ([https://nodejs.org/en/download](https://nodejs.org/en/blog/release/v16.8.0)).
-   2. Download the application code base in your computer: ([https://experienceazure.blob.core.windows.net/devsecops-hackthon/DevOps-DevSecOps-Hackathon-lab-files.zip]). You will need to use this repository to complete the challenges successfully.
+   2. Download the application code base in your computer: [https://experienceazure.blob.core.windows.net/devsecops-hackthon/User-DevOps-DevSecOps-Hackathon-lab-files.zip](https://experienceazure.blob.core.windows.net/devsecops-hackthon/User-DevOps-DevSecOps-Hackathon-lab-files.zip). You will need to use this repository to complete the challenges successfully.
 
 Feel free to explore the challenges, learn, and have fun during this hackathon! If you have any questions, don't hesitate to contact our support team. 
 
