@@ -30,15 +30,21 @@ In this task, you will use Dependabot to track the versions of the packages we u
 
 1. Sort the Dependabot alerts by `Package name`. Under the **Package** ***(1)*** dropdown menu, search for **nanoid** ***(2)*** by typing in the search box and selecting **nanoid** ***(3)*** vulnerability.
 
-   ![Summary of the `handlebars` Dependabot alert in the list of Dependabot alerts.](../media/ch31u.png "`handlebars` Dependabot alert")
+
+   ![Summary of the `handlebars` Dependabot alert in the list of Dependabot alerts.](../media/160625(05).png "`handlebars` Dependabot alert")
 
 1. Select any of the `nanoid` Dependabot alert entries to see the alert details. After reviewing the alert, select **Review security update**.
 
-   ![The `handlebars` Dependabot alert detail.](../media/ch32u.png "Dependabot alert detail")
-   
-   **Note:** If you see the Create Dependabot Security Update option, click on it. After it is created, select Review security update. 
+   ![](../media/160625(06).png)
 
-1. It will Navigate to the **Pull Requests** ***(1)*** tab, Click on **Merge pull request**, followed by **Confirm merge**.
+   ![](../media/160625(07).png)
+   >> **Note:** If you see the Create Dependabot Security Update option, click on it. After it is created, select Review security update.
+
+
+   ![The `handlebars` Dependabot alert detail.](../media/ch32u.png "Dependabot alert detail")
+    
+
+1. It will Navigate to the **Pull Requests** tab, Click on **Merge pull request**, followed by **Confirm merge**.
 
    ![List of Pull Requests.](../media/ch33u.png "Pull Requests")
 

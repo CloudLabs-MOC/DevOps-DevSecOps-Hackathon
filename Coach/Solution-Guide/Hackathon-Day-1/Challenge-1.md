@@ -51,7 +51,9 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
     
 1. In the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg1.png "New Repository Creation Form")
+   ![The `New Repository` creation form in GitHub.](../media/160625(01).png "New Repository Creation Form")
+
+   ![The `New Repository` creation form in GitHub.](../media/160625(02).png "New Repository Creation Form")
 
 1. Next to the search criteria, locate and select the **New** button.
 
@@ -61,7 +63,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
    ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s5.png "New Repository Creation Form")
    
-   >**Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow steps 6 to 10. Otherwise, skip to step 11.
+   >**Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow steps 6 to 11. Otherwise, skip to step 12.
 
 1. In the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
 
@@ -115,6 +117,8 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
     Note: This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
 
+    Note: Remove the "<>", while entering url and unique id.
+
       ```pwsh
       git init
       git add .
@@ -125,6 +129,8 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
       ```
      
    - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
+
+       ![](../media/160625(03).png)
 
        ![](../media/ex2-t3.png)
        

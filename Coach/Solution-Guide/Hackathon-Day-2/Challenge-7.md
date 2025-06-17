@@ -117,7 +117,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
     >**Note:** However the ease of executability of this challenge, you can open a new folder within VS Code and import the solution folder from the Windows file explorer with path, `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\`. Select the **src** folder. This solution project has integrated "About Us" page and unit test cases for the same.
 
-    >**Note:** If you wish to continue to manually edit the raw project, follow the steps from step 7.
+    >**Note:** If you wish to continue to manually edit the raw project, follow the steps from step 7 or else you can directly can do from step 16.
 
 1. Create a new file named `AboutUs.css` **(1)** in your `src` directory ie., within the path `ContosoTraders.Ui.Website.V2\src\` and then add the following code **(2)**:
 
