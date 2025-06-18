@@ -7,11 +7,11 @@ In this previous challenge, you successfully hosted the application using the Gi
 
 You need to focus on completing the implementation of the below-mentioned security features.
 
-**Code Scanning**: Code scanning is a feature that you use to analyze the code in a GitHub repository to find security vulnerabilities and coding errors. Any problems identified by the analysis are shown on GitHub. You can use code scanning to find, triage, and prioritize fixes for existing problems in your code. Code scanning also prevents developers from introducing new problems
+**Code Scanning:** Code scanning is a feature that you use to analyze the code in a GitHub repository to find security vulnerabilities and coding errors. Any problems identified by the analysis are shown on GitHub. You can use code scanning to find, triage, and prioritize fixes for existing problems in your code. Code scanning also prevents developers from introducing new problems
 
-**CodeQL**: CodeQL is the code analysis engine developed by GitHub to automate security checks. You can analyze your code using CodeQL and display the results as code-scanning alerts.
+**CodeQL:** CodeQL is the code analysis engine developed by GitHub to automate security checks. You can analyze your code using CodeQL and display the results as code-scanning alerts.
 
-**Repository security advisories**: Repository security advisories allow repository maintainers to privately discuss and fix a security vulnerability in a project. 
+**Repository security advisories:** Repository security advisories allow repository maintainers to privately discuss and fix a security vulnerability in a project. 
 
 ## Accessing GitHub
 
@@ -29,7 +29,7 @@ You need to focus on completing the implementation of the below-mentioned securi
 
 ## Challenge Objectives:
 
-> **Note**: Use the same GitHub repository that you created in the last challenge.
+> **Note:** Use the same GitHub repository that you created in the last challenge.
 
 1. **Implement Code Scanning and CodeQL:**
  
