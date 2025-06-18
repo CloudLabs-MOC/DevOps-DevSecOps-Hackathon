@@ -1,6 +1,6 @@
 # Challenge 01: Continuous Integration and Deployment for Contoso Traders using GitHub Actions
 
-### Estimated Time: 90 minutes
+### Estimated Time: 90 Minutes
 
 ## Introduction:
 This challenge is designed to evaluate your skills in creating a robust CI/CD pipeline leveraging GitHub Actions. It aims to assess your capability to not only establish a seamless pipeline but also to guarantee the successful deployment of the application.
@@ -106,7 +106,6 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
        
        >**Hint**: You can also find the deployment ID and the Azure AD password within the environment details tab of your integrated lab guide.
 
-   
    -  Run the workflow named `contoso-traders-provisioning-deployment` using GitHub Actions.
  
 3. **Setup CI/CD Workflow:**
