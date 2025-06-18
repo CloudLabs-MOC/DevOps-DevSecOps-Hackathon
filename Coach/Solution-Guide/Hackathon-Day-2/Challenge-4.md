@@ -12,7 +12,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. You will deploy the complete monitoring infrastructure using the Bicep template named `monitoringinfra.bicep`. The monitoring infrastructure includes Application Insights, a secret created for Application Insights, and a monitoring dashboard.
 
-1. Open VS Code within the Vm, and then click on **File (1)** at the top left corner and then select **Open Folder (2)**.
+1. Open VS Code within the VM, and then click on **File (1)** at the top left corner and then select **Open Folder (2)**.
 
     ![](../media/ex4-task1-1.png)
 
@@ -24,9 +24,9 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
     ![](../media/ad25.png)
 
-1. Open the **monitoringinfra.parameters.json (1)** file. Locate the env parameter in the JSON file and update its value with the **deployment ID (2).** and then save. 
+1. Open the **monitoringinfra.parameters.json (1)** file. Locate the env parameter in the JSON file and update its value with the **deployment ID (2)** and then save. 
 
-   >**Note**: You can find the deployment ID within the environment details tab of your integrated lab guide.
+   >**Note:** You can find the deployment ID within the environment details tab of your integrated lab guide.
 
    ![](../media/ex4-task1-3.png)
    
@@ -34,8 +34,8 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ```
    Connect-AzAccount -UseDeviceAuthentication
-
    ```
+
 1. Go to **https://microsoft.com/devicelogin (1)** in the VM browser and copy the **code (2).** 
 
       ![](../media/authenticate2.png)
@@ -68,14 +68,15 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
     ![](../media/ad27.png)      
    
-   >**Note:** Make sure you are in the directory where the Bicep template and parameters file resides. If not switch to the directory cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files\iac
+   >**Note:** Make sure you are in the directory where the Bicep template and parameters file reside. If not, switch to the directory cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files\iac
    
 1. Run the following command to initiate the deployment using the Bicep template and parameters file:
 
    ```
    New-AzResourceGroupDeployment -Name "createresource" -TemplateFile "monitoringinfra.bicep" -TemplateParameterFile "monitoringinfra.parameters.json" -ResourceGroup $RGname
    ```
-1. Monitor the output in the terminal , and wait for until the deployment is succeeded.
+   
+1. Monitor the output in the terminal, and wait until the deployment succeeds.
 
    ![](../media/ex4-task1-5.png)
    
