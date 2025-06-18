@@ -7,11 +7,11 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 ## Accessing GitHub
 
-1. To access and log into GitHub, open the edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
+1. To access and log into GitHub, open the Edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
 
 2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
 
-3. On the **Sign into GitHub tab**, you will see a login screen. Enter the following `GitHubUserEmail` and `GitHubUserPassword` then click on **Sign in**.
+3. On the **Sign into GitHub tab**, you will see a login screen. Enter the following `GitHubUserEmail` and `GitHubUserPassword`, then click on **Sign in**.
 
     >**Note**: For **GitHubUserEmail** and **GitHubUserPassword**, Navigate to **Environment(1)**, click on **Licenses (2)** and Copy **(3)**.
             
@@ -122,8 +122,8 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
  ## Success criteria:
 To complete this challenge successfully:
 
-   - Verify the implementation of Implement Code Scanning and CodeQL.
-   - Configure the Repository security advisories feature and create temporary private fork.
+   - Verify the implementation of Code Scanning and CodeQL.
+   - Configure the Repository security advisories feature and create a temporary private fork.
 
 ## Additional Resources:
 
