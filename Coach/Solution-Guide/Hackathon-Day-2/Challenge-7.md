@@ -14,14 +14,14 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    * **Email/Username**: 
 
-      > **Note**: For **Email/Username**, Navigate to **Environment(1)**, click on **Azure credentials (2)**, and copy **Username (3)**.   
+      > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure credentials (2)**, and copy **Username (3)**.   
             
       ![](../media/ad1.png)   
         
 1. Now enter the following password and click on **Sign in**.
    * **Password**: 
 
-      > **Note**: For **Email/Username**, Navigate to **Environment(1)**, click on **Azure credentials (2)**, and copy **Password (3)**.   
+      > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure credentials (2)**, and copy **Password (3)**.   
             
       ![](../media/ad2.png)   
      
@@ -41,7 +41,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/cl7-ex1-t1-s1.png)
    
-1. At the left pane , click on **Extensions**. 
+1. In the left pane, click on **Extensions**. 
 
    ![Picture1](../media/ex7-1.png)
 
@@ -49,7 +49,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/ex7-task1-0.1.png)
    
-1. Once the installation is successfull, a pop appears to sign-in. Click on **Sign in to Use Copilot for free**
+1. Once the installation is successful, a pop-up appears to sign in. Click on **Sign in to Use Copilot for free**
 
    ![Picture1](../media/ad12.png)
 
@@ -77,13 +77,13 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    >**Note:** If the activation status of Github Copilot in the bottom right corner is not visible, try restarting Visual Studio Code to ensure that the activation status becomes visible in that location.
 
-1. Verify if **GitHub Copilot Chat** is installed. If its installed, chat window will open as shown below.
+1. Verify if **GitHub Copilot Chat** is installed. If it's installed, the chat window will open as shown below.
    
     ![Picture1](../media/ad14.png)
    
 ### Task 2: Integrate an 'About Us' app component in React using GitHub Copilot
 
-  >**NOTE:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the labguide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Applications which may be needed as you proceed with this exercise.
+  >**NOTE:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
 
 1. In a new Visual Studio Code window, click on **File (1)** at the top left corner and then select **Open Folder (2)**.
 
@@ -105,7 +105,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/ad16.png)
 
-1. Within the **CHAT: GITHUB COPILOT** pane, type: `Help me create the new About Us" page in ContosoTraders.Ui.Website.V2\src` and observe the AI response. You can follow the instructions provided by GitHub Copilot towards successfully adding the About Us page as a part of the sample React application that you have imported into VS Code.
+1. Within the **CHAT: GITHUB COPILOT** pane, type: `Help me create the new About Us" page in ContosoTraders.Ui.Website.V2\src` and observe the AI response. You can follow the instructions provided by GitHub Copilot towards successfully add the About Us page as a part of the sample React application that you have imported into VS Code.
 
    >**Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **AboutUs.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
 
@@ -113,9 +113,9 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/CL7-EX1-T2-S4.png)
 
-    >**Disclaimer:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the labguide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Applications which may be needed as you proceed with this exercise.
+    >**Disclaimer:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
 
-    >**Note:** However the ease of executability of this challenge, you can open a new folder within VS Code and import the solution folder from the Windows file explorer with path, `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\`. Select the **src** folder. This solution project has integrated "About Us" page and unit test cases for the same.
+    >**Note:** However, due to the ease of execution of this challenge, you can open a new folder within VS Code and import the solution folder from the Windows file explorer with path `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\`. Select the **src** folder. This solution project has integrated the "About Us" page and unit test cases for the same.
 
     >**Note:** If you wish to continue to manually edit the raw project, follow the steps from step 7 or else you can directly can do from step 16.
 
@@ -173,9 +173,9 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    >**Note:** Feel free to make changes in the above code snippet as per your use case scenario.
 
-   >**Note:** Notice that the css rules have been imported into the `AboutUs.js` file using the code, `import "./AboutUs.css";`.
+   >**Note:** Notice that the CSS rules have been imported into the `AboutUs.js` file using the code, `import "./AboutUs.css";`.
    
-   >**Note:** The `AboutUs.js` file is a React component that renders an "About Us" section on a webpage based on the CSS rules that have been defined in `AboutUs.css` file.
+   >**Note:** The `AboutUs.js` file is a React component that renders an "About Us" section on a webpage based on the CSS rules that have been defined in the `AboutUs.css` file.
 
 1. Save the newly created `AboutUs.js` file.
 
@@ -188,7 +188,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
      import "./App.css";
      ```
 
-1. Your `App.js` should look similar like the below screenshot:
+1. Your `App.js` should look similar to the screenshot below:
 
      ![Picture1](../media/CL7-EX1-T2-S11.png)
 
@@ -197,12 +197,12 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
      ```
      <AboutUs />
      ```
-1. Your `App.js` should now look similar like the below screenshot:
+1. Your `App.js` should now look similar to the screenshot below:
 
      ![Picture1](../media/CL7-EX1-T2-S13.png)
 
 1. To run your React application, you typically use the command line (also known as the terminal). Here are the steps:
-      - Within Visual Studio Code, you can open the terminal by going to the top menu, click on elipses **... (1)**, then click on **Terminal** **(2)** and then select **New Termimal (3)**.
+      - Within Visual Studio Code, you can open the terminal by going to the top menu, click on ellipses **... (1)**, then click on **Terminal** **(2)** and then select **New Termimal (3)**.
 
       - Navigate to your project directory. You can do this with the `cd` command followed by the path to your project. You can use the below command to navigate to the React application's working directory **(4)**:
 
@@ -225,7 +225,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
    
      - The command `npm i` is a shorthand version of `npm install`. It is used in Node.js environments to install all the dependencies listed in the `package.json` file. These dependencies are libraries or packages that your project needs to run correctly. The installed packages will be placed in a folder named `node_modules` in your project directory.
 
-     - After the installation of all the dependencies, execute the command - `npm run start` to start the application. This open a new browser tab over the url path, `http://localhost:3000/`.
+     - After the installation of all the dependencies, execute the command - `npm run start` to start the application. This opens a new browser tab over the URL path, `http://localhost:3000/`.
 
 1. Click on **Get Started** and scroll down within your static web app to view the integrated **About Us** page.
 
@@ -235,11 +235,11 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
      ![Picture1](../media/CL7-EX1-T2-S15.png)
 
-## Exercise 2: Generate and run Unit Test cases using GitHub Coplilot:
+## Exercise 2: Generate and run Unit Test cases using GitHub Copilot:
 
 ### Task 1: Create and run test cases:
 
-1. In Visual Studio Code, go to **Explorer** and navigate to path `ContosoTraders.Ui.Website.V2\src\components` and open the `WelcomePopup.js` file.
+1. In Visual Studio Code, go to **Explorer** and navigate to the path `ContosoTraders.Ui.Website.V2\src\components` and open the `WelcomePopup.js` file.
 
    ![Picture1](../media/CL7-EX2-T1-S1.png)
 
@@ -277,13 +277,13 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    >**Note:** Ensure that your current working directory within the terminal has the `components` folder in its present path. In this scenario, the `components` folder is present inside the `/src` directory. 
 
-6. To execute the unit test cases genereated by GitHub Copilot, we need to run the `WelcomePopup.test.js` file using the following command within the terminal:
+6. To execute the unit test cases generated by GitHub Copilot, we need to run the `WelcomePopup.test.js` file using the following command within the terminal:
 
    ```
    npm run test
    ```
 
-7. Post execution of the above unit test, you must ensure to have a successful - `PASS` test runs with no errors. If you are produced with errors, please understand the intricacies of the error as mentioned within the terminal and work towards a successful unit test run.
+7. Post execution of the above unit test, you must ensure to have a successful - `PASS` test runs with no errors. If you are presented with errors, please understand the intricacies of the error as mentioned within the terminal and work towards a successful unit test run.
 
    >**Note:** You may need to scroll up in your output window to view the results.
 
@@ -297,7 +297,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![](../media/ad3.png) 
 
-2. once logged-in, on the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
+2. Once logged in, on the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
 
    ![The `New Repository` creation form in GitHub.](../media/2dg1.png "New Repository Creation Form")
 
@@ -321,7 +321,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![imported-Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/2dg4.png "Quick setup screen")
 
-8. In Visual Studio Code, run the below commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
+8. In Visual Studio Code, run the following commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
    
      ```pwsh
      cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2
@@ -333,7 +333,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
      
     Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` with the value you copied in step 5 and `Unique-ID` in step 6.
 
-    Note: This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created named `devsecops`. 
+    Note: This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository named `devsecops`. 
 
       ```pwsh
       git init
@@ -356,7 +356,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 **Note**: To perform this task, the GitHub repository should be public. If the repository visibility is private, please go to the settings of the repository and change the visibility to public.
 
-1. Login to GitHub where the `devsecops-2` repository was created.
+1. Log in to GitHub where the `devsecops-2` repository was created.
 
 2. Select the **settings** ***(1)*** tab from the GitHub browser tab. Click on **Advanced security** ***(2)*** under the security side blade.
 
@@ -452,17 +452,17 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
 
 5. After having the temporary fork, you can request a CVE. It is used for GitHub reviews and published security advisories. Upon review, we may use this advisory to send Dependabot alerts to affected repositories and redistribute the advisory through our API and Atom feed.
 
-## Exercise 4: CI/CD Pipeline Setup and Infrastrucure Deployment
+## Exercise 4: CI/CD Pipeline Setup and Infrastructure Deployment
 
 ### Task 1: Deploy Infrastructure
 
-1. Login to your Azure portal with the credentials provided in the **Environment** tab of the integrated CloudLabs Environment.
+1. Log in to your Azure portal with the credentials provided in the **Environment** tab of the integrated CloudLabs Environment.
 
 2. In the global search bar, search for **Static Web Apps (1)** and select **Static Web Apps (2)**.
 
     ![](../media/ad20.png)
 
-3. Click on **+ Create** to create a new Static Web Apps.
+3. Click on **+ Create** to create a new Static Web App.
 
 4. In the **Basics tab** of the **Create Static Web App** page, enter the following details:
    - **Subscription:** Select the available subscription **(1)**.
@@ -470,7 +470,7 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
    - **Name:** `React-Static-Web-App` **(3)**.
    - **Plan type:** Select **Free (4)**.
    - **Source:** Select **GitHub (5)**
-   - **GitHub account:** Click on **Click here to login**. Connect to your GitHub account which has the `devsecops-2` repository with the React application files **(6)**.
+   - **GitHub account:** Click on **Click here to login**. Connect to your GitHub account, which has the `devsecops-2` repository with the React application files **(6)**.
    
       ![](../media/ex7-task1-6a.png)
 
