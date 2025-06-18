@@ -14,14 +14,14 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    * **Email/Username**: 
 
-      > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure credentials (2)**, and copy **Username (3)**.   
+      > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Username (3)**.   
             
       ![](../media/ad1.png)   
         
 1. Now enter the following password and click on **Sign in**.
    * **Password**: 
 
-      > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure credentials (2)**, and copy **Password (3)**.   
+      > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.   
             
       ![](../media/ad2.png)   
      
@@ -45,11 +45,11 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/ex7-1.png)
 
-1. At the search bar of the Extensions type **Github (1)**, select the **Github Copilot (2)** Extension and then click on **install (3).**
+1. At the search bar of the Extensions type **Github (1)**, select the **Github Copilot (2)** Extension and then click on **Install (3).**
 
    ![Picture1](../media/ex7-task1-0.1.png)
    
-1. Once the installation is successful, a pop-up appears to sign in. Click on **Sign in to Use Copilot for free**
+1. Once the installation is successful, a pop-up appears to sign in. Click on **Sign in to Use Copilot for Free**
 
    ![Picture1](../media/ad12.png)
 
@@ -85,7 +85,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
   >**NOTE:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
 
-1. In a new Visual Studio Code window, click on **File (1)** at the top left corner and then select **Open Folder (2)**.
+1. In a new Visual Studio Code window, click on **File (1)** at the top left corner and then select **Open Folder.. (2)**.
 
     ![](../media/ex4-task1-1.png)
 
@@ -206,22 +206,23 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
       - Navigate to your project directory. You can do this with the `cd` command followed by the path to your project. You can use the below command to navigate to the React application's working directory **(4)**:
 
-      ```
-      cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2
-      ``` 
+         ```
+         cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2
+         ``` 
+
       - Once you're in your project directory, you can start the application with the `npm start` **(5)** because we need npm to create the Contoso Traders Application. After running the following command within the terminal, your application should start, and you can view it in your web browser at http://localhost:3000.  
        
-      ```
-      npm run start
-      ```
+         ```
+         npm run start
+         ```
       
-     ![Picture1](../media/ad17.png)
+         ![Picture1](../media/ad17.png)
 
-    >**Note:** If the above command fails, you might need to run the following command :
+         >**Note:** If the above command fails, you might need to run the following command :
 
-     ```powershell
-     npm i
-     ```
+         ```powershell
+         npm i
+         ```
    
      - The command `npm i` is a shorthand version of `npm install`. It is used in Node.js environments to install all the dependencies listed in the `package.json` file. These dependencies are libraries or packages that your project needs to run correctly. The installed packages will be placed in a folder named `node_modules` in your project directory.
 
@@ -293,7 +294,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 ### Task 1: Submit Codebase Modifications to GitHub Repository
 
-1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **License** **(2)** tab and **copy** **(3)** the credentials. Use the same username and password to log into GitHub.
+1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **Licenses** **(2)** tab and **Copy** **(3)** the credentials. Use the same username and password to log into GitHub.
 
    ![](../media/ad3.png) 
 
@@ -366,7 +367,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
    ![](../media/ex2-task1-2.png)     
 
-4. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes** ***(4)***.
+4. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes..** ***(4)***.
   
    ![](../media/cl2-t1-s3.png)
 
@@ -398,40 +399,40 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
    - CVE identifier: **Request CVE ID later** ***(2)***
    - Description: **Add** ***(3)*** Replace the below-mentioned details in the description section.
    
-   ```
-   Impact
-   What kind of vulnerability is it? Who is impacted?
+      ```
+      Impact
+      What kind of vulnerability is it? Who is impacted?
 
-   HTTP request handlers should not perform expensive operations such as accessing the file system, executing an operating system command, or interacting with a database without limiting the rate at which requests are accepted. Otherwise, the application becomes vulnerable to denial-of-service attacks where an attacker can cause the application to crash or become unresponsive by issuing a large number of requests at the same time.
+      HTTP request handlers should not perform expensive operations such as accessing the file system, executing an operating system command, or interacting with a database without limiting the rate at which requests are accepted. Otherwise, the application becomes vulnerable to denial-of-service attacks where an attacker can cause the application to crash or become unresponsive by issuing a large number of requests at the same time.
 
-   Patches
-   Has the problem been patched? What versions should users upgrade to?
+      Patches
+      Has the problem been patched? What versions should users upgrade to?
 
-   It is patched and rectified the error. Please use 1.2 version
+      It is patched and rectified the error. Please use 1.2 version
 
-   Workarounds
-   Is there a way for users to fix or re../mediate the vulnerability without upgrading?
+      Workarounds
+      Is there a way for users to fix or re../mediate the vulnerability without upgrading?
 
-   // set up rate limiter: maximum of five requests per minute
-   var RateLimit = require('express-rate-limit');
-   var limiter = new RateLimit({
-   windowMs: 1601000, // 1 minute
-   max: 5
-   });
+      // set up rate limiter: maximum of five requests per minute
+      var RateLimit = require('express-rate-limit');
+      var limiter = new RateLimit({
+      windowMs: 1601000, // 1 minute
+      max: 5
+      });
 
-   // apply rate limiter to all requests
-   app.use(limiter);
+      // apply rate limiter to all requests
+      app.use(limiter);
 
-   Added the above code in app.js
+      Added the above code in app.js
 
-   References
-   Are there any links users can visit to find out more?
+      References
+      Are there any links users can visit to find out more?
 
-   https://github.com/OWASP/API-Security/blob/master/2019/en/src/0xa4-lack-of-resources-and-rate-limiting.md
-   https://codeql.github.com/codeql-query-help/javascript/js-missing-rate-limiting/
-   ```
+      https://github.com/OWASP/API-Security/blob/master/2019/en/src/0xa4-lack-of-resources-and-rate-limiting.md
+      https://codeql.github.com/codeql-query-help/javascript/js-missing-rate-limiting/
+      ```
     
-   ![](../media/CL7-EX3-T3-S2.png)
+      ![](../media/CL7-EX3-T3-S2.png)
 
 3. In the **Affected products** section, provide the following details and click on **Create draft security advisory** ***(7)***   
  
@@ -444,7 +445,7 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
   
      ![](../media/CL7-EX3-T3-S3.png)
 
-4. Once the security advisory is created, scroll down and click on **start a temporary private fork**. It is used to collaborate on a patch for this advisory.
+4. Once the security advisory is created, scroll down and click on **Start a temporary private fork**. It is used to collaborate on a patch for this advisory.
 
     ![](../media/CL7-EX3-T3-S4-a.png)
     
@@ -470,13 +471,13 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
    - **Name:** `React-Static-Web-App` **(3)**.
    - **Plan type:** Select **Free (4)**.
    - **Source:** Select **GitHub (5)**
-   - **GitHub account:** Click on **Click here to login**. Connect to your GitHub account, which has the `devsecops-2` repository with the React application files **(6)**.
+   - **GitHub account:** Click on **Click here to login (6)**. Connect to your GitHub account, which has the `devsecops-2` repository with the React application files.
    
       ![](../media/ex7-task1-6a.png)
 
       ![](../media/ex7-task1-8.png)
 
-      - Click on **Authorize AzureApp service**
+      - Click on **Authorize AzureAppService**.
 
         ![](../media/ad21.png)
 
@@ -492,7 +493,7 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
 
       >**Note:** `/` refers to the root directory of the GitHub repository. Ensure that the location is specified appropriately as per your GitHub file structure.
    
-   - Leave the other fields at default and then click on **Review + Create (12)**.
+   - Leave the other fields at default and then click on **Review + create (12)**.
 
      ![](../media/ex7-task1-7.png)
 

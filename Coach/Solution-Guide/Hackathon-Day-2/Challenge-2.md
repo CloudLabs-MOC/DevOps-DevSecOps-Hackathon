@@ -13,7 +13,7 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 3. On the **Sign into GitHub tab**, you will see a login screen. Enter the following `GitHubUserEmail` and `GitHubUserPassword`, then click on **Sign in**.
 
-    >**Note**: For **GitHubUserEmail** and **GitHubUserPassword**, Navigate to **Environment(1)**, click on **Licenses (2)** and Copy **(3)**.
+    >**Note**: For **GitHubUserEmail** and **GitHubUserPassword**, Navigate to **Environment (1)**, click on **Licenses (2)** and Copy **(3)**.
             
      ![](../media/ad3.png)
 
@@ -25,7 +25,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 **Note**: To perform this task, the GitHub repository should be public. If the repository visibility is private, please go to the settings of the repository and change the visibility to public.
    
-1. Select the **Settings** ***(1)*** tab from the GitHub browser tab. Click on **Advanced security** ***(2)*** under the security side blade.
+1. Select the **Settings** ***(1)*** tab from the GitHub browser tab. Click on **Advanced Security** ***(2)*** under the security side blade.
 
    ![](../media/ex2-task1-1a.png)  
    
@@ -33,7 +33,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
    ![](../media/ex2-task1-2.png)      
 
-1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes** ***(4)***.
+1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes..** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes** ***(4)***.
   
    ![](../media/cl2-t1-s3.png)
 
@@ -65,40 +65,40 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
    - CVE identifier: **Request CVE ID later** ***(2)***
    - Description: **Add** ***(3)*** replace the below-mentioned details in the description section.
    
-   ```
-   Impact
-   What kind of vulnerability is it? Who is impacted?
+      ```
+      Impact
+      What kind of vulnerability is it? Who is impacted?
 
-   HTTP request handlers should not perform expensive operations such as accessing the file system, executing an operating system command, or interacting with a database without limiting the rate at which requests are accepted. Otherwise, the application becomes vulnerable to denial-of-service attacks where an attacker can cause the application to crash or become unresponsive by issuing a large number of requests at the same time.
+      HTTP request handlers should not perform expensive operations such as accessing the file system, executing an operating system command, or interacting with a database without limiting the rate at which requests are accepted. Otherwise, the application becomes vulnerable to denial-of-service attacks where an attacker can cause the application to crash or become unresponsive by issuing a large number of requests at the same time.
 
-   Patches
-   Has the problem been patched? What versions should users upgrade to?
+      Patches
+      Has the problem been patched? What versions should users upgrade to?
 
-   It is patched and rectified the error. Please use 1.2 version
+      It is patched and rectified the error. Please use 1.2 version
 
-   Workarounds
-   Is there a way for users to fix or re../mediate the vulnerability without upgrading?
+      Workarounds
+      Is there a way for users to fix or re../mediate the vulnerability without upgrading?
 
-   // set up rate limiter: maximum of five requests per minute
-   var RateLimit = require('express-rate-limit');
-   var limiter = new RateLimit({
-   windowMs: 1601000, // 1 minute
-   max: 5
-   });
+      // set up rate limiter: maximum of five requests per minute
+      var RateLimit = require('express-rate-limit');
+      var limiter = new RateLimit({
+      windowMs: 1601000, // 1 minute
+      max: 5
+      });
 
-   // apply rate limiter to all requests
-   app.use(limiter);
+      // apply rate limiter to all requests
+      app.use(limiter);
 
-   Added the above code in app.js
+      Added the above code in app.js
 
-   References
-   Are there any links users can visit to find out more?
+      References
+      Are there any links users can visit to find out more?
 
-   https://github.com/OWASP/API-Security/blob/master/2019/en/src/0xa4-lack-of-resources-and-rate-limiting.md
-   https://codeql.github.com/codeql-query-help/javascript/js-missing-rate-limiting/
-   ```
+      https://github.com/OWASP/API-Security/blob/master/2019/en/src/0xa4-lack-of-resources-and-rate-limiting.md
+      https://codeql.github.com/codeql-query-help/javascript/js-missing-rate-limiting/
+      ```
     
-   ![](../media/cl2-t2-s2.png)
+      ![](../media/cl2-t2-s2.png)
    
 1. In the **Affected products** section, provide the following details and click on **Create draft security advisory** ***(7)***   
  
@@ -111,7 +111,7 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
   
      ![](../media/ad8.png)
    
- 1. Once the security advisory is created, scroll down and click on **start a temporary private fork**. It is used to collaborate on a patch for this advisory.
+ 1. Once the security advisory is created, scroll down and click on **Start a temporary private fork**. It is used to collaborate on a patch for this advisory.
 
     ![](../media/cl2-t2-s4-a.png)
     

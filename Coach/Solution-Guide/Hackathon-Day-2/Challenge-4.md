@@ -12,15 +12,15 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. You will deploy the complete monitoring infrastructure using the Bicep template named `monitoringinfra.bicep`. The monitoring infrastructure includes Application Insights, a secret created for Application Insights, and a monitoring dashboard.
 
-1. Open VS Code within the VM, and then click on **File (1)** at the top left corner and then select **Open Folder (2)**.
+1. Open VS Code within the VM, and then click on **File (1)** at the top left corner and then select **Open Folder... (2)**.
 
     ![](../media/ex4-task1-1.png)
 
-1. Navigate to **C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files (1)** path ,  select **iac (2)** and click on **Select folder (3)**.
+1. Navigate to **C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files (1)** path ,  select **iac (2)** and click on **Select Folder (3)**.
 
     ![](../media/ad24.png)
 
-1. Click on **Yes, I Trust the authors**.
+1. Click on **Yes, I trust the authors**.
 
     ![](../media/ad25.png)
 
@@ -40,7 +40,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
       ![](../media/authenticate2.png)
 
-1. Paste the **code (1)** you copied earlier and click **Next (2)**.
+1. Paste the **Code (1)** you copied earlier and click **Next (2)**.
 
       ![](../media/authenticate3.png)
 

@@ -71,7 +71,7 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
    ![](../media/ch34u.png)
     
-1. Select **Advanced security** from the sidebar.
+1. Select **Advanced Security** from the sidebar.
 
    ![](../media/ex3-task2-1a.png)
 
@@ -79,15 +79,15 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
    ![](../media/ch35u.png)
     
-1. Navigate back to **Code (1)** and click on the **src (2)** folder.
+1. Navigate back to **Code** and click on the **src** folder.
 
    ![](../media/ch36u.png)    
    
-1. Click on **Add file (1)** and select the **create new file (2)** option.
+1. Click on **Add file (1)** and select the **+ Create new file (2)** option.
 
    ![](../media/ch37u.png)    
    
-1. Add a new file with the name **build.docker-compose.yml (1)**, add the code **(2)** mentioned below and click on **Commit changes (3)** at the right corner. Here, you'll expose the **application ID** of a service principal.
+1. Add a new file with the name **build.docker-compose.yml (1)**, add the code **(2)** mentioned below and click on **Commit changes... (3)** at the right corner. Here, you'll expose the **application ID** of a service principal.
 
    ```
    version: "3.4"
@@ -110,7 +110,7 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
    ![](../media/ex-common.png)
 
-1. If you get the below warning pop-up, choose **Its used in tests (3)** and then select **Allow secret (2)**.   
+1. If you get the below warning pop-up, choose **It's used in tests (3)** and then select **Allow Secret (2)**.   
 
    ![](../media/ad11.png)
 

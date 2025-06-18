@@ -86,7 +86,7 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **License** **(2)** tab and **copy** **(3)** the credentials. Use the same username and password to log into GitHub.
+1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **Licenses** **(2)** tab and **Copy** **(3)** the credentials. Use the same username and password to log into GitHub.
 
    ![](../media/ad3.png) 
    
@@ -223,7 +223,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
       ![](../media/ex-task1-11.png)
 
-      > **Note:** For **Azure Password**, Navigate to **Environment (1)**, click on **Azure credentials (2)**, and copy **Password (3)**.
+      > **Note:** For **Azure Password**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.
       
       ![](../media/ad2.png)   
 
@@ -234,18 +234,18 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 7. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
    - **Name:** Enter **DEPLOYMENTREGION** ***(1)***
-   - **Value:** Add the deployment region where you want to get the resources deployed. preferenced **eastus2,uksouth,australiaeast** **(2)**
+   - **Value:** Add the deployment region where you want to get the resources deployed. preferenced **eastus2, uksouth, australiaeast** **(2)**
    
      ![](../media/ex1-task1-10.png)
 
-8. To create another **Variable** click on **New repository variable** ,Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
+8. To create another **Variable** click on **New repository variable**, under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
    - **Name:** Enter **SUFFIX** ***(1)***
    - **Value:** Create a secret to store the deployment ID **(2)**
   
      ![](../media/ex1-task1-12.png)
 
-      > **Note:** You can find the **Deployment ID** within the environment by navigating to the **Environment Details (1)**, click on **Azure credentials (2)**, and copy **Deployment ID** **(3)**.
+      > **Note:** You can find the **Deployment ID** within the environment by navigating to the **Environment Details (1)**, click on **Azure Credentials (2)**, and copy **Deployment ID** **(3)**.
 
       ![](../media1/Deployment_ID.png)
      
@@ -259,15 +259,15 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 ### Task 3: Set up CI/CD Workflow
 
-1. From the Azure Portal Dashboard, click on **Resource Groups** from the Navigate panel to see the resource groups.
+1. From the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
    ![](../media/2dgn9.png) 
    
-1. Select the **contoso-traders-rgXXXXXXX** resource group from the list.
+1. Select the **contoso-traders-rgXXXXXX** resource group from the list.
 
    ![](../media/ex1-task1-13.png)  
 
-   >**Note:**  XXXXXXX represents the Deployment ID, which can be found in the Environment section.
+   >**Note:** XXXXXX represents the Deployment ID, which can be found in the Environment section.
    
 1. Select the **productsdb** SQL database from the list of resources.
 
@@ -291,7 +291,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    
       ![](../media/ex1-task3-2.png)
    
-      >**Note:** Replace `{your_password}` with the ODL User Azure Password. Go to **Environment (1)**, click on **Azure credentials (2)**, and copy **Password (3)**.
+      >**Note:** Replace `{your_password}` with the ODL User Azure Password. Go to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.
       
       ![](../media/ad2.png)   
       
@@ -307,17 +307,17 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    
 ## Task 4: Test the application and perform rolling updates
 
-1. Navigate to Azure Portal, and click on **Resource Groups** from the Navigate panel to see the resource groups.
+1. Navigate to Azure Portal, and click on **Resource groups** from the Navigate panel to see the resource groups.
 
    ![](../media/2dgn9.png) 
    
-2. Select the **contoso-traders-rg(XXXXXXX)DeploymentID** resource group from the list.
+2. Select the **contoso-traders-rg(XXXXXX)DeploymentID** resource group from the list.
 
    ![](../media/2dgn135.png) 
 
-   > **Note:** XXXXXXX represents the Deployment ID, which can be found in the Environment section.
+   > **Note:** XXXXXX represents the Deployment ID, which can be found in the Environment section.
    
-3. Select the **contoso-traders-ui2<inject key="DeploymentID" enableCopy="false" />** endpoint from the list of resources.
+3. Select the **contoso-traders-ui2<inject key="DeploymentID" enableCopy="false" />** Endpoint from the list of resources.
 
    ![](../media/2dgn127.png) 
    
