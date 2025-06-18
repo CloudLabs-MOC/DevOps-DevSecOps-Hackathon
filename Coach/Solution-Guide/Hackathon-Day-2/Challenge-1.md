@@ -17,9 +17,9 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 ## Accessing the Azure Portal
 
->**Important**: You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
+>**Important:** You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
 
->**Note**: Numbers and ID's values may vary kindly ignore values in screenshots and copy values from **Environment** tab.
+>**Note:** Numbers and ID's values may vary. Kindly ignore values in screenshots and copy values from the **Environment** tab.
 
  ![](../media1/Active-image19.png)
  ![](../media1/Active-image(20).png)
@@ -32,7 +32,7 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
      ![](../media1/Active-image1.png)
 
-      > **Note**: For **Email/Username**, Navigate to **Environment(1)**, click on **Azure credentials (2)**, and copy **Username (3)**.   
+      > **Note:** For **Email/Username**, Navigate to **Environment(1)**, click on **Azure credentials (2)**, and copy **Username (3)**.   
             
       ![](../media/ad1.png)
 
@@ -42,7 +42,7 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
       ![](../media1/Active-image2.png)
 
-      > **Note**: For **Password**, Navigate to **Environment(1)**, click on **Azure credentials (2)**, and copy **Password (3)**.   
+      > **Note:** For **Password**, Navigate to **Environment(1)**, click on **Azure credentials (2)**, and copy **Password (3)**.   
             
       ![](../media/ad2.png)      
 
@@ -82,15 +82,15 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 ## Solution Guide 
 
-### Task 1: Setup a GitHub repository
+### Task 1: Set up a GitHub repository
 
-In this task, you will login to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
+In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
 1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **License** **(2)** tab and **copy** **(3)** the credentials. Use the same username and password to log into GitHub.
 
    ![](../media/ad3.png) 
    
-1. For **Device Verification Code**, use the same credentials as in the previous step, open `http://outlook.office.com/` in a private window, and enter the same username and password used for the GitHub Account login. Copy the verification code and Paste it into Device verification.
+1. For **Device Verification Code**, use the same credentials as in the previous step, open `http://outlook.office.com/` in a private window, and enter the same username and password used for the GitHub Account login. Copy the verification code and paste it into Device verification.
 
    ![](../media/2dgn154.png) 
     
@@ -110,7 +110,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
    ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s5.png "New Repository Creation Form")
    
-   >**Note**: **If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow steps below from 1 to 6. Otherwise, skip to step 7**.
+   >**Note:** **If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow the steps below from 1 to 6. Otherwise, skip to step 7**.
 
    1. In the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
 
@@ -144,11 +144,11 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
    ![](../media/cl1-t1-s13.png) 
    
-1. Navigate  to the **Visual Studio Code (1)** application . Click on **... (2)** at the top and select **Terminal (3)** from the **drop-down** and choose **New Terminal (4)**, this opens a fresh PowerShell terminal tab.
+1. Navigate  to the **Visual Studio Code (1)** application. Click on **... (2)** at the top and select **Terminal (3)** from the **drop-down** and choose **New Terminal (4)**, which opens a fresh PowerShell terminal tab.
 
    ![Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/ex1-task1-5.png "Quick setup screen")
 
-1. In Visual Studio Code, run the below commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
+1. In Visual Studio Code, run the following commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
    
      ```pwsh
      cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files
@@ -160,7 +160,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
      
     Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` with the value you copied in step 7 and `Unique-ID` in step 8.
 
-    Note: This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
+    **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
 
       ```pwsh
       git init
@@ -211,19 +211,19 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
 4. Under the **Actions Secrets/New secret** page, enter the below-mentioned details and click on **Add secret** **(3)**.
 
-   - **Name** : Enter **SERVICEPRINCIPAL** **(1)**
-   - **Value** : Paste the service principal details in JSON format **(2)**
+   - **Name:** Enter **SERVICEPRINCIPAL** **(1)**
+   - **Value:** Paste the service principal details in JSON format **(2)**
    
       ![](../media/2dgn36.png)
 
 5. To create another secret, under the **Actions Secrets/New secret** page, click on **New repository secret**. Enter the below-mentioned details and click on **Add secret** ***(3)***.
 
-   - **Name**: Enter **SQLPASSWORD** ***(1)***
-   - **Value**: Enter **Azure Password** ***(2)*** 
+   - **Name:** Enter **SQLPASSWORD** ***(1)***
+   - **Value:** Enter **Azure Password** ***(2)*** 
 
       ![](../media/ex-task1-11.png)
 
-      > **Note**: For **Azure Password**, Navigate to **Environment (1)**, click on **Azure credentials (2)**, and copy **Password (3)**.
+      > **Note:** For **Azure Password**, Navigate to **Environment (1)**, click on **Azure credentials (2)**, and copy **Password (3)**.
       
       ![](../media/ad2.png)   
 
@@ -233,23 +233,22 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
 7. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
-   - **Name**: Enter **DEPLOYMENTREGION** ***(1)***
-   - **Value**: Add the deployment region where you want to get the resources deployed. preferenced **eastus2,uksouth,australiaeast** **(2)**
+   - **Name:** Enter **DEPLOYMENTREGION** ***(1)***
+   - **Value:** Add the deployment region where you want to get the resources deployed. preferenced **eastus2,uksouth,australiaeast** **(2)**
    
      ![](../media/ex1-task1-10.png)
 
 8. To create another **Variable** click on **New repository variable** ,Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
-   - **Name**: Enter **SUFFIX** ***(1)***
-   - **Value**: Create a secret to store the deployment ID **(2)**
+   - **Name:** Enter **SUFFIX** ***(1)***
+   - **Value:** Create a secret to store the deployment ID **(2)**
   
      ![](../media/ex1-task1-12.png)
 
-      > **Note**: You can find the **Deployment ID** within the environment by navigating to the **Environment Details (1)**, click on **Azure credentials (2)**, and copy **Deployment ID** **(3)**.
+      > **Note:** You can find the **Deployment ID** within the environment by navigating to the **Environment Details (1)**, click on **Azure credentials (2)**, and copy **Deployment ID** **(3)**.
 
       ![](../media1/Deployment_ID.png)
      
-
 9. To run a workflow, perform the following steps and wait for the resources to be deployed within your Azure Portal:
       - Click on **Actions (1)** within your GitHub repository.
       - Select the workflow named **contoso-traders-provisioning-deployment (2)**.
@@ -258,8 +257,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
         ![](../media1/ex1-task1-15.png)
 
-
-### Task 3: Setup CI/CD Workflow
+### Task 3: Set up CI/CD Workflow
 
 1. From the Azure Portal Dashboard, click on **Resource Groups** from the Navigate panel to see the resource groups.
 
@@ -269,7 +267,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
    ![](../media/ex1-task1-13.png)  
 
-   >**Note** : XXXXXXX represents the Deployment ID, which can be found in the Environment section.
+   >**Note:**  XXXXXXX represents the Deployment ID, which can be found in the Environment section.
    
 1. Select the **productsdb** SQL database from the list of resources.
 
@@ -289,11 +287,11 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
     
 1. Under the **Actions Secrets/Update secret** page, enter the below-mentioned details, and click on **Update secret.**
 
-   - **Value**: Paste the **ADO.NET (SQL authentication)** that you  have copied in the previous step.
+   - **Value:** Paste the **ADO.NET (SQL authentication)** that you  have copied in the previous step.
    
       ![](../media/ex1-task3-2.png)
    
-      >**Note**: Replace `{your_password}` with the ODL User Azure Password. Go to **Environment (1)**, click on **Azure credentials (2)**, and copy **Password (3)**.
+      >**Note:** Replace `{your_password}` with the ODL User Azure Password. Go to **Environment (1)**, click on **Azure credentials (2)**, and copy **Password (3)**.
       
       ![](../media/ad2.png)   
       
@@ -331,15 +329,15 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
     
    The last task automated building and updating only one of the Docker images. In this task, we will update the workflow file with a more appropriate workflow for the structure of our repository. This task will end with    a file named `docker-publish.yml` that will rebuild and publish Docker images as their respective code is updated.
 
-   > **Note :** If you see the **Know your location** pop-up, click on **Block**.
+   > **Note:** If you see the **Know your location** pop-up, click on **Block**.
 
 ## Success criteria:
 To complete this challenge successfully:
 
 - The application must be deployed using VS Code, which supports GitHub Actions.
 - A new repository must have been created.
-- **CI/CD Implementation**: The CI/CD pipeline should be established using GitHub Actions, encompassing build, test, and deployment stages effectively.
-- **Deployment Accuracy**: The application must be successfully deployed using GitHub Actions, and the chosen deployment strategy should align with the project's requirements.
+- **CI/CD Implementation:** The CI/CD pipeline should be established using GitHub Actions, encompassing build, test, and deployment stages effectively.
+- **Deployment Accuracy:** The application must be successfully deployed using GitHub Actions, and the chosen deployment strategy should align with the project's requirements.
 
 ## Additional Resources:
 
