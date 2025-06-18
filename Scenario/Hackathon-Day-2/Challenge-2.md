@@ -1,6 +1,6 @@
 # Challenge 02: GitHub Advanced Security - Implement Code Security Enhancements
 
-### Estimated Time: 60 minutes
+### Estimated Time: 60 Minutes
 
 ### Introduction:
 In this previous challenge, you successfully hosted the application using the GitHub repository and GitHub Actions for Continuous Integration and Continuous Delivery. In this challenge, you are a DevSecOps engineer tasked with ensuring the security of the Contoso Traders application hosted on GitHub. In this challenge, your goal is to mitigate risks in dependencies and secure sensitive data using advanced security features provided by GitHub. 
@@ -15,7 +15,7 @@ You need to focus on completing the implementation of the below-mentioned securi
 
 ## Accessing GitHub
 
-1. To access and login to GitHub, open the Edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
+1. To access and log in to GitHub, open the Edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
 
 2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
 
@@ -27,7 +27,6 @@ You need to focus on completing the implementation of the below-mentioned securi
 
    - **Password:** <inject key="GitHubPassword"></inject>
 
-
 ## Challenge Objectives:
 
 > **Note**: Use the same GitHub repository that you created in the last challenge.
@@ -35,8 +34,8 @@ You need to focus on completing the implementation of the below-mentioned securi
 1. **Implement Code Scanning and CodeQL:**
  
    - Enable Code scanning for the repository.
-   - Configure CodeQL analysis in the workflow to the existing GitHub.
-   - Use **Advanced** option when creating a CodeQL Analysis YAML file.
+   - Configure CodeQL analysis in the workflow for the existing GitHub.
+   - Use the **Advanced** option when creating a CodeQL Analysis YAML file.
    - Resolve the generated alerts, if any.
 
 2. **Implement Repository security advisories:**
@@ -53,7 +52,7 @@ You need to focus on completing the implementation of the below-mentioned securi
 To complete this challenge successfully:
 
    - Verify the implementation of setting up Code Scanning and CodeQL via alerts.
-   - Configure the Repository security advisories feature and create temporary private fork.
+   - Configure the Repository security advisories feature and create a temporary private fork.
 
 ## Additional Resources:
 
