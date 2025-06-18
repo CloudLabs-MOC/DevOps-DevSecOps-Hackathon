@@ -1,6 +1,6 @@
 # Challenge 05: Implementing Monitoring Solutions for Contoso Traders
 
-### Estimated Time: 60 minutes
+### Estimated Time: 60 Minutes
 
 ## Introduction:
 
@@ -14,7 +14,7 @@ In this challenge, you will integrate Azure's monitoring tools—Azure Monitor a
 
    - Create and set up Application Insights for the Contoso traders application using `monitoringinfra.bicep`.and update **DeploymentID** in the `monitoringinfra.parameters.json` file.
 
-     >**Note :** The `monitoringinfra.bicep` file is 
+     >**Note:** The `monitoringinfra.bicep` file is 
      located at:
      `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files`
 
@@ -29,7 +29,7 @@ In this challenge, you will integrate Azure's monitoring tools—Azure Monitor a
 ## Success criteria:
 To complete this challenge successfully:
 
-- Verify the Monitoring dashboards where data should be populated based on usage of Contoso traders application.
+- Verify the Monitoring dashboards where data should be populated based on the usage of the Contoso traders application.
 
 ## Additional Resources:
 
