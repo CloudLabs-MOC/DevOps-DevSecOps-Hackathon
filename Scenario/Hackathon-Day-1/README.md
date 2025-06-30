@@ -1,4 +1,4 @@
-# DevOps/DevSecOps Challenge: 1-Day Attendee Guide
+# Accelerate Development with GitHub Copilot Challenge: 1-Day Attendee Guide
 
 Welcome to the DevSecOps Mastery with GitHub Hackathon! This event is your gateway to mastering DevSecOps practices within a modern application environment. We have crafted this hackathon to provide you with a robust learning experience focused on Contoso Traders, a hypothetical e-commerce company using a React front-end, .NET back-end, and various microservices and container services.
 
