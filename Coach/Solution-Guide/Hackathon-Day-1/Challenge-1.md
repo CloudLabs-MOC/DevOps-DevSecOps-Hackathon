@@ -41,27 +41,90 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 In this task, you will login to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **Licenses** **(2)** tab and **copy** **(3)** the credentials. Use the same username and password to log into GitHub.
+1. In the LABVM desktop, open the **Microsoft Edge** browser.
 
-   ![](../media/devops-devsecops-new-1.png) 
-   
-1. For **Device Verification Code**, use the same credentials as in the previous step, open `http://outlook.office.com/` in a private window, and enter the same username and password used for the GitHub Account login. Copy the verification code and Paste it into Device verification.
+   ![](../media/23-7-25-g-1.png)
 
-   ![](../media/2dgn154.png) 
-    
-1. In the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
+   >**Note**: If you see any open PowerShell prompts running, please minimize them and proceed with the next steps.
 
-   ![The `New Repository` creation form in GitHub.](../media/160625(01).png "New Repository Creation Form")
+   ![](../media/minimise-screen.png)
 
-   ![The `New Repository` creation form in GitHub.](../media/160625(02).png "New Repository Creation Form")
+1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
 
-1. Next to the search criteria, locate and select the **New** button.
+   ```
+   https://github.com/login
+   ```
 
-   ![The `New Repository` creation form in GitHub.](../media/ex2-t3-3-git.png "New Repository Creation Form")
+1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
 
-1. On the **Create a new repository** screen, name the repository ```devsecops``` **(1)**, select **Public** **(2)**, and click on the **Create repository** **(3)** button.
+    - Email/Username: <inject key="GitHub User Name" enableCopy="true"/>`
 
-   ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s5.png "New Repository Creation Form")
+      ![](../media/01.png)
+
+1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
+
+    ![](../media/02.png)
+
+1. You'll see the **Sign in** tab. Here, enter your Azure Entra credentials:
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+       ![Enter Your Username](../media/03.png)
+
+1. Next, provide your password and click on **Sign in**
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+      ![Enter Your Password](../media/04.png)
+
+1. On the **Stay Signed in?** pop-up, click on No.
+
+    ![](../media/05.png)
+
+1. On the **Permission requested by** pop-up, click on **Accept**.
+
+      ![Enter Your Password](../media/06.png)
+
+1. On top right of the Github page click this **Icon** then select **Your organizations**.
+
+   ![](../media/07.png)
+
+   ![](../media/08.png)
+
+1. You are now successfully logged in to **GitHub** and have been redirected to the **GitHub homepage**.
+
+   ![](../media/09.png)
+
+1. Click on the **Copy link** button, then open a new tab in the Edge browser inside the LabVM. Paste the link into the address bar and press Enter. Ensure you're logged into GitHub, as described in the previous steps.
+
+      ```
+      https://github.com/new?template_owner=skills&template_name=copilot-codespaces-vscode&owner=%40me&name=skills-copilot-codespaces vscode&description=My+clone+repository&visibility=public
+      ```
+
+   <!-- For start course, run in JavaScript:
+      'https://github.com/new?' + new URLSearchParams({
+        template_owner: 'skills',
+        template_name: 'copilot-codespaces-vscode',
+        owner: '@me',
+        name: 'skills-copilot-codespaces-vscode',
+        description: 'My clone repository',
+        visibility: 'public',
+      }).toString()
+   -->
+
+1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
+
+    - Enter your Repository name as:
+
+      ```
+      skills-copilot-codespaces-vscode-<inject key="Deployment-id" enableCopy="false"/>
+      ```
+
+      
+    - Then click **Create repository** **(3)** to continue
+
+      ![](../media/10.png)
+
    
    >**Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow steps 6 to 11. Otherwise, skip to step 12.
 
@@ -174,7 +237,9 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
    - **Name**: Enter **SQLPASSWORD** ***(1)***
    - **Value**: You need to enter any unique password with combination of Alphanumeric letters. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
 
-      ![](../media/sqlpass.png)
+      ![](../media/12.png)
+
+      ![](../media/12.png)
 
 7. Under the **Actions Secrets/New variable** page, enter the below-mentioned details and click on **Add variable** ***(3)***.
 
@@ -191,7 +256,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
       - Click on **Run workflow (3)**.
       - Finally, click on **Run workflow (4)**. Ensure that the branch is selected as **main**.
 
-         ![](../media/cl1-t2-s10.png)
+         ![](../media/14.png)
 
 
 11. Navigate to `.github/workflow/update-contoso-traders-App.yml` path, ensure to update the `AKS_NODES_RESOURCE_GROUP_NAME` and`RESOURCE_GROUP_NAME` environment variable by replacing `<deployment-id>` with **<inject key="DeploymentID" enableCopy="false" />**, once updated click commit changes to save the file:
