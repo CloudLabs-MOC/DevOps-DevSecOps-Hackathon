@@ -41,13 +41,14 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 In this task, you will login to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
+
 1. In the LABVM desktop, open the **Microsoft Edge** browser.
 
-   ![](../media/23-7-25-g-1.png)
+   ![](../media/n27.png)
 
    >**Note**: If you see any open PowerShell prompts running, please minimize them and proceed with the next steps.
 
-   ![](../media/minimise-screen.png)
+   ![](../media/n28.png)
 
 1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
 
@@ -93,6 +94,8 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
 1. You are now successfully logged in to **GitHub** and have been redirected to the **GitHub homepage**.
 
+1. Selcet **New** to create a new repository
+
    ![](../media/09.png)
 
 1. Click on the **Copy link** button, then open a new tab in the Edge browser inside the LabVM. Paste the link into the address bar and press Enter. Ensure you're logged into GitHub, as described in the previous steps.
@@ -117,7 +120,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
     - Enter your Repository name as:
 
       ```
-      skills-copilot-codespaces-vscode-<inject key="Deployment-id" enableCopy="false"/>
+      devsecops-<inject key="Deployment-id" enableCopy="false"/>
       ```
 
       
@@ -126,39 +129,32 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
       ![](../media/10.png)
 
    
-   >**Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow steps 6 to 11. Otherwise, skip to step 12.
+   >**Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow steps 15 to 20. Otherwise, skip to step 21.
 
-1. In the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
+1. On the overview page search existing repository.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg1.png "New Repository Creation Form")
+   ![The `New Repository` creation form in GitHub.](../media/n29.png "New Repository Creation Form")
 
-1. Using the search bar, search for ```devsecops``` **(1)** and open it.
+1. Select **Settings** in that existing repository.
 
-   ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s7.png "New Repository Creation Form")
-
-1. From the GitHub repository, click on the **Settings** tab.
-
-   ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s8.png "New Repository Creation Form")
+   ![](../media/n30.png)
 
 1. In the settings page, scroll to the bottom of the page to select **Delete this repository**, and then click on **I want to delete this repository**.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
+   ![](../media/n31.png)
 
 1. Within the following pop-up window, click on **I have read and understand these effects**.
 
-   ![](../media/cl1-t1-s10.png)
+   ![](../media/n33.png)
 
-1. In the succeeding pop-up window, copy the **repository name** **(1)**, paste it in the **box** **(2)**, and click on **Delete this repository** **(3)**.
+1. In the succeeding pop-up window, copy the repository name , paste it in the box, and click on **Delete this repository**.
 
-   ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s11.png "New Repository Creation Form")
+   ![](../media/n34.png)
 
 1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
    ![](../media/cl1-t1-s12.png)
-   
-1. From the GitHub username, note down the **Unique-ID** present in the Username. You'll need this in the upcoming steps.
-
-   ![](../media/cl1-t1-s13.png) 
+    
    
 1. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
 
@@ -187,8 +183,8 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
       git add .
       git commit -m "Initial commit"
       git branch -M main
-      git remote add origin<Unique-ID> <your_github_repository-url>
-      git push -u origin<Unique-ID> main
+      git remote add origin <your_github_repository-url>
+      git push -u origin main
       ```
      
    - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
@@ -230,24 +226,25 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
    - **Name** : Enter **SERVICEPRINCIPAL** **(1)**
    - **Value** : Paste the service principal details in JSON format **(2)**
    
-      ![](../media/2dgn36.png)
+      ![](../media/n20.png)
 
-6. To create another secret, under the **Actions Secrets/New secret** page, enter the below-mentioned details and click on **Add secret** ***(3)***.
+6. To create another secret, under the **Actions Secrets/New secret** page, enter the below-mentioned details and click on **Add secret** **(3)**.
 
    - **Name**: Enter **SQLPASSWORD** ***(1)***
    - **Value**: You need to enter any unique password with combination of Alphanumeric letters. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
 
-      ![](../media/12.png)
-
-      ![](../media/12.png)
+      ![](../media/13.png)
 
 7. Under the **Actions Secrets/New variable** page, enter the below-mentioned details and click on **Add variable** ***(3)***.
 
    - **Name** : Enter **SUFFIX** ***(1)***
    - **Value** : **<inject key="DeploymentID" enableCopy="false" />** (Copy the Deployment ID from the environment details tab) ***(2)***
    
-       
-8. Same as above create a new variable called **DEPLOYMENTREGION** and enter the region where you want to deploy your infrastructure. 
+      ![](../media/N21.png)
+
+8. Same as above create a new variable called **DEPLOYMENTREGION** and enter the region (Example: eastus2) where you want to deploy your infrastructure. 
+
+   ![](../media/n22.png)
 
 
 10. To run a workflow, perform the following steps and wait for the resources to be deployed within your Azure Portal:
@@ -256,20 +253,9 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
       - Click on **Run workflow (3)**.
       - Finally, click on **Run workflow (4)**. Ensure that the branch is selected as **main**.
 
-         ![](../media/14.png)
+         ![](../media/cl1-t2-s10.png)
 
-
-11. Navigate to `.github/workflow/update-contoso-traders-App.yml` path, ensure to update the `AKS_NODES_RESOURCE_GROUP_NAME` and`RESOURCE_GROUP_NAME` environment variable by replacing `<deployment-id>` with **<inject key="DeploymentID" enableCopy="false" />**, once updated click commit changes to save the file:
-
-    ![](../media/dso1.png) 
-
-12. To run a workflow, perform the following steps and wait for the resources to be deployed within your azure portal:
-      - Click on **Actions (1)** within your GitHub repository.
-      - Select on the workflow named **update contoso traders app (2)**.
-      - Click on **Run workflow (3)**.
-      - Finally click on **Run workflow (4)**. Ensure that the branch is select as **main**.
-
-         ![](../media/dso2.png) 
+         ![](../media/n35.png)
 
 ### Task 3: Setup CI/CD Workflow
 
@@ -291,7 +277,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
  
 1. In your GitHub lab files repository, select the **Settings** tab from the lab files repository.
 
-   ![](../media/cl1-t1-s8.png)
+   ![](../media/n23.png)
    
 1. Under **Security**, expand **Secrets and variables** ***(1)*** by clicking the drop-down and selecting **Actions** ***(2)*** from the left navigation bar. Select the edit button for the created secret named **SQL_PASSWORD** ***(3)***.
 
@@ -301,22 +287,22 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
    - **Value**: Paste the **ADO.NET (SQL authentication)** that you  have copied in the previous step.
    
-      ![](../media/cl1-t3-s7.png)
+      ![](../media/n24.png)
    
    >**Note**: Replace `{your_password}` with the password that you have used initially
    
    
 1. From your GitHub repository, select the **Actions** ***(1)*** tab. Select the **contoso-traders-app-deployment** ***(2)*** workflow from the side blade, Click on the  **drop-down** ***(3)*** next Run workflow button, and select **Run workflow** ***(4)***.
 
-   ![](../media/2dgn159.png)
+   ![](../media/n25.png)
    
 1. Navigate back to the Actions tab and select the **contoso-traders-app-deployment** workflow. This workflow builds the Docker image, which is pushed to the container registry. The same image is pushed to the Azure container application.
 
-   ![](../media/2dgn124.png)
+   ![](../media/n26.png)
    
 
    
-   **Note**: If the workflow **fails** due to the **npm install** job, follow steps 13 to 15. Otherwise, continue from step 16. 
+   **Note**: If the workflow **fails** due to the **npm install** job, follow steps 10 to 12. 
    
 1. From the GitHub browser tab, follow the steps given below and click on **Create codespace on main** ***(3)***.
 
@@ -354,56 +340,19 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
    ![](../media/2dgn135.png) 
    
-3. Select the **contosotraders-ui2<inject key="DeploymentID" enableCopy="false" />** endpoint from the list of resources.
+3. Select the **contoso-traders-cdn<inject key="DeploymentID" enableCopy="false" />** Front Door from the list of resources.
 
-   ![](../media/2dgn127.png) 
+   ![](../media/S3.png) 
    
-4. Click on the **Endpoint hostname**. It'll open a browser tab where you will be able to verify that the Contoso Traders app has been hosted successfully.
+4. Once you opened the Fron Door Just scroll dow under **properties** you can see the **Endpoint hostname** just copy it and paste in new tab.
 
-   ![](../media/2dgn128.png) 
+   ![](../media/S4.png) 
     
    ![](../media/2dgn162.png) 
     
    The last task automated building and updating only one of the Docker images. In this task, we will update the workflow file with a more appropriate workflow for the structure of our repository. This task will end with    a file named `docker-publish.yml` that will rebuild and publish Docker images as their respective code is updated.
 
-5. From the GitHub browser tab, follow the steps given below and click on **Create codespace on main** ***(3)***.
-
-   - Click on **Code** ***(1)***, 
-   - Select the **Codespace** ***(2)*** tab
-
-      ![](../media/ex2-kc-codespace.png)
    
-      >**Note**: In case you have created a codespace in a previous task. Click on the **+** button to create a new codespace.
-   
-6. You'll be redirected to a new codespace tab in the browser. Please wait until the codespace is configured.
-
-   ![](../media/2dg33.png)
-   
-7. From the explorer side blade, navigate to **.github (1)** > **workflows** **(2)** and select the **contoso-traders-provisioning-deployment.yml** **(3)** file.
-
-   ![](../media/contosoprovision.png) 
-   
-8. Remove the commands from lines 7 to 14 from the workflow file.
-
-   ![](../media/2dgn163.png) 
-   
-9. Using the terminal from codespace, run the following commands to commit this change to your repo and push the change to GitHub.
-
-   ```pwsh
-   git add .
-   git commit -m "Updating app deployment"
-   git push
-   ```
-   ![](../media/2dgn133.png) 
-    
-   > **Note**: This will update the workflow and will **not** run the "Update the ... Docker image" jobs.
-
-10. Navigate back to the GitHub browser, select the **Actions** ***(1)*** tab, and review the **workflow** ***(2)*** created automatically for the changes made. 
-
-      ![](../media/2dgn164.png)
-
-11. Click on the **Next** button present in the bottom-right corner of this lab guide.
-
 ## Success criteria:
 To complete this challenge successfully:
 
