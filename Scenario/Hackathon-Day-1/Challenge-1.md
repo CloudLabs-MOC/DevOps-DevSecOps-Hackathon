@@ -66,26 +66,26 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
    - Enter your GitHub **Username** **(1)** as:
     
      ```
-     odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs
+     odl-user-<inject key="Deployment ID" enableCopy="false"/>_clabs
      ```
     
    - Click on **Sign in with your identity provider** **(2)** to continue.
 
-     ![](../media1/github-logina-1.png)
+     ![](../media/github-logina-1.png)
 
 1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
 
-   ![](../media1/github-loginb.png)
+   ![](../media/github-loginb.png)
 
 1. You are now successfully logged in to GitHub.
 
 1. Click on **Github profile icon** on the top right corner and choose **Your Repositories** from the menu.
 
-   ![](../media1/your-repo.png)
+   ![](../media/your-repo.png)
 
 1. Click on **New**
   
-   ![](../media1/new-repo.png)
+   ![](../media/new-repo.png)
    
 1. Follow the steps below to create a new repository:
    
@@ -93,13 +93,13 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
     - Enter the **Repository name (2)** as below:
     
       ```
-      devsecops-<inject key="DeploymentID"enableCopy="false"/>
+      devsecops-<inject key="Deployment ID"enableCopy="false"/>
       ```
     - Set the  repository visibility to **Private(3)**, 
  
     - Click on **Create repository (4)**.
 
-      ![](../media1/github-repo-create-1.png)
+      ![](../media/github-repo-create-1.png)
 
 ## Challenge Objectives:
 
@@ -136,7 +136,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
      - Create GitHub variables with the same name as mentioned below.   
         - **DEPLOYMENTREGION**: Add the deployment region where you want to get the resources deployed. preferenced **eastus2,uksouth,australiaeast**
       
-        - **SUFFIX**: Create a variables to store the deployment ID which is **<inject key="DeploymentID" enableCopy="false" />**.
+        - **SUFFIX**: Create a variables to store the deployment ID which is **<inject key="Deployment ID" enableCopy="false" />**.
        
        >**Hint**: You can also find the deployment ID and the Azure AD password within the environment details tab of your integrated lab guide.
  
