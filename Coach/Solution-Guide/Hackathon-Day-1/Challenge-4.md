@@ -10,28 +10,77 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 ### Task 1: Deploy Monitoring Infrastructure
 
-1. You will deploy the complete monitoring infrastructure using the Bicep template. The monitoring infrastructure includes Application Insights, a secret created for Application Insights, and a monitoring dashboard.
+1. You will deploy the complete monitoring infrastructure using the Bicep template named monitoringinfra.bicep. The monitoring infrastructure includes Application Insights, a secret created for Application Insights, and a monitoring dashboard.
+
+1. Open VS Code within the VM, and then click on File (1) at the top left corner and then select Open Folder... (2).
+
+    ![](../media/n51.png)
 
 1. Navigate to `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files\iac` path, open the `monitoringinfra.parameters.json` file and update **env** parameter value with **deployment-ID**.
 
-1. Open VS Code, and execute the code.
+    ![](../media/n52.png)
 
-   The below-mentioned code uses a bicep template named `monitoringinfra.bicep` which contains code to deploy the complete monitoring infrastructure.
-   
-   - **Email/Username:** <inject key="GitHubUsername"></inject>
-   - **Password:** <inject key="GitHubPassword"></inject>
+1. Click on Yes, I trust the authors.
 
-   >**Note**: Please use the above-mentioned credentials to login to Azure.
+   ![](../media/n53.png)
+
+1. Open the monitoringinfra.parameters.json (1) file. Locate the env parameter in the JSON file and update its value with the deployment ID (2) and then save.
+
+   >**Note**: You can find the deployment ID within the environment details tab of your integrated lab guide.
+
+   ![](../media/n54.png)
+
+1. In the VS Code Terminal, run the following command to log in to your Azure account:
 
    ```
-   Connect-AzAccount 
-   
-   $RGname = <update the existing RG name>
-   
-   cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files\iac
-   
-   New-AzResourceGroupDeployment -Name "createresource" -TemplateFile "monitoringinfra.bicep" -TemplateParameterFile "monitoringinfra.parameters.json" -ResourceGroup $RGname
+   Connect-AzAccount -UseDeviceAuthentication
    ```
+
+1. Connect-AzAccount -UseDeviceAuthentication
+Go to https://microsoft.com/devicelogin (1) in the VM browser and copy the code (2).
+
+
+    ![](../media/n55.png)
+
+1. Paste the Code (1) you copied earlier and click Next (2).
+
+    ![](../media/n56.png)
+
+1. Choose the account you are using.
+
+    ![](../media/n57.png)
+
+1. Click on Continue.
+
+    ![](../media/n58.png)
+
+1. After signing in, return to Visual Studio Code.
+
+   ![](../media/n59.png)
+
+1. Set the Resource Group Name before running the deployment command. set the $RGname as contoso-traders-rg<DeployementID>
+
+   ```
+   $RGname = '<update the RG name mentioned above>'
+   ```
+
+   ![](../media/n60.png)
+
+   >**Note**: For <DeploymentID>, Navigate to Environment(1), click on Azure credentials (2), and copy (3)
+
+   ![](../media/n61.png)
+
+   >**Note**: Make sure you are in the directory where the Bicep template and parameters file reside. If not, switch to the directory cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files\iac
+
+1. Run the following command to initiate the deployment using the Bicep template and parameters file:
+
+    ```
+    New-AzResourceGroupDeployment -Name "createresource" -TemplateFile "monitoringinfra.bicep" -TemplateParameterFile "monitoringinfra.parameters.json" -ResourceGroup $RGname
+    ```
+
+1. Monitor the output in the terminal, and wait until the deployment succeeds.
+
+    ![](../media/n62.png)
 
 ### Task 2: Monitoring using Application Insights
 
