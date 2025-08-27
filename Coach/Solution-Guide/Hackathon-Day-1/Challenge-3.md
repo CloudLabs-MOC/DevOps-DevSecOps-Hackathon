@@ -16,27 +16,31 @@ In this task, you will use Dependabot to track the versions of the packages we u
 
    > **Note**: Enabling the `Dependabot security updates` will also automatically enable `Dependency graph` and `Dependabot alerts`.
 
-   ![The GitHub Repository Security Overview tab.](../media/devops-devsecops-new-6.png "GitHub Repository Security Overview")
+   ![](../media/n37.png)
 
    > **Note**: The alerts for the repository may take some time to appear. The rest of the steps for this task rely on the alerts being present. You can continue with the next exercise, as this is an independent task and doesn't affect the lab. Please visit this task later and complete it.
 
 1. To observe Dependabot issues, navigate to the **Security** ***(1)*** tab and select the **View Dependabot alerts** ***(2)*** link.
 
-   ![GitHub Dependabot alerts in the Security tab.](../media/devops-devsecops-new-7.png "GitHub Dependabot alerts")
+   ![](../media/n36.png)
 
 1. You should arrive at the `Dependabot alerts` blade in the `Security` tab.
 
-   ![GitHub Dependabot alerts in the Security tab.](../media/devops-devsecops-new-8.png "GitHub Dependabot alerts")
+   ![GitHub Dependabot alerts in the Security tab.](../media/T1S3.png "GitHub Dependabot alerts")
 
-1. Sort the Dependabot alerts by `Package name`. Under the **Package** ***(1)*** dropdown menu, search for **node-forge** ***(2)*** by typing in the search box and selecting **node-forge** ***(3)*** vulnerability.
+1. Sort the Dependabot alerts by `Package name`. Under the **Package** **(1)** dropdown menu, search for **nanoid** **(2)** by typing in the search box and selecting **nanoid** **(3)** vulnerability.
 
-   ![Summary of the `handlebars` Dependabot alert in the list of Dependabot alerts.](../media/ex5-t3-node-forge.png "`handlebars` Dependabot alert")
+   ![](../media/n38.png)
 
 1. Select any of the `node-forge` Dependabot alert entries to see the alert details. After reviewing the alert, select **Review security update**.
 
-   ![The `handlebars` Dependabot alert detail.](../media/ex5-t3-reviewsu.png "Dependabot alert detail")
-   
-   **Note:** If you see the Create Dependabot Security Update option, click on it. After it is created, select Review security update. 
+   ![](../media/n50.png)
+
+   **Note:** If you see the Create Dependabot Security Update option, click on it. After it is created, select Review security update.
+
+   **Note:** If it is taking more than 6 minutes to  Create Dependabot Security Update, you can choose any one of the list.
+
+    ![](../media/n41.png)
 
 1. Navigate to the **Pull Requests** ***(1)*** tab, find the Dependabot security patch pull request ***(2)***, and merge it to your main branch.
 
@@ -44,7 +48,8 @@ In this task, you will use Dependabot to track the versions of the packages we u
    
 1. Click on **Merge pull request**, followed by **Confirm merge**. 
 
-   ![The Pull Request Merge Button in the Pull Request detail.](../media/ex5-t3-merge-pr.png "Pull Request Merge Button")
+   ![](../media/n42.png)
+
     
    >**Note**: In case you see any errors with the merge request, retry steps 4 to 6 by selecting any other Dependabot alert.
 
@@ -61,21 +66,21 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
 1. From your GitHub repository, click on the **Settings** tab.
 
-   ![](../media/2dg110.png)
+   ![](../media/n43.png)
     
 1. Select **Code security** from the sidebar and make sure **Secret scanning is enabled (1)**.
 
-   ![](../media/devops-devsecops-new-9.png)   
+   ![](../media/n44.png)   
     
-1. Navigate back to **Code (1)** and click on the **src (2)** folder.
+1. Navigate back to **Code** and click on the **src** folder.
 
-   ![](../media/2dg112.png)    
+   ![](../media/n45.png)    
    
-1. Click on **Add file** and select the **create new file** option.
+1. Click on **Add file (1)** and select the **create new file (2)** option.
 
-   ![](../media/2dg113.png)    
+   ![](../media/n46.png)    
    
-1. Add a new file with the name **build.docker-compose.yml (1)**, add the code mentioned below **commit** the file. Here, you'll expose the **application ID** of a service principal.
+1. Add a new file with the name **build.docker-compose.yml (1)**, add the code mentioned below **commit** the file, then again commit changes. Here, you'll expose the **application ID** of a service principal.
 
    ```
    version: "3.4"
@@ -88,7 +93,9 @@ In this task, you'll explore how secret scanning works and how it generates aler
       build: ./ContosoTraders.Api.Products
    ```
    
-   ![](../media/devops-devsecops-new-10.png)   
+   ![](../media/n47.png)  
+
+   ![](../media/n48.png) 
 
 1. You will get a pop up window of Secret scanning found Azure Active Directory Application secret found alert. You can either **Allow secret** by selecting the options available i.e It's used in tests, It's a false positive or I'll fix it later or **Cancel** it.
 
@@ -96,7 +103,7 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
 1. Select the **Security (1)** tab and click on **Secret scanning (2)** from the sidebar. Here, you'll notice that an alert is generated referring to the same **Application ID** that was exposed in the `build.docker-compose.yml` file. This is how the Secret scanning feature works and generates alerts to notify you.
 
-   ![](../media/devops-devsecops-new-13.png) 
+   ![](../media/n49.png) 
 
 ## Success criteria:
 To complete this challenge successfully:

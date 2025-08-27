@@ -74,7 +74,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 >**Note:** Only use GitHub and GitHub Actions for CI/CD; no usage of Azure DevOps or any external CI/CD services.
 
 1. **Setup a GitHub repository:**
-   - Create a new GitHub repository with public access permission.
+   - Create a new GitHub repository in organization.
      
    <validation step="5b252fb5-a2f0-4c4c-8b1d-af806a115039" />
       
