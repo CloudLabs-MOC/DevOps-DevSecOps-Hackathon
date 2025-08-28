@@ -12,40 +12,45 @@ This is the solution guide, which provides all the specific, step-by-step direct
 
 In this task, you will use Dependabot to track the versions of the packages we use in our GitHub repository and create pull requests to update packages for us.
 
-1. In your lab files GitHub repository, navigate to the **Settings** ***(1)*** tab and select the **Advanced security** ***(2)*** under Security from the side blade. Make sure **Dependabot alerts** is **Enabled** ***(3)***, if not, click on **Enable** to enable Dependabot alerts. Click on **Enable** ***(4)*** to enable Dependabot security updates.
+1. In your lab files GitHub repository, navigate to the **Settings** ***(1)*** tab and select the **Code security** ***(2)*** under Security from the side blade. Make sure **Dependabot alerts** is **Enabled** ***(3)***, if not, click on **Enable** to Enable Dependabot alerts. Click on **Enable** ***(4)*** to Enable Dependabot security updates.
 
    > **Note**: Enabling the `Dependabot security updates` will also automatically enable `Dependency graph` and `Dependabot alerts`.
 
-   ![The GitHub Repository Security Overview tab.](../media/ex3-task1-1a.png "GitHub Repository Security Overview")
+   ![](../media/n37.png)
 
    > **Note**: The alerts for the repository may take some time to appear. The rest of the steps for this task rely on the alerts being present. You can continue with the next exercise, as this is an independent task and doesn't affect the lab. Please visit this task later and complete it.
 
 1. To observe Dependabot issues, navigate to the **Security** ***(1)*** tab and select the **View Dependabot alerts** ***(2)*** link.
 
-   ![GitHub Dependabot alerts in the Security tab.](../media/cl3-t1-s2.png "GitHub Dependabot alerts")
+   ![](../media/n36.png)
 
 1. You should arrive at the `Dependabot alerts` blade in the `Security` tab.
 
-   ![GitHub Dependabot alerts in the Security tab.](../media/cl3-t1-s3.png "GitHub Dependabot alerts")
+   ![GitHub Dependabot alerts in the Security tab.](../media/n67.png "GitHub Dependabot alerts")
 
-1. Sort the Dependabot alerts by `Package name`. Under the **Package** ***(1)*** dropdown menu, search for **nanoid** ***(2)*** by typing in the search box and selecting **nanoid** ***(3)*** vulnerability.
+1. Sort the Dependabot alerts by `Package name`. Under the **Package** **(1)** dropdown menu, search for **nanoid** **(2)** by typing in the search box and selecting **nanoid** **(3)** vulnerability.
 
-   ![Summary of the `handlebars` Dependabot alert in the list of Dependabot alerts.](../media/160625(05).png "`handlebars` Dependabot alert")
+   ![](../media/n38.png)
 
-1. Select any of the `nanoid` Dependabot alert entries to see the alert details. After reviewing the alert, select **Review security update**.
+1. Select the Dependabot alert entries to see the alert details. After reviewing the alert, select **Review security update**.
 
-   ![](../media/160625(06).png)
+   ![](../media/n50.png)
 
-   ![](../media/160625(07).png)
+   **Note:** If you see the Create Dependabot Security Update option, click on it. After it is created, select Review security update.
 
-   >> **Note:** If you see the Create Dependabot Security Update option, click on it. After it is created, select Review security update.
+   **Note:** If it is taking more than 6 minutes to  Create Dependabot Security Update, you can choose any one of the list.
 
-   ![The `handlebars` Dependabot alert detail.](../media/ch32u.png "Dependabot alert detail")
+    ![](../media/n41.png)
 
-1. It will Navigate to the **Pull Requests** tab, Click on **Merge pull request**, followed by **Confirm merge**.
+1. Navigate to the **Pull Requests** ***(1)*** tab, find the Dependabot security patch pull request ***(2)***, and merge it to your main branch.
 
-   ![List of Pull Requests.](../media/ch33u.png "Pull Requests")
+   ![List of Pull Requests.](../media/cl3-t1-s6.png "Pull Requests")
+   
+1. Click on **Merge pull request**, followed by **Confirm merge**. 
 
+   ![](../media/n42.png)
+
+    
    >**Note**: In case you see any errors with the merge request, retry steps 4 to 6 by selecting any other Dependabot alert.
 
 1. In the LabVM **Start** button, search for **cmd (1)** and select **Command Prompt (2)**.

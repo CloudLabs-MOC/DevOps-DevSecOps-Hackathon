@@ -47,14 +47,21 @@ In this task, you will use Dependabot to track the versions of the packages we u
    ![The Pull Request Merge Button in the Pull Request detail.](../media/ex5-t3-merge-pr.png "Pull Request Merge Button")
     
    >**Note**: In case you see any errors with the merge request, retry steps 4 to 6 by selecting any other Dependabot alert.
+   1. In the LabVM **Start** button, search for **cmd (1)** and select **Command Prompt (2)**.
+
+   ![cmd.](../media/dev1.png "cmd")
 
 1. Pull the latest changes from your GitHub repository to your local GitHub folder.
 
    ```pwsh
-   cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files  # This path may vary depending on how you set up your lab files repository
+   cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files  
    git pull
    ```
-   
+
+    ![cmd.](../media/dev-2.png "cmd")   
+
+     > **Note:** This path may vary depending on how you set up your lab files repository.
+     
 ## Task 2: Implement Secret Scanning:
 
 In this task, you'll explore how secret scanning works and how it generates alerts. GitHub scans repositories for known types of secrets to prevent fraudulent use of secrets that were accidentally committed.

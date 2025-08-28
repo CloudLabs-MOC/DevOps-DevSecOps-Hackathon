@@ -294,60 +294,58 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 ### Task 1: Submit Codebase Modifications to GitHub Repository
 
-1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **Licenses** **(2)** tab and **Copy** **(3)** the credentials. Use the same username and password to log into GitHub.
+1. Navigate back to github organzation page and selcet **New** to create a new repository
 
-   ![](../media/ad3.png) 
+   ![](../media/09.png)
 
-2. Once logged in, on the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
+1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg1.png "New Repository Creation Form")
+    - Enter your Repository name as: `devsecops-2 <did>`
 
-3. Next to the search criteria, locate and select the **New** button.
+       >Note: Make sure replace the did with your deployemnt id.
 
-   ![The `New Repository` creation form in GitHub.](../media/ex2-t3-3-git.png "New Repository Creation Form")
+    - Then click **Create repository** **(3)** to continue
 
-4. On the **Create a new repository** screen, name the repository ```devsecops-2``` **(1)**, select **Public** **(2)**, and click on the **Create repository** **(3)** button.
+      ![](../media/n70.png)
 
-   ![](../media/CL7-EX3-T1-S4.png) 
+1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
-5. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
+   ![](../media/n64.png) 
+      
+1. Navigate  to the **Visual Studio Code (1)** application. Click on **... (2)** at the top and select **Terminal (3)** from the **drop-down** and choose **New Terminal (4)**, which opens a fresh PowerShell terminal tab.
 
-   ![](../media/ex7-task1-3.png)
+   ![Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/ex1-task1-5.png "Quick setup screen")
 
-6. From the GitHub username, note down the **Unique-ID** present in the Username. You'll need this in the upcoming steps.
-
-   ![](../media/cl1-t1-s13.png)
-
-7. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
-
-   ![imported-Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/2dg4.png "Quick setup screen")
-
-8. In Visual Studio Code, run the following commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
+1. In Visual Studio Code, run the following commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
    
      ```pwsh
-     cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2
+     cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files
      git config --global user.email "you@example.com"
      git config --global user.name "Your UserName"
      ```
      
-   ![](../media/ex7-task1-4.png) 
+   ![](../media/ad4.png) 
      
-    Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` with the value you copied in step 5 and `Unique-ID` in step 6.
+    Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` 
 
-    Note: This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository named `devsecops`. 
+    **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
 
       ```pwsh
       git init
       git add .
       git commit -m "Initial commit"
       git branch -M main
-      git remote add origin-<Unique-ID> <your_github_repository-url>
-      git push -u origin-<Unique-ID> main
+      git remote add origin- <your_github_repository-url>
+      git push -u origin main
       ```
-     
-   - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
+      
+   - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager.
+  
+       ![](../media/ad5.png)
 
-       ![](../media/ex2-t3.png)
+   - Click on **Authorize git-ecosystem** to provide access.    
+
+       ![](../media/n63.png)
        
    - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
 
@@ -369,9 +367,9 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 4. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes..** ***(4)***.
   
-   ![](../media/cl2-t1-s3.png)
+   ![](../media/c2t1s3.png)
 
-   ![](../media/ad-19.png) 
+   ![](../media/n65.png) 
 
 5. Navigate to the **Actions** ***(1)*** tab, here you can review the **workflow** ***(2)*** run.
     
@@ -384,75 +382,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 7. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
    
    ![](../media/ex7-task1-5.png)
-
-### Task 3: Implement Repository security advisories
-
-In this task, you'll enable Repository security advisories. You can use GitHub Security Advisories to privately discuss, fix, and publish information about security vulnerabilities in your repository. Anyone with admin permissions to a repository can create a security advisory.
-
-1. Navigate to the **Security** ***(1)*** tab, select **Advisories** ***(2)*** from the side blade, and click on **New draft security advisory** ***(3)***.
-
-   ![](../media/cl2-t2-s1.png)
-
-2. In the Open a draft security advisory tab, under the Advisory Details section, provide the following details:
-
-   - Title: **Improper Access Control in devsecops-2/src/App.js** ***(1)***
-   - CVE identifier: **Request CVE ID later** ***(2)***
-   - Description: **Add** ***(3)*** Replace the below-mentioned details in the description section.
    
-      ```
-      Impact
-      What kind of vulnerability is it? Who is impacted?
-
-      HTTP request handlers should not perform expensive operations such as accessing the file system, executing an operating system command, or interacting with a database without limiting the rate at which requests are accepted. Otherwise, the application becomes vulnerable to denial-of-service attacks where an attacker can cause the application to crash or become unresponsive by issuing a large number of requests at the same time.
-
-      Patches
-      Has the problem been patched? What versions should users upgrade to?
-
-      It is patched and rectified the error. Please use 1.2 version
-
-      Workarounds
-      Is there a way for users to fix or re../mediate the vulnerability without upgrading?
-
-      // set up rate limiter: maximum of five requests per minute
-      var RateLimit = require('express-rate-limit');
-      var limiter = new RateLimit({
-      windowMs: 1601000, // 1 minute
-      max: 5
-      });
-
-      // apply rate limiter to all requests
-      app.use(limiter);
-
-      Added the above code in app.js
-
-      References
-      Are there any links users can visit to find out more?
-
-      https://github.com/OWASP/API-Security/blob/master/2019/en/src/0xa4-lack-of-resources-and-rate-limiting.md
-      https://codeql.github.com/codeql-query-help/javascript/js-missing-rate-limiting/
-      ```
-    
-      ![](../media/CL7-EX3-T3-S2.png)
-
-3. In the **Affected products** section, provide the following details and click on **Create draft security advisory** ***(7)***   
- 
-   - Ecosystem: **composer** ***(1)***
-   - Package name: **devsecops-2/src/App.js** ***(2)***
-   - Affected version: **<1.2** ***(3)***
-   - Patched version: **1.2** ***(4)***
-   - Severity: **High** ***(5)***
-   - Common Weakness Enumerator (CWE): **Improper Access Control (CWE-284)** ***(6)***
-  
-     ![](../media/CL7-EX3-T3-S3.png)
-
-4. Once the security advisory is created, scroll down and click on **Start a temporary private fork**. It is used to collaborate on a patch for this advisory.
-
-    ![](../media/CL7-EX3-T3-S4-a.png)
-    
-    ![](../media/cl2-t2-s4-b.png)
-
-5. After having the temporary fork, you can request a CVE. It is used for GitHub reviews and published security advisories. Upon review, we may use this advisory to send Dependabot alerts to affected repositories and redistribute the advisory through our API and Atom feed.
-
 ## Exercise 4: CI/CD Pipeline Setup and Infrastructure Deployment
 
 ### Task 1: Deploy Infrastructure
@@ -479,14 +409,14 @@ In this task, you'll enable Repository security advisories. You can use GitHub S
 
       - Click on **Authorize AzureAppService**.
 
-        ![](../media/ad21.png)
+        ![](../media/n68.png)
 
       - Provide the **GitHubUserPassword (1)** and then click on **Confirm (2)**
 
         ![](../media/ad22.png)
 
    - **Organization:** Select your assigned Github organization **(7)**.
-   - **Repository:** Select `devsecops-2` **(8)**.
+   - **Repository:** Select `devsecops-2 <did>` **(8)**.
    - **Branch:** `Main` **(9)**.
    - **Build presets:** Search for and select **React (detected) (10)**.
    - **App location:** `/` **(11)**.

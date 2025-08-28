@@ -86,64 +86,66 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **Licenses** **(2)** tab and **Copy** **(3)** the credentials. Use the same username and password to log into GitHub.
+1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
 
-   ![](../media/ad3.png) 
-   
-1. For **Device Verification Code**, use the same credentials as in the previous step, open `http://outlook.office.com/` in a private window, and enter the same username and password used for the GitHub Account login. Copy the verification code and paste it into Device verification.
+   ```
+   https://github.com/login
+   ```
 
-   ![](../media/2dgn154.png) 
-    
-1. In the upper-right corner, expand the user **drop-down menu**.
+1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
 
-   ![The `New Repository` creation form in GitHub.](../media/Ex1-task1-1.png "New Repository Creation Form")
+    - Email/Username: **odl-user-did_clabs** The Username is similar to this  make sure you have to replace the **did** with your **Deployement ID**. Deployement id you can find in Environment Tab.
 
-1. Then select **Your repositories**.
+      ![](../media/01.png)
 
-   ![The `New Repository` creation form in GitHub.](../media/ex1-task1-2.png "New Repository Creation Form")
+1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
 
-1. Next to the search criteria, locate and select the **New** button.
+    ![](../media/02.png)
 
-   ![The `New Repository` creation form in GitHub.](../media/ex1-task1-3.png "New Repository Creation Form")
+1. You'll see the **Sign in** tab. Here, enter your Azure Entra credentials:
 
-1. On the **Create a new repository** screen, name the repository ```devsecops``` **(1)**, select **Public** **(2)**, and click on the **Create repository** **(3)** button.
+   - **Email/Username:** 
 
-   ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s5.png "New Repository Creation Form")
-   
-   >**Note:** **If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow the steps below from 1 to 6. Otherwise, skip to step 7**.
+       ![Enter Your Username](../media/03.png)
 
-   1. In the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
+1. Next, provide your password and click on **Sign in**
 
-      ![The `New Repository` creation form in GitHub.](../media/2dg1.png "New Repository Creation Form")
+   - **Password:** 
 
-   1. Using the search bar, search for ```devsecops``` **(1)** and open it.
+      ![Enter Your Password](../media/04.png)
 
-      ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s7.png "New Repository Creation Form")
+1. On the **Stay Signed in?** pop-up, click on No.
 
-   1. From the GitHub repository, click on the **Settings** tab.
+    ![](../media/n69.png)
 
-      ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s8.png "New Repository Creation Form")
+1. On the **Permission requested by** pop-up, click on **Accept**.
 
-   1. In the settings page, scroll to the bottom of the page to select **Delete this repository**, and then click on **I want to delete this repository**.
+      ![Enter Your Password](../media/06.png)
 
-      ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
+1. You are now successfully logged in to **GitHub** and have been redirected to the **GitHub homepage** On top right of the Github page click this **Icon** then select **Your organizations**.
 
-   1. Within the following pop-up window, click on **I have read and understand these effects**.
+   ![](../media/07.png)
 
-      ![](../media/cl1-t1-s10.png)
+   ![](../media/08.png)
 
-   1. In the succeeding pop-up window, copy the **repository name** **(1)**, paste it in the **box** **(2)**, and click on **Delete this repository** **(3)**.
+1. Selcet **New** to create a new repository
 
-      ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s11.png "New Repository Creation Form")
+   ![](../media/09.png)
+
+1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
+
+    - Enter your Repository name as: **devsecops-did**
+
+       >Note: Make sure replace the did with your deployemnt id.
+
+    - Then click **Create repository** **(3)** to continue
+
+      ![](../media/10.png)
 
 1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
-   ![](../media/ex1-task1-4.png)
-   
-1. From the GitHub username, note down the **Unique-ID** present in the Username. You'll need this in the upcoming steps.
-
-   ![](../media/cl1-t1-s13.png) 
-   
+   ![](../media/n64.png) 
+      
 1. Navigate  to the **Visual Studio Code (1)** application. Click on **... (2)** at the top and select **Terminal (3)** from the **drop-down** and choose **New Terminal (4)**, which opens a fresh PowerShell terminal tab.
 
    ![Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/ex1-task1-5.png "Quick setup screen")
@@ -158,7 +160,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
      
    ![](../media/ad4.png) 
      
-    Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` with the value you copied in step 7 and `Unique-ID` in step 8.
+    Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` 
 
     **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
 
@@ -167,8 +169,8 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
       git add .
       git commit -m "Initial commit"
       git branch -M main
-      git remote add origin-<Unique-ID> <your_github_repository-url>
-      git push -u origin-<Unique-ID> main
+      git remote add origin- <your_github_repository-url>
+      git push -u origin main
       ```
       
    - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager.
@@ -181,7 +183,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
        
    - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
 
-     ![](../media/ex1-task1-7.png)
+     ![](../media/n63.png)
 
 ### Task 2: Deploy Infrastructure
 
@@ -301,7 +303,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    
 1. Navigate back to the Actions tab and select the **contoso-traders-app-deployment** workflow. This workflow builds the Docker image, which is pushed to the container registry. The same image is pushed to the Azure container application.
 
-   ![](../media/2dgn124.png)
+   ![](../media/n26.png)
    
    ![](../media1/2dgn165.png)
    
@@ -317,13 +319,13 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    > **Note:** XXXXXX represents the Deployment ID, which can be found in the Environment section.
    
-3. Select the **contoso-traders-ui2<inject key="DeploymentID" enableCopy="false" />** Endpoint from the list of resources.
+3. Select the **contoso-traders-cdn XXXXXXX** Front Door from the list of resources.
 
-   ![](../media/2dgn127.png) 
+   ![](../media/S3.png) 
    
-4. Click on the **Endpoint hostname**. It'll open a browser tab where you will be able to verify that the Contoso Traders app has been hosted successfully.
+4. Once you opened the Fron Door Just scroll dow under **properties** you can see the **Endpoint hostname** just copy it and paste in new tab.
 
-   ![](../media/2dgn128.png) 
+   ![](../media/S4.png) 
     
    ![](../media/2dgn162.png) 
     
