@@ -5,15 +5,6 @@ This challenge is designed to evaluate the attendee/user skills in creating a ro
 
 Here's the solution guide, which includes detailed step-by-step instructions required to complete the challenge.
 
-## Accessing GitHub
-
-1. To access and log into GitHub, open the edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
-
-2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
-
-3. On the **Sign into GitHub tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
-
-4. Now enter the following password and click on **Sign in**.
 
 ## Accessing the Azure Portal
 
@@ -86,102 +77,114 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **Licenses** **(2)** tab and **Copy** **(3)** the credentials. Use the same username and password to log into GitHub.
+1. In the LABVM desktop, open the **Microsoft Edge** browser.
 
-   ![](../media/ad3.png) 
-   
-1. For **Device Verification Code**, use the same credentials as in the previous step, open `http://outlook.office.com/` in a private window, and enter the same username and password used for the GitHub Account login. Copy the verification code and paste it into Device verification.
+   ![](../media/n27.png)
 
-   ![](../media/2dgn154.png) 
-    
-1. In the upper-right corner, expand the user **drop-down menu**.
+   > **Note**: If you see any open PowerShell prompts running, please minimize them and proceed with the next steps.
 
-   ![The `New Repository` creation form in GitHub.](../media/Ex1-task1-1.png "New Repository Creation Form")
+   ![](../media/n28.png)
 
-1. Then select **Your repositories**.
+1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
 
-   ![The `New Repository` creation form in GitHub.](../media/ex1-task1-2.png "New Repository Creation Form")
+   ```
+   https://github.com/login
+   ```
 
-1. Next to the search criteria, locate and select the **New** button.
+1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
 
-   ![The `New Repository` creation form in GitHub.](../media/ex1-task1-3.png "New Repository Creation Form")
+   - Email/Username: <inject key="GitHub User Name" enableCopy="true"/>`
 
-1. On the **Create a new repository** screen, name the repository ```devsecops``` **(1)**, select **Public** **(2)**, and click on the **Create repository** **(3)** button.
+     ![](../media/01.png)
 
-   ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s5.png "New Repository Creation Form")
-   
-   >**Note:** **If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow the steps below from 1 to 6. Otherwise, skip to step 7**.
+1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
 
-   1. In the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
+   ![](../media/02.png)
 
-      ![The `New Repository` creation form in GitHub.](../media/2dg1.png "New Repository Creation Form")
+1. You'll see the **Sign in** tab. Here, enter your Azure Entra credentials:
 
-   1. Using the search bar, search for ```devsecops``` **(1)** and open it.
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-      ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s7.png "New Repository Creation Form")
+      ![Enter Your Username](../media/03.png)
 
-   1. From the GitHub repository, click on the **Settings** tab.
+1. Next, provide your password and click on **Sign in**
 
-      ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s8.png "New Repository Creation Form")
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-   1. In the settings page, scroll to the bottom of the page to select **Delete this repository**, and then click on **I want to delete this repository**.
+     ![Enter Your Password](../media/04.png)
 
-      ![The `New Repository` creation form in GitHub.](../media/2dg120.png "New Repository Creation Form")
+1. On the **Stay Signed in?** pop-up, click on No.
 
-   1. Within the following pop-up window, click on **I have read and understand these effects**.
+   ![](../media/05.png)
 
-      ![](../media/cl1-t1-s10.png)
+1. On the **Permission requested by** pop-up, click on **Accept**.
 
-   1. In the succeeding pop-up window, copy the **repository name** **(1)**, paste it in the **box** **(2)**, and click on **Delete this repository** **(3)**.
+   ![Enter Your Password](../media/06.png)
 
-      ![The `New Repository` creation form in GitHub.](../media/cl1-t1-s11.png "New Repository Creation Form")
+1. On top right of the Github page click this **Icon** then select **Your organizations**.
+
+   ![](../media/07.png)
+
+   ![](../media/08.png)
+
+1. You are now successfully logged in to **GitHub** and have been redirected to the **GitHub homepage**.
+
+1. Selcet **New** to create a new repository
+
+   ![](../media/09.png)
+
+1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
+
+   - Enter your Repository name as:
+
+     ```
+     devsecops-{Deployment-id}
+     ```
+
+   - Then click **Create repository** **(3)** to continue
+
+     ![](../media/10.png)
+
 
 1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
-   ![](../media/ex1-task1-4.png)
+   ![](../media/cl1-t1-s12.png)
+    
    
-1. From the GitHub username, note down the **Unique-ID** present in the Username. You'll need this in the upcoming steps.
+1. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
 
-   ![](../media/cl1-t1-s13.png) 
+   ![Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/2dg4.png "Quick setup screen")
+
+   >**Note**: If the terminal is not open by default, please navigate to the terminal and click on new terminal.
+
+1. In Visual Studio Code, run the below commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
    
-1. Navigate  to the **Visual Studio Code (1)** application. Click on **... (2)** at the top and select **Terminal (3)** from the **drop-down** and choose **New Terminal (4)**, which opens a fresh PowerShell terminal tab.
-
-   ![Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/ex1-task1-5.png "Quick setup screen")
-
-1. In Visual Studio Code, run the following commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
-   
-     ```pwsh
-     cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files
-     git config --global user.email "you@example.com"
-     git config --global user.name "Your UserName"
-     ```
+   ```pwsh
+   cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files
+   git config --global user.email "you@example.com"
+   git config --global user.name "Your UserName"
+   ```
      
-   ![](../media/ad4.png) 
+   ![](../media/cl1-t1-s15.png) 
      
-    Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` with the value you copied in step 7 and `Unique-ID` in step 8.
-
-    **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
+    > Note: This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1.
 
       ```pwsh
       git init
       git add .
       git commit -m "Initial commit"
       git branch -M main
-      git remote add origin-<Unique-ID> <your_github_repository-url>
-      git push -u origin-<Unique-ID> main
+      git remote add origin <your_github_repository-url>
+      git push -u origin main
       ```
-      
-   - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager.
-  
-       ![](../media/ad5.png)
+     
+   - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
 
-   - Click on **Authorize git-ecosystem** to provide access.    
+       ![](../media/160625(03).png)
 
-       ![](../media/ad6.png)
+       ![](../media/ex2-t3.png)
        
    - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
-
-     ![](../media/ex1-task1-7.png)
 
 ### Task 2: Deploy Infrastructure
 
@@ -191,10 +194,10 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 2. Navigate to **Environment** **(1)**, click on **Service Principal Details** **(2)**, and copy the **Subscription ID**, **Tenant ID (Directory ID)**, **Application ID (Client ID)**, and **Secret Key (Client Secret)**.
 
-      ![](../media/ad7.png)
+   ![](../media/ad7.png)
    
-      - Replace the values that you copied in the below JSON. You will be using them in this step.
-      - The Application ID refers to the Client ID, and the Secret Key corresponds to the Client Secret.
+   - Replace the values that you copied in the below JSON. You will be using them in this step.
+   - The Application ID refers to the Client ID, and the Secret Key corresponds to the Client Secret.
       
       ```json
       {
