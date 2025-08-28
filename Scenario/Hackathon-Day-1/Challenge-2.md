@@ -37,10 +37,7 @@ You need to focus on completing the implementation of the below-mentioned securi
    - Enable Code scanning for the repository.
    - Configure CodeQL analysis in the workflow to the existing GitHub.
    - Use **Advanced** option when creating a CodeQL Analysis YAML file.
-   - Resolve the generated alerts, if any.
-
-2. **Implement Repository security advisories:**
-   -  Set up Repository security advisory features for App.js package. Use the `devsecops/src/ContosoTraders.Ui.Website/src/App.js` path while configuring the affected products.
+   - Resolve the generated alerts, if any
 
 <validation step="32952c71-7fea-4af1-a5f5-7200dbad84ef" />  
 

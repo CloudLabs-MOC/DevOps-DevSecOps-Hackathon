@@ -7,22 +7,6 @@ This challenge is designed to evaluate your skills in creating a robust CI/CD pi
 
 You are a DevOps engineer tasked with setting up a robust Continuous Integration and Continuous Deployment (CI/CD) pipeline for an e-commerce application named Contoso Traders. The goal is to set up a GitHub repository, implement a CI/CD workflow using GitHub Actions, deploy the application to Azure, and make rolling updates to the repository.
 
-## Accessing GitHub
-
-1. To access and log in to GitHub, open the Edge browser from inside the environment VM and navigate to ```https://github.com/login```.
-
-2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
-
-3. On the **Sign into GitHub tab**, you will see a login screen. Enter the following email/username, and click on **Next**.
-
-   - **Email/Username:** <inject key="GitHubUsername"></inject>
-
-1. Now enter the following password and click on **Sign in**.
-
-   - **Password:** <inject key="GitHubPassword"></inject>
-
-1. For the Device Verification Code, use the same credentials as in the previous step, open and login to ```http://outlook.office.com/``` in a private window, and enter the username and password used for the GitHub Account login. Copy the verification code and paste it into Device verification.
-
 ## Accessing the Azure Portal
 
 1. To access the Azure Portal, open the Edge browser from inside the environment VM and navigate to ```https://portal.azure.com```.
@@ -69,12 +53,60 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
 
+## Accessing GitHub
+
+1. Open the GitHub login page in a new tab within the same browser window using the provided URL below:
+
+   ```
+   https://github.com/login
+   ```
+
+1. On the **Sign in to GitHub** tab, you will see the login screen. 
+
+   - Enter your GitHub **Username** **(1)** as:
+    
+     ```
+     odl-user-<inject key="Deployment ID" enableCopy="false"/>_clabs
+     ```
+    
+   - Click on **Sign in with your identity provider** **(2)** to continue.
+
+     ![](../media/github-logina-1.png)
+
+1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
+
+   ![](../media/github-loginb.png)
+
+1. You are now successfully logged in to GitHub.
+
+1. Click on **Github profile icon** on the top right corner and choose **Your Repositories** from the menu.
+
+   ![](../media/your-repo.png)
+
+1. Click on **New**
+  
+   ![](../media/new-repo.png)
+   
+1. Follow the steps below to create a new repository:
+   
+    - Select **Cloudlabs Enterprises(1)** as the owner.
+    - Enter the **Repository name (2)** as below:
+    
+      ```
+      devsecops-<inject key="Deployment ID"enableCopy="false"/>
+      ```
+    - Set the  repository visibility to **Private(3)**, 
+ 
+    - Click on **Create repository (4)**.
+
+      ![](../media/github-repo-create-1.png)
+
 ## Challenge Objectives:
 
 >**Note:** Only use GitHub and GitHub Actions for CI/CD; no usage of Azure DevOps or any external CI/CD services.
 
 1. **Setup a GitHub repository:**
-   - Create a new GitHub repository with public access permission.
+   - Create a new GitHub repository in organization.
      
    <validation step="5b252fb5-a2f0-4c4c-8b1d-af806a115039" />
       
@@ -104,7 +136,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
      - Create GitHub variables with the same name as mentioned below.   
         - **DEPLOYMENTREGION**: Add the deployment region where you want to get the resources deployed. preferenced **eastus2,uksouth,australiaeast**
       
-        - **SUFFIX**: Create a variables to store the deployment ID which is **<inject key="DeploymentID" enableCopy="false" />**.
+        - **SUFFIX**: Create a variables to store the deployment ID which is **<inject key="Deployment ID" enableCopy="false" />**.
        
        >**Hint**: You can also find the deployment ID and the Azure AD password within the environment details tab of your integrated lab guide.
  

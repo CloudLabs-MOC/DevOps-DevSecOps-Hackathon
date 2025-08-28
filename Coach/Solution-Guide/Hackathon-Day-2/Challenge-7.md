@@ -1,298 +1,243 @@
-# Challenge 04: Integrate 'About Us' Page with GitHub Copilot in React Application
+# Challenge 07: DevSecOps with AI-Powered GitHub Actions
 
 ## Introduction
 
-Contoso Traders is an e-commerce web application. In this challenge, as a DevOps engineer, your focus is to seamlessly implement and test new features with Copilot, ensuring accuracy and alignment. Conduct a thorough code review and enhance security using GitHub Advanced Security's CodeQL. Streamline development with a GitHub Actions CI/CD pipeline for Contoso Traders, ensuring efficient and secure deployment.
+Contoso Traders, an e-commerce platform, is committed to delivering secure and efficient software solutions. In this challenge, as a Lead DevSecOps engineer, your focus is to enhance the DevSecOps workflow by leveraging AI-driven GitHub Actions that focus on code review and security checks for pull requests thus leading to improved code quality and enhanced security practices in the development lifecycle.
 
-This is the solution guide that contains all of the comprehensive, step-by-step directions needed to finish the challenge.
+You need to focus on completing the implementation of the below-mentioned GitHub Actions:
 
-## Accessing the Azure Portal
+**AI Code Review Action**: AI Code Reviewer is a GitHub Action that leverages OpenAI's GPT-4 API to provide intelligent feedback and suggestions on your pull requests.
+**AI Security Check for Pull Request**: This GitHub Action uses OpenAI's GPT to analyse code in pull requests and identify potential security and privacy vulnerabilities and comment to the pull request with the findings.
 
-1. To access the Azure Portal, open the Edge browser from inside the environment and navigate to the **[Azure Portal](https://portal.azure.com)**.
+Here is the solution guide, which provides all the specific, step-by-step directions needed to do the task.
 
-1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username, and then click on **Next**. 
+## Accessing GitHub
 
-   * **Email/Username**: 
+1. To access and log into GitHub, open the edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
 
-      > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Username (3)**.   
-            
-      ![](../media/ad1.png)   
-        
-1. Now enter the following password and click on **Sign in**.
-   * **Password**: 
+2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
 
-      > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.   
-            
-      ![](../media/ad2.png)   
-     
-1. If you see the pop-up **Stay Signed in?**, click No.
+3. On the **Sign into GitHub tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+   - **Email/Username:** <inject key="GitHubUsername"></inject>
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Cancel** to skip the tour.
+4. Now enter the following password and click on **Sign in**.
+
+   - **Password:** <inject key="GitHubPassword"></inject>
 
 ## Solution Guide
 
-## Exercise 1: Integrate an 'About Us' app component in React using GitHub Copilot
+## Exercise 1: Configure and implement AI Code Review GitHub Action
 
-### Task 1: Sign in to GitHub Copilot in Visual Studio Code
+### Task 1: Sign In/Sign Up to an OpenAI Account
 
-1. Open **Visual Studio Code** from the desktop screen. 
-
-   ![Picture1](../media/cl7-ex1-t1-s1.png)
+1. Navigate to the **[OpenAI](https://platform.openai.com/login?launch)** in order to login to **OpenAI Account.**
    
-1. In the left pane, click on **Extensions**. 
+3. Within the **Welcome back** page,
+    - If you already have an OpenAI account pre-created, you can go ahead and sign into OpenAI using the following sign-in options as shown in the screenshot below.
 
-   ![Picture1](../media/ex7-1.png)
+      ![](../media/cl6-ex1-t1-s2-a.png)
 
-1. At the search bar of the Extensions type **Github (1)**, select the **Github Copilot (2)** Extension and then click on **Install (3).**
+      >**Note:** Ensure that your OpenAI account has active credits for the generation and usage of API keys.
 
-   ![Picture1](../media/ex7-task1-0.1.png)
-   
-1. Once the installation is successful, a pop-up appears to sign in. Click on **Sign in to Use Copilot for Free**
+    - After providing the user email and password, you will be prompted to select an access option. Choose **API** to proceed.
 
-   ![Picture1](../media/ad12.png)
-
-   >**Note:** If you don’t see any option here, you can click the icon at the bottom right and select **Sign in to use Copilot**.
-
-   ![Picture1](../media/ad12a.png)
-
-1. If you get the popup, click on **Allow**.
-
-   ![Picture1](../media/cl7-ex1-t1-s3.png)
-
-1. On the **Select user to authorize** page in the edge browser, click on **Continue**
-
-   ![Picture1](../media/ad13.png)
-
-1. You will encounter a pop-up prompt. Click **Open** to proceed.
-
-   ![Picture1](../media/ex7-task1-0.4.png)
-
-   >**Note:** If you get another pop-up stating **Allow an extension to open this URI**, please click on **Open**.
-
-1. You will be able to see in the bottom right corner that GitHub Copilot has been activated.
-
-   ![Picture1](../media/cl7-ex1-t1-s8.png)
-
-   >**Note:** If the activation status of Github Copilot in the bottom right corner is not visible, try restarting Visual Studio Code to ensure that the activation status becomes visible in that location.
-
-1. Verify if **GitHub Copilot Chat** is installed. If it's installed, the chat window will open as shown below.
-   
-    ![Picture1](../media/ad14.png)
-   
-### Task 2: Integrate an 'About Us' app component in React using GitHub Copilot
-
-  >**NOTE:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
-
-1. In a new Visual Studio Code window, click on **File (1)** at the top left corner and then select **Open Folder.. (2)**.
-
-    ![](../media/ex4-task1-1.png)
-
-1. Navigate to **C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2/ (1)** within the file explorer, and then select the **ContosoTraders.Ui.Website.V2.Raw (2)** folder, and then click on **Select folder (3)**
-
-    ![Picture1](../media/ex7-task1-1.png) 
-
-1. Ensure to click on **Yes, I trust the authors** within the pop-up to successfully import the CloudLabs folder into VS Code.
-
-   ![Picture1](../media/trust-authors.png)
-
-1. Once the project has loaded, within the explorer pane of VS Code, navigate to `Contosotraders.Ui.Website.V2\src\components` folder to view the `App.js` file.
-
-   ![Picture1](../media/CL7-EX1-T2-S3.png)
-
-1. Click on the **Copilot Chat** icon drop down **(1)** and select **Open Chat (2)**.   
-
-   ![Picture1](../media/ad16.png)
-
-1. Within the **CHAT: GITHUB COPILOT** pane, type: `Help me create the new About Us" page in ContosoTraders.Ui.Website.V2\src` and observe the AI response. You can follow the instructions provided by GitHub Copilot towards successfully add the About Us page as a part of the sample React application that you have imported into VS Code.
-
-   >**Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **AboutUs.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
-
-   ![Picture1](../media/CL7-EX1-T2-S4a.png)
-
-   ![Picture1](../media/CL7-EX1-T2-S4.png)
-
-    >**Disclaimer:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
-
-    >**Note:** However, due to the ease of execution of this challenge, you can open a new folder within VS Code and import the solution folder from the Windows file explorer with path `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\`. Select the **src** folder. This solution project has integrated the "About Us" page and unit test cases for the same.
-
-    >**Note:** If you wish to continue to manually edit the raw project, follow the steps from step 7 or else you can directly can do from step 16.
-
-1. Create a new file named `AboutUs.css` **(1)** in your `src` directory ie., within the path `ContosoTraders.Ui.Website.V2\src\` and then add the following code **(2)**:
-
-   ```
-   .about-us {
-       padding: 20px;
-       font-size: 1.2em;
-       line-height: 1.6;
-       color: #333;
-   }
-   
-   .about-us h1 {
-       font-size: 2em;
-       margin-bottom: 0.5em;
-   }
-   ```
-
-   >**Note:** This `AboutUs.css` file contains CSS (Cascading Style Sheets) rules that are used to style HTML elements on a webpage. The specific code you've selected defines styles for elements with the class `about-us` and `h1` elements within elements with the class `about-us`.
-
-   ![Picture1](../media/CL7-EX1-T2-S5.png)
-
-1. Save the newly created `AboutUs.css` file.
-
-1. Now let's build a new component for the application. Create a new file named `AboutUs.js` **(1)** in your `src` directory i.e., within the path `ContosoTraders.Ui.Website.V2\src\` and then add the following code **(2)**:
-
-   >**Note:** If the **AboutUs.js** file has already been created by Copilot, you only need to update its contents with the code provided below to maintain consistency.
-
-   ```
-   import React from "react";
-   import "./AboutUs.css";
-   
-   function AboutUs() {
-     return (
-       <div className="container">
-         <div className="about-us">
-           <h1 className="text-center">About Us</h1>
-           <p>
-             Contoso Traders is a leading company in the trading industry. We have
-             been serving our customers for over 20 years with high-quality
-             products and excellent customer service.
-           </p>
-           <p>
-             Our team is dedicated to providing the best service possible. We value
-             our customers and strive to meet their needs.
-           </p>
-         </div>
-       </div>
-     );
-   }
-   
-   export default AboutUs;
-   ```
-
-   >**Note:** Feel free to make changes in the above code snippet as per your use case scenario.
-
-   >**Note:** Notice that the CSS rules have been imported into the `AboutUs.js` file using the code, `import "./AboutUs.css";`.
-   
-   >**Note:** The `AboutUs.js` file is a React component that renders an "About Us" section on a webpage based on the CSS rules that have been defined in the `AboutUs.css` file.
-
-1. Save the newly created `AboutUs.js` file.
-
-1. Now navigate to the `App.js` file to integrate the "About Us" page that was created in the previous steps.
-
-1. Within the `App.js` file, enter the following code.
-
-     ```
-     import AboutUs from "./AboutUs";
-     import "./App.css";
-     ```
-
-1. Your `App.js` should look similar to the screenshot below:
-
-     ![Picture1](../media/CL7-EX1-T2-S11.png)
-
-1. Scroll down to the end of the code within the `App.js` file and then add the following code to include the newly created `About Us` component.
-
-     ```
-     <AboutUs />
-     ```
-1. Your `App.js` should now look similar to the screenshot below:
-
-     ![Picture1](../media/CL7-EX1-T2-S13.png)
-
-1. To run your React application, you typically use the command line (also known as the terminal). Here are the steps:
-      - Within Visual Studio Code, you can open the terminal by going to the top menu, click on ellipses **... (1)**, then click on **Terminal** **(2)** and then select **New Termimal (3)**.
-
-      - Navigate to your project directory. You can do this with the `cd` command followed by the path to your project. You can use the below command to navigate to the React application's working directory **(4)**:
-
-         ```
-         cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2
-         ``` 
-
-      - Once you're in your project directory, you can start the application with the `npm start` **(5)** because we need npm to create the Contoso Traders Application. After running the following command within the terminal, your application should start, and you can view it in your web browser at http://localhost:3000.  
-       
-         ```
-         npm run start
-         ```
+      ![](../media/ex6-task1-0.1.png)
       
-         ![Picture1](../media/ad17.png)
+    - If you are new to OpenAI and do not have an account created, click on **Sign up** within the *Welcome back* page to create a new free-tier account. 
 
-         >**Note:** If the above command fails, you might need to run the following command :
+      ![](../media/cl6-ex1-t1-s2-b.png)
+  
+    - After clicking Sign Up on the welcome page:
 
-         ```powershell
-         npm i
-         ```
+        - Enter your email address – You can use your GitHub **Email address (1)** and click on **Continue (2)**.
+
+          ![](../media/ex6-task1-2.png)
+
+        - Enter your password – Use your GitHub **Password (1)** and click on **Continue (2).**
+     
+          ![](../media/ex6-task1-3.png)
+  
+          >**Note:** You can find the GitHub credentials from the Environment Details page of the integrated lab environment, navigate to License tab.
+  
+        - A page will appear with the message "Verify your email". open http://outlook.office.com/ in a private window, provide the Github username and password, open the email from OpenAI, and click the verification link inside to complete the setup process. 
+     
+          ![](../media/ex6-task1-3.1.png)
+  
+        - Navigate back to the login page provide Github username and password, You will be prompted to provide details like **Full Name** and **Date of Bith** then click on **Agree** this will navigate you the Open AI Platform.
+
+      >**Note:** Upon creation of a new OpenAI account, the free tier provides you with a $5 credit limit that expires within a period of 3 months from the day of account activation.
+
+### Task 2: Create an OpenAI secret key
+
+1. Once you have successfully logged into your OpenAI account, you will be auto-directed to the overview page of the OpenAI platform. If not, you can navigate to the OpenAI platform using the following link, **[OpenAI platform](https://platform.openai.com/docs/overview)**.
+
+1. Go to the profile icon in the top right corner and select **Your profile**.
    
-     - The command `npm i` is a shorthand version of `npm install`. It is used in Node.js environments to install all the dependencies listed in the `package.json` file. These dependencies are libraries or packages that your project needs to run correctly. The installed packages will be placed in a folder named `node_modules` in your project directory.
+    ![](../media/CH6T2S2.png)
 
-     - After the installation of all the dependencies, execute the command - `npm run start` to start the application. This opens a new browser tab over the URL path, `http://localhost:3000/`.
+2. Hover your cursor over the left navigation toolbar to expand the pane and click on **API keys**.
 
-1. Click on **Get Started** and scroll down within your static web app to view the integrated **About Us** page.
+    ![](../media/ex6-apikeys.png)
 
-   ![Picture1](../media/CL7-EX1-T2-S15a.png)
+3. In order to create **API key**, its required to Verify it with your phone number.Click on **Start verification.**
 
-1. Observe that the new "About Us" component has been added at the end of the webpage.
+   ![](../media/ex6-task1-4.png)
 
-     ![Picture1](../media/CL7-EX1-T2-S15.png)
+4. Provide your Phone Number and click on **Send code.**
 
-## Exercise 2: Generate and run Unit Test cases using GitHub Copilot:
+   ![](../media/ex6-phoneno.png)
 
-### Task 1: Create and run test cases:
+5. Enter the Verification code that has been sent to the Phone number.
 
-1. In Visual Studio Code, go to **Explorer** and navigate to the path `ContosoTraders.Ui.Website.V2\src\components` and open the `WelcomePopup.js` file.
+   ![](../media/ex6-code.png)
 
-   ![Picture1](../media/CL7-EX2-T1-S1.png)
+8. On the **Create new secret key** pop-up, configure the following:
+   
+    - **Name:** `GitHub Action Key` **(1)**
+    - **Project:** Select **Default project (2)** from the drop down.
+    - **Permissions:** Select `All` **(3)**
+    - Click on **Create secret key (4)**
 
-2. Select all code lines `[CTRL+A]` of `WelcomePopup.js` file **(1)** and then paste the following prompt **(2)** within the GitHub Copilot Chat Panel and press enter:
+      ![](../media/ex6-task1-5.png)
+
+10. Upon creation of a new secret, save your key by clicking on the **Copy** button and pasting it on your notepad for a handy access.
+
+    **Note:** For safety reasons, **you won't be able to view the secret value again** once the **Save your key** page is closed.
+
+    ![](../media/cl6-ex1-t2-s5.png)
+
+11. You will now notice that the new API key, `GitHub Action Key` now appears in the list of **API keys**.
+
+    ![](../media/ex6-task1-7.png)
+
+### Task 3: Create a new GitHub repository secret
+
+1. Sign in to GitHub using the credentials provided in the environment detail tab of the integrated lab environment or via the credentials provided at the beginning of this solution guide.
+
+2. Select the `devsecops` repository that was created as a part of the earlier challenges.
+
+3. Under **Settings (1)**, expand **Secrets and variables** **(2)** under **security** by clicking the drop-down and select **Actions** **(3)** blade from the left navigation bar. Select the **New repository secret** **(4)** button.
+
+   ![](../media/ex6-task1-8.png)
+
+4. Under the **Actions Secrets/New secret** page, enter the below-mentioned details and click on **Add secret** **(3)**.
+
+   - **Name** : Enter **OPENAI_API_KEY** **(1)**
+   - **Value**: Paste the OpenAI secret value that was copied earlier over to the notepad **(2)**.
+
+     ![](../media/cl6-ex1-t3-s4.png)
+
+### Task 4: Configure the AI Code Review GitHub Action
+
+1. Open a new tab and paste the below URL which will Navigate to the following repo and fork it.
 
    ```
-   /tests
+   https://github.com/freeedcom/ai-codereviewer
    ```
 
-   >**Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **WelcomePopup.test.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
+   ![](../media/ex6-task1-forkrepo.png)
+  
+1. Click on **Fork (1)** and then select **Create a new fork (2).**
 
-   ![Picture1](../media/ad18.png)
+   ![](../media/ex6-task1-9.png)
 
-   ![Picture1](../media/ad18a.png)
+1. Uncheck **Copy the main branch only (1)** and click on **Create fork (2)**
 
-3. Now create a new file named `WelcomePopup.test.js` under the path `ContosoTraders.Ui.Website.V2\src\components`.
+   ![](../media/ex6-task1-10.png)
+   
+1. Click on **Settings** **(1)**, rename the repo name to **ai-code-reviewer** **(2)** and click on **Rename** **(3)** button. 
 
-   >**Note:** If the file has already been created by Copilot, there is no need to create it again.
+   ![](../media1/edit-ai-code.png)
 
-   ![Picture1](../media/CL7-EX2-T1-S3.png)
+1. Navigate back to the `devsecops` repository that was created as a part of the earlier challenges.
 
-4. Navigate back to the GitHub Copilot chat panel and copy the unit test that has been generated using Copilot for the `WelcomePopup` component. Ensure to paste these unit test cases within the newly created file - `WelcomePopup.test.js` under the `components` folder and save the file.
+   ![](../media/ex6-task1-11.png)
 
-   >**Note:** If the file has already been created by Copilot, you can skip this step. This step is only needed if the result appears in the Copilot chat window—then you'll need to copy and paste the generated code into your file.
+3. Select the **Actions (1)** tab from your repository home page and then click on **New Workflow (2)**.
 
-   ![Picture1](../media/CL7-EX2-T1-S4-a.png)
+   ![](../media/cl9-t2-s3.png)
 
-   ![Picture1](../media/CL7-EX2-T1-S4-b.png)
+4. On the Get Started with GitHub Actions page, select **set up a workflow yourself**.
 
-5. Once ready with the test cases, open a new terminal within Visual Studio Code, and navigate to the following path/directory by running the below command within the terminal:
+   ![](../media/cl9-t2-s4.png)
 
-   ```
-   cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2\src\components
-   ```
+5. In the text box, enter the name `ai-code-review.yml` for your workflow file.
 
-   >**Note:** Ensure that your current working directory within the terminal has the `components` folder in its present path. In this scenario, the `components` folder is present inside the `/src` directory. 
+   ![](../media/cl6-ex1-t4-s4.png)
 
-6. To execute the unit test cases generated by GitHub Copilot, we need to run the `WelcomePopup.test.js` file using the following command within the terminal:
+6. Copy and paste the following action workflow into the Edit New file tab:
 
-   ```
-   npm run test
-   ```
+    ```
+    name: AI Code Reviewer
+    
+    on:
+      pull_request:
+        types:
+          - opened
+          - synchronize
+    permissions: write-all
+    jobs:
+      review:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout Repo
+            uses: actions/checkout@v3
+    
+          - name: AI Code Reviewer
+            uses: your-username/ai-code-reviewer@main
+            with:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # The GITHUB_TOKEN is there by default so you just need to keep it like it is and not necessarily need to add it as secret as it will throw an error. [More Details](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#about-the-github_token-secret)
+              OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+              OPENAI_API_MODEL: "gpt-3.5"
+              exclude: "**/*.json, **/*.md" # Optional: exclude patterns separated by commas
+    ```
 
-7. Post execution of the above unit test, you must ensure to have a successful - `PASS` test runs with no errors. If you are presented with errors, please understand the intricacies of the error as mentioned within the terminal and work towards a successful unit test run.
+7. Rename `your-username` with a GitHub **username (1)** and Commit the changes made to create the workflow file by clicking on **Commit changes (2)**.
 
-   >**Note:** You may need to scroll up in your output window to view the results.
+   ![](../media1/ai-code-edit.png)
 
-   ![Picture1](../media/CL7-EX2-T1-S7.png)
+8. Click on **Commit changes**.
 
-## Exercise 3: Code Review and Security Check
+   ![](../media/ex-common.png)
 
-### Task 1: Submit Codebase Modifications to GitHub Repository
+### Task 5: Create a pull request to initiate workflow
+
+1. To create a new branch, click on the **Switch branch (1)** dropdown menu and click on **View all branches (2)**.
+  
+   ![](../media/cl6-ex1-t5-s1.png)
+
+2. Click on **New branch** within the **Branches** page.
+
+   ![](../media/cl6-ex1-t5-s2.png)
+
+3. Within the **Create a branch** pop-up, enter the following:
+   - **New branch name:** Test **(1)**
+   - **Source:** Select `main` **(2)**.
+   - Click on **Create new branch (3)**
+
+     ![](../media/ex6-task1-12.png)
+
+4. Navigate to the newly created `Test` branch.
+
+   ![](../media/ex6-task1-13.png)
+
+6. Select **.github (1)**, expand **workflows (2)** click on **ai-code-review.yml (3)**.
+
+    ![](../media/ex6-task1-14.png)
+
+7. on the `ai-code-review.yml` file click on **pencil icon** at the top right corner in order to edit the file.
+
+   ![](../media/ex6-task1-17.png)
+
+8. At the end of the line add a **space** or click on **enter** and click on **Commit changes.**
+
+   ![](../media/ex6-task1-15.png)
+
+9. Click on **Commit changes.**
+
+   ![](../media/ex6-task1-16.png)
+
 
 1. Navigate back to github organzation page and selcet **New** to create a new repository
 
@@ -348,39 +293,77 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
        ![](../media/n63.png)
        
    - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
+=======
+10. To create a Pull request to merge the changes made from the `test` to  the `main` branch. Click on **Pull requests**
 
-### Task 2: Implement Code Scanning and CodeQL
+    ![](../media/ex6-task1-18.png)
 
-In this task, you'll configure Code scanning and explore CodeQL alerts. Code scanning is a feature that you use to analyze the code in a GitHub repository to find security vulnerabilities and coding errors. Any problems identified by the analysis are shown on GitHub.
+1. Click on **New pull request.**
 
-**Note**: To perform this task, the GitHub repository should be public. If the repository visibility is private, please go to the settings of the repository and change the visibility to public.
+   ![](../media/ex6-task1-19.png)
 
-1. Log in to GitHub where the `devsecops-2` repository was created.
+1. Here at the Comparing changes page, make sure you have selected **main** **(1)** for the base and **Test** **(2)** for compare, then click on **Create pull request** **(3)**.
 
-2. Select the **settings** ***(1)*** tab from the GitHub browser tab. Click on **Advanced security** ***(2)*** under the security side blade.
+   ![](../media/ex6-task1-20.png)
 
-   ![](../media/ex2-task1-1a.png) 
+1. In the GitHub browser tab and select the **Pull requests** tab.
 
-3. Click on the **Set up** **(1)** button to enable CodeQL analysis, and select the **Advanced** **(2)** option for creating a CodeQL Analysis YAML file.
+1. Open the PR created from the **Test** branch and select **Merge pull request**.
 
-   ![](../media/ex2-task1-2.png)     
+1. Click on the **Actions** tab and then notice that `AI Code Reviewer` workflow has been automatically initiated. Ensure that the workflow does not fail. If so, there may be some vulnerabilities in the code within the recent pull request.  
+
+   ![](../media/ex6-task1-22.png)
+
+## Exercise 2: Configure and implement AI Security Check for Pull Requests
+
+### Task 1: Create a new GitHub repository secret
+
+1. Sign in to GitHub using the credentials provided in the environment detail tab of the integrated lab environment or via the credentials provided at the beginning of this solution guide.
+
+2. Select the `devsecops` repository that was created as a part of the earlier challenges.
+
+3. Under **Security (1)**, expand **Secrets and variables** **(2)** by clicking the drop-down and select **Actions** **(3)** blade from the left navigation bar. Select the **New repository secret** **(4)** button.
+
+   ![](../media/ex6-task1-23.png)
+
+
+4. Under the **Actions Secrets/New secret** page, enter the below-mentioned details and click on **Add secret** **(3)**.
+
+   - **Name** : Enter **OPENAI_TOKEN** **(1)**
+   - **Value** : Paste the OpenAI secret value that was created and copied over to the notepad in the previous exercise. **(2)**.
+
+     ![](../media/ex6-task1-24.png)
+
+### Task 2: Configure GitHub Action
+
+1. Login to GitHub and select the `devsecops` repository that was created as a part of the earlier challenges.
+
+2. Select the **Actions (1)** tab from your repository home page and then click on **New Workflow (2)**.
+
+   ![](../media/cl9-t2-s3.png)
+
+3. On the Get Started with GitHub Actions page, select **set up a workflow yourself**.
+
 
 4. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes..** ***(4)***.
   
    ![](../media/c2t1s3.png)
 
    ![](../media/n65.png) 
+=======
+   ![](../media/cl9-t2-s4.png)
 
-5. Navigate to the **Actions** ***(1)*** tab, here you can review the **workflow** ***(2)*** run.
-    
-   ![](../media/cl2-t1-s4.png) 
+4. In the text box, enter the name `ai-security-check-for-pr.yml` for your workflow file.
 
-6. Navigate to the **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
+
+   ![](../media/cl6-ex2-t2-s5.png)
+
+5. Copy and paste the following action workflow into the Edit new file tab:
+
+   ```
+   name: AI Security Check for Pull Requests
    
-   ![](../media/cl2-t1-s5.png)
 
-7. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
-   
    ![](../media/ex7-task1-5.png)
    
 ## Exercise 4: CI/CD Pipeline Setup and Infrastructure Deployment
@@ -422,48 +405,86 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
    - **App location:** `/` **(11)**.
 
       >**Note:** `/` refers to the root directory of the GitHub repository. Ensure that the location is specified appropriately as per your GitHub file structure.
+=======
+   on:
+     pull_request:
+       branches:
+         - main
    
-   - Leave the other fields at default and then click on **Review + create (12)**.
+   jobs:
+     ai_security_check_for_pull_requests:
+       runs-on: ubuntu-latest
+   
+       steps:
+         - name: Check out repository
+           uses: actions/checkout@v2
 
-     ![](../media/ex7-task1-7.png)
+   
+         - name: Set up Node.js
+           uses: actions/setup-node@v2
+           with:
+             node-version: 16
+   
+         - name: Install dependencies
+           run: npm ci
+   
+         - name: Finding security and privacy code vulnerabilities
+           id: ai_security_check
+           uses: obetomuniz/ai-security-check-for-pull-requests-action@v1.0.0
+           env:
+             GH_TOKEN: ${{ secrets.GH_TOKEN }}
+             GH_REPOSITORY: ${{ github.repository }}
+             GH_EVENT_PULL_REQUEST_NUMBER: ${{ github.event.number }}
+             OPENAI_TOKEN: ${{ secrets.OPENAI_TOKEN }}
+   
+         - name: Comment on pull request
+           uses: actions/github-script@v6
+           env:
+             PR_COMMENT: ${{ steps.ai_security_check.outputs.pr_comment }}
+           with:
+             github-token: ${{ secrets.GH_TOKEN }}
+             script: |
+               const prComment = process.env.PR_COMMENT || "No security or privacy issues found.";
+               const { data } = await github.rest.issues.createComment({
+                 issue_number: context.issue.number,
+                 owner: context.repo.owner,
+                 repo: context.repo.repo,
+                 body: prComment
+               });
+   ```
 
-   - Finally, click on **Create** on the **Review + create** page to create the static web app.     
+6. Commit the changes made to create the workflow file.
 
-     ![](../media/ad23.png)   
+   ![](../media/ex6-task1-cm.png)
 
-6. Once the deployment is successful, click on **Go to resource**.
+7. Click on **Commit changes**.
 
-    ![](../media/CL7-EX4-T1-S5.png)
+   ![](../media/ex6-cm1.png)
 
-7. Navigate back to your `devsecops-2` repository on the GitHub portal and click on the **Actions** tab.
+8. Navigate back to the **Test** branch that you created.
 
-    ![](../media/CL7-EX4-T1-S6.png)
+    ![](../media/ex6-task1-25u.png)
 
-8. Ensure that your **Azure Static Web Apps CI/CD** workflow has a successful run status.
+9. Select the **.github/workflows** folder and click on **ai-code-review.yml**.
 
-    ![](../media/CL7-EX4-T1-S7.png)
+10. At the end of the line, add a **space** or press **Enter** to make a change.
 
-9. Navigate back to your Azure portal on the overview page of the recently created Static Web App and click on the **URL**
+11. Create a Pull Request to merge the changes from the **Test** branch to the **Main** branch.
 
-    ![](../media/CL7-EX4-T1-S8.png)
+12. Click on the **Actions** tab and then notice that **AI Security Check for Pull Requests** workflow has been automatically initiated. Ensure that the workflow does not fail. If so, there may be some vulnerabilities within the recent pull request. Refer to the run details for the GitHub Actions that have failed.
 
-10. The URL redirects you to a new browser tab with the React Application up and running.
+    ![](../media/ex6-task1-26.png)
 
-    ![](../media/CL7-EX4-T1-S9.png)
 
-11. Click on **Get Started** and scroll down within your static web app to view the integrated **About Us** page.
-
-    ![](../media/CL7-EX4-T1-S10.png)
 
 ## Success criteria:
 To complete this challenge successfully:
 
-- Successful implementation of the new feature.
-- Accuracy and completeness of the generated unit tests with all successful passes.
-- Successful setup and execution of the CI/CD pipeline.
+- Successful implementation of the `AI Code Review Action` and generation of of review comments based on the AI's response and added to the pull request.
+- Successful implementation of the `AI Security Check for Pull Requests` and generation of comments to the pull requests based on AI's analysis of the code.
 
 ## Additional Resources:
 
-- Refer to [About GitHub Copilot Chat](https://docs.github.com/en/copilot/github-copilot-chat/about-github-copilot-chat) for reference.
-- Refer to [Copilot Chat writes Unit Tests](https://dev.to/this-is-learning/copilot-chat-writes-unit-tests-for-you-1c82) for reference.
-- Refer to [Using GitHub Copilot Chat in your IDE](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat-in-your-ide) for reference.
+- Refer to [Overview of Microsoft Defender for Cloud devsecops Security](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devsecops-introduction) for reference.
+- Refer to [Configure the Microsoft Security devsecops GitHub action](https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-action) for reference.
+- Refer to [Connect your GitHub Environment to Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-github) for reference.

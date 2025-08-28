@@ -1,167 +1,127 @@
-# Challenge 06: Resilience Testing using Azure Load Testing & Azure Chaos Studio
+# Challenge 05: Implementing Monitoring Solutions for Contoso Traders
 
 ## Introduction
 
-This challenge centers around Azure Load Testing and Azure Chaos Studio, empowering you to perform performance tests and enhance application resilience. In the modern digital landscape, guaranteeing optimal performance during heavy loads and fortifying against disruptions is essential. Through Azure's tools, you'll gain insights into proactive issue detection and methods to reinforce your applications.
+In this challenge, the user/attendee will integrate Azure's monitoring tools—Azure Monitor and Application Insights—into their Azure-based application. Monitoring is vital for maintaining efficiency and resilience in cloud applications, enabling proactive issue identification and seamless user experiences.
 
 This is the solution guide that contains all of the comprehensive, step-by-step directions needed to finish the challenge.
 
 ## Solution Guide
 
-## Task 1: Setting Up Azure Load Testing
+### Task 1: Deploy Monitoring Infrastructure
 
-In this task, you'll create an Azure Load Testing instance and run a test using a JMeter file.
+1. You will deploy the complete monitoring infrastructure using the Bicep template named monitoringinfra.bicep. The monitoring infrastructure includes Application Insights, a secret created for Application Insights, and a monitoring dashboard.
 
-1. In the Azure Portal, navigate to the **contoso-traders-rg<inject key="DeploymentID" enableCopy="false" /> (1)** resource group and select the **Endpoint** resource with the name  **contoso-traders-ui2<inject key="DeploymentID" /> (2)**.
+1. Open VS Code within the VM, and then click on File (1) at the top left corner and then select Open Folder... (2).
 
-   ![](../media/ex5-task1-1.png)
+    ![](../media/n51.png)
 
-1. From the overview of the **contoso-traders-ui2<inject key="DeploymentID" enableCopy="false" />** endpoint, copy the **Endpoint hostname** and paste it into the notepad for later use in the task.
+1. Navigate to `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files\iac` path, open the `monitoringinfra.parameters.json` file and update **env** parameter value with **deployment-ID**.
 
-   ![](../media/cl5-t1-s2.png)
+    ![](../media/n52.png)
 
-1. To create an Azure Load Testing service, within the global search bar of the Azure Portal, search for and select **Azure Load Testing**.
+1. Click on Yes, I trust the authors.
 
-   ![](../media/loadtesting.png)
+   ![](../media/n53.png)
 
-1. After the resource is created, click on Go to Resource. In the left-hand pane, expand **Tests (1)**, then select **Tests (2)**. Click on **+ Create (3)** and choose **Create a URL-based test (4)**.
+1. Open the monitoringinfra.parameters.json (1) file. Locate the env parameter in the JSON file and update its value with the deployment ID (2) and then save.
 
-   ![](../media/ex5-task1-3.png)
+   >**Note**: You can find the deployment ID within the environment details tab of your integrated lab guide.
 
-1. On the **Create a URL-based test** page, under the Basics tab, uncheck **Enable advanced settings** **(1)** to reveal the Test URL setting. Paste the **Endpoint URL** a copied in point 2 as **Test URL** **(2)**, leave the rest as default, and then click on **Review + create (3)**, followed by **Create**.
+   ![](../media/n54.png)
 
-   ![](../media/url-load-test-1.png)
+1. In the VS Code Terminal, run the following command to log in to your Azure account:
 
-1. Once the test run starts, wait until it completes. When the test run finishes, the status will update to **Done**. At this point, you’ll be able to view the Client-side metrics. Explore the given metrics output.
+   ```
+   Connect-AzAccount -UseDeviceAuthentication
+   ```
 
-   >**Note:** This process may take up to 30 minutes to complete.
+1. Connect-AzAccount -UseDeviceAuthentication
+Go to https://microsoft.com/devicelogin (1) in the VM browser and copy the code (2).
 
-   ![](../media/ex5-task1-4.png)
 
-   ![](../media/ex5-task1-5.png) 
+    ![](../media/n55.png)
+
+1. Paste the Code (1) you copied earlier and click Next (2).
+
+    ![](../media/n56.png)
+
+1. Choose the account you are using.
+
+    ![](../media/n57.png)
+
+1. Click on Continue.
+
+    ![](../media/n58.png)
+
+1. After signing in, return to Visual Studio Code.
+
+   ![](../media/n59.png)
+
+1. Set the Resource Group Name before running the deployment command. set the $RGname as contoso-traders-rg<DeployementID>
+
+   ```
+   $RGname = '<update the RG name mentioned above>'
+   ```
+
+   ![](../media/n60.png)
+
+   >**Note**: For <DeploymentID>, Navigate to Environment(1), click on Azure credentials (2), and copy (3)
+
+   ![](../media/n61.png)
+
+   >**Note**: Make sure you are in the directory where the Bicep template and parameters file reside. If not, switch to the directory cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files\iac
+
+1. Run the following command to initiate the deployment using the Bicep template and parameters file:
+
+    ```
+    New-AzResourceGroupDeployment -Name "createresource" -TemplateFile "monitoringinfra.bicep" -TemplateParameterFile "monitoringinfra.parameters.json" -ResourceGroup $RGname
+    ```
+
+1. Monitor the output in the terminal, and wait until the deployment succeeds.
+
+    ![](../media/n62.png)
+
+### Task 2: Monitoring using Application Insights
+
+1. In the Azure Portal, navigate to the **contosotraders-<inject key="Deploymentid" enableCopy="false" />** **(1)** resource group and select the **Application Insights** resource with the name  **contoso-traders-aivalue** **(2)**.
+
+   ![](../media/cl4-t2-s1.png)
+
+1. From the Overview of **contoso-traders-aivalue** Application Insights resource, you can set the **Show data for last** as per your requirement of monitoring insights.
+
+   ![](../media/cl4-t2-s2.png)
+
+1. In the first graph, you can see the number of failed requests for Application access.
+
+   ![](../media/upd-ex6-t1-failedrequests.png)
+
+1. In the next graph, you can see the average server response time.
+
+   ![](../media/upd-ex6-t1-server-response-time.png)
    
-   **Note**: In case the test fails due to `The test was stopped due to a high error rate, check your script and try again. This is expected, as sometimes the load on the application exceeds the defined throughput.
-     
-## Task 2: Create an experiment and target using Azure Chaos Studio
+1. In the next graph, you can see the number of server requests.
 
-In this task, your objective is to incorporate Targets and establish an Experiment within Azure Chaos Studio. This process aims to assess the resilience of the web application we developed by introducing real faults and observing how our applications react to real-world disruptions.
+   ![](../media/upd-ex6-t1-server-requests.png)
 
-1. In the Azure Portal, search for **Azure Chaos Studio (1)** and then click on it from the search results **(2)**.
-   
-   ![](../media/Ex6-T2-S1.1.png)
+1. In the last graph, you can see the average availability.
 
-1. In the **Azure Chaos Studio**, Expand **Experiment management (1)** on the left menu and select **Targets (2)**.
-
-   ![](../media/ex5-task2-1.png)
-      
-1. From the drop-down menu, select the **contoso-traders-rgXXXXXX** resource group.
- 
-   ![](../media/ex5-task2-2.png)
-     
-1. Click on the **contoso-traders-aks<inject key="DeploymentID" enableCopy="false" />** **(1)** **Kubernetes service** instance, and from the drop-down for **Enable Targets** **(2)**, choose **Enable service-direct targets (All resources)** **(3)**.
-
-   ![](../media/ch61u.png)
-     
-1. Click on **Review + Enable**.
-
-   ![](../media/ch62u.png)
-
-1. Then click on **Enable** to Enable service-direct targets. 
-   
-   ![](../media/enable.png)
-
-1. Wait for the deployment to be completed.  
-
-1. In the Azure Portal search for **Azure Chaos Studio** ***(1)*** and then click on it from the search results ***(2)***.
-   
-   ![](../media/Ex6-T2-S1.1.png)
-    
-1. Once the target is enabled, select **Experiments** ***(1)*** on the left, click the **+ Create** ***(2)*** drop-down, and select **New experiment** **(3)** .
- 
-   ![](../media/ex6-task3-step9.png)
- 
-1. On the **Create an experiment** page, under the **Basics** tab, provide the following values and select **Next: Permissions >** ***(4)***.
-
-    - Subscription: Select the default subscription ***(1)***
-    - Resource Group: **contoso-traders-rgXXXXXX** **(2)**
-    - Name: **contoso-chaos-XXXXXX** ***(3)***
-    - Region: Leave it to default 
- 
-      ![](../media/experiment.png)
-   
-1. On the **Permissions** page, leave the default selection and select **Next: Experiment designer >**.
-
-   ![](../media/ch63u.png)
- 
-1. On the **Experiment designer** page select **+ Add action (1)** and choose **Add fault (2)**.
-
-   ![](../media/Ex6-T2-S7.3.png)
- 
-1. On the **Add fault** page, select the following and select **Next: Target resources>** **(4)**.
-   
-   - Faults: **AKS Chaos Mesh Pods Chaos(deprecated)** ***(1)***
-
-   - Duration (minutes): **5** ***(2)***
-
-   - jsonSpec: Leave it to default ***(3)***
-     
-     ![](../media/2dgn61.png)
-     
-1. On **Target resources**, select **Manually select from a list** **(1)** option under the **Select target resources** , select the **contoso-traders-aks<inject key="DeploymentID" enableCopy="false" />** ***(2)*** resource, and **Add** ***(3)***.
-  
-   ![](../media/ex6-task3-step14.png)
-  
-1. Click on **Review + create**.
-  
-   ![](../media/upd-review.png)
-   
-1. On the **Review + create** page, click on **Create**.
-    
-1. Navigate back to the **contoso-traders-aksXXXXXX** container instance and select **Access control (IAM) (1)**, click on **+ Add (2)**, and select **Add role assignment (3)**. 
-  
-   ![](../media/2dgn121.png)
-
-1. In the **Add role assignment** page, under the **Role** tab, select **Privileged administrator roles**  **(1)**. Select **Owner** **(2)** and then **Next** **(3)**.
-  
-   ![](../media/ex6-task3-step18.png)
-  
-1. Next, on the **Members** tab, select **Managed identity (1)**  for **Assign access to** , click on **+ Select members (2)**  on the **Select managed identities** choose **Chaos Experiment (3)** for **Managed identity**, select the experiment **contoso-chaos-<inject key="DeploymentID" enableCopy="false" /> (4)**, click on **Select (5)**, and click on **Next** **(6)**.  
-   
-   ![](../media/ex6-task3-step19.png)
-  
-1. Next, on the **Conditions** tab, select **What user can do** as **Allow user to assign all roles** **(1)** and click on **Review + assign** **(2)**.
-
-   ![](../media/dev-9.png)
-
-1. Click on **Review + assign**. 
-   
-   ![](../media/ex6-ch.png)
-      
-1. On the Azure Portal, navigate back to the Chaos experiment you created, **contoso-chaos-<inject key="DeploymentID" enableCopy="false" />** and click on **Start**.
-  
-   ![](../media/ch64u.png)
- 
-1. Select **Ok** to **Start this experiment** pop-up.
-
-    ![](../media/Ex6-T2-S17.1.png)
-       
-1. Once the experiment status is **Success** click on **Details** to view the run preview.
- 
-   ![](../media/2dgn109.png)
- 
-1. On the **Details** preview page, select **Action (1)** and view the complete details of the run on **Fault details** under **Successful targets (2)**.
- 
-   ![](../media/ch65u.png)
+   ![](../media/upd-ex6-t1-availability.png)  
 
 ## Success criteria:
+
 To complete this challenge successfully:
 
-   - Completion of Load Test and Results Analysis: Azure Load Testing is configured, the test runs successfully, and Client-side metrics are reviewed, providing insights into performance under load.
-   - Execution of Chaos Experiment: A Chaos Experiment in Azure Chaos Studio is configured with the specified faults, executed successfully, and results are reviewed to confirm resilience.
+- Successful integration of Azure Monitor and Application Insights within the application environment, ensuring seamless data collection and monitoring capabilities.
+
+- Selection and configuration of key performance metrics relevant to the application's functionality and performance goals.
+
+- Establishment of effective alerting mechanisms with well-defined thresholds, ensuring timely notifications for potential issues or deviations in monitored metrics.
 
 ## Additional Resources:
 
-- Refer to [Continuous validation with Azure Load Testing and Azure Chaos Studio](https://learn.microsoft.com/en-us/azure/architecture/guide/testing/mission-critical-deployment-testing) for reference.
-- [What is Azure Chaos Studio?](https://learn.microsoft.com/en-us/azure/chaos-studio/chaos-studio-overview).
-- [Load test a website by using a JMeter script in Azure Load Testing](https://learn.microsoft.com/en-us/azure/load-testing/how-to-create-and-run-load-test-with-jmeter-script?tabs=portal).
-- [Intro to Chaos Engineering and Azure Chaos Studio](https://pdtit.medium.com/intro-to-chaos-engineering-and-azure-chaos-studio-preview-5e85fff10642).
+- Refer to [Application Insights Overview](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) for reference.
+
+- Refer to [Application Insights for ASP.NET Core applications](https://learn.microsoft.com/en-us/azure/azure-monitor/app/asp-net-core?tabs=netcorenew%2Cnetcore6).
+
+- Refer to [Azure Monitor vs. Application Insights](https://azurelib.com/azure-monitor-vs-application-insights/) for reference.

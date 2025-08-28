@@ -7,11 +7,15 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 ## Accessing GitHub
 
+
 1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
+=======
+1. To access and log into GitHub, open the edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
 
    ```
    https://github.com/login
    ```
+
 
 1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
 
@@ -42,6 +46,14 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 1. On the **Permission requested by** pop-up, click on **Accept**.
 
       ![Enter Your Password](../media/06.png)
+=======
+3. On the **Sign into GitHub tab**, you will see a login screen. Enter the following email/username and click on **Next**.
+
+   - **Email/Username:** <inject key="GitHubUsername"></inject>
+
+1. Now enter the following password and click on **Sign in**.
+
+   - **Password:** <inject key="GitHubPassword"></inject>
 
 ## Solution Guide
 
@@ -51,19 +63,27 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 **Note**: To perform this task, the GitHub repository should be public. If the repository visibility is private, please go to the settings of the repository and change the visibility to public.
    
-1. Select the **Settings** ***(1)*** tab from the GitHub browser tab. Click on **Advanced Security** ***(2)*** under the security side blade.
+1. Select the **Settings** ***(1)*** tab from the GitHub browser tab. Click on **Code security** ***(2)*** under the security side blade.
+
 
    ![](../media/n66.png)  
+=======
+   ![](../media/devops-devsecops-new-4.png)  
+
    
 1. Click on the **Set up** **(1)** button to enable CodeQL analysis, and select the **Advanced** **(2)** option for creating a CodeQL Analysis YAML file.
 
-   ![](../media/ex2-task1-2.png)      
+   ![](../media/devops-devsecops-new-5.png)      
 
-1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes..** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes** ***(4)***.
+1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes** ***(4)***.
   
    ![](../media/c2t1s3.png)
 
+
    ![](../media/n65.png) 
+=======
+   ![](../media/ex5-task1-step3b.png) 
+
   
 1. Navigate to the **Actions** ***(1)*** tab, here you can review the **workflow** ***(2)*** run.
     
@@ -73,15 +93,22 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
    
    ![](../media/c2t1s5.png)
   
+  
 1. You will be navigated to the **Code scanning** section. You’ll be able to see the alerts generated from the code scanning.
    
    ![](../media/ex-noalerta.png)
     
+=======
+1. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
+   
+   ![](../media/cl2-t1-s6.png)
+   
+
  ## Success criteria:
 To complete this challenge successfully:
 
-   - Verify the implementation of Code Scanning and CodeQL.
-   - Configure the Repository security advisories feature and create a temporary private fork.
+   - Verify the implementation of Implement Code Scanning and CodeQL.
+   - Configure the Repository security advisories feature and create temporary private fork.
 
 ## Additional Resources:
 
