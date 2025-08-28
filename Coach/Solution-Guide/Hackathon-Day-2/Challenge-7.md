@@ -238,62 +238,6 @@ Here is the solution guide, which provides all the specific, step-by-step direct
 
    ![](../media/ex6-task1-16.png)
 
-
-1. Navigate back to github organzation page and selcet **New** to create a new repository
-
-   ![](../media/09.png)
-
-1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
-
-    - Enter your Repository name as: `devsecops-2 <did>`
-
-       >Note: Make sure replace the did with your deployemnt id.
-
-    - Then click **Create repository** **(3)** to continue
-
-      ![](../media/n70.png)
-
-1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
-
-   ![](../media/n64.png) 
-      
-1. Navigate  to the **Visual Studio Code (1)** application. Click on **... (2)** at the top and select **Terminal (3)** from the **drop-down** and choose **New Terminal (4)**, which opens a fresh PowerShell terminal tab.
-
-   ![Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/ex1-task1-5.png "Quick setup screen")
-
-1. In Visual Studio Code, run the following commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
-   
-     ```pwsh
-     cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files
-     git config --global user.email "you@example.com"
-     git config --global user.name "Your UserName"
-     ```
-     
-   ![](../media/ad4.png) 
-     
-    Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` 
-
-    **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
-
-      ```pwsh
-      git init
-      git add .
-      git commit -m "Initial commit"
-      git branch -M main
-      git remote add origin- <your_github_repository-url>
-      git push -u origin main
-      ```
-      
-   - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager.
-  
-       ![](../media/ad5.png)
-
-   - Click on **Authorize git-ecosystem** to provide access.    
-
-       ![](../media/n63.png)
-       
-   - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
-=======
 10. To create a Pull request to merge the changes made from the `test` to  the `main` branch. Click on **Pull requests**
 
     ![](../media/ex6-task1-18.png)
@@ -326,7 +270,6 @@ Here is the solution guide, which provides all the specific, step-by-step direct
 
    ![](../media/ex6-task1-23.png)
 
-
 4. Under the **Actions Secrets/New secret** page, enter the below-mentioned details and click on **Add secret** **(3)**.
 
    - **Name** : Enter **OPENAI_TOKEN** **(1)**
@@ -344,17 +287,9 @@ Here is the solution guide, which provides all the specific, step-by-step direct
 
 3. On the Get Started with GitHub Actions page, select **set up a workflow yourself**.
 
-
-4. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes..** ***(4)***.
-  
-   ![](../media/c2t1s3.png)
-
-   ![](../media/n65.png) 
-=======
    ![](../media/cl9-t2-s4.png)
 
 4. In the text box, enter the name `ai-security-check-for-pr.yml` for your workflow file.
-
 
    ![](../media/cl6-ex2-t2-s5.png)
 
@@ -363,49 +298,6 @@ Here is the solution guide, which provides all the specific, step-by-step direct
    ```
    name: AI Security Check for Pull Requests
    
-
-   ![](../media/ex7-task1-5.png)
-   
-## Exercise 4: CI/CD Pipeline Setup and Infrastructure Deployment
-
-### Task 1: Deploy Infrastructure
-
-1. Log in to your Azure portal with the credentials provided in the **Environment** tab of the integrated CloudLabs Environment.
-
-2. In the global search bar, search for **Static Web Apps (1)** and select **Static Web Apps (2)**.
-
-    ![](../media/ad20.png)
-
-3. Click on **+ Create** to create a new Static Web App.
-
-4. In the **Basics tab** of the **Create Static Web App** page, enter the following details:
-   - **Subscription:** Select the available subscription **(1)**.
-   - **Resource Group:** Create a new resource group named - **Static-Web-App (2)**.
-   - **Name:** `React-Static-Web-App` **(3)**.
-   - **Plan type:** Select **Free (4)**.
-   - **Source:** Select **GitHub (5)**
-   - **GitHub account:** Click on **Click here to login (6)**. Connect to your GitHub account, which has the `devsecops-2` repository with the React application files.
-   
-      ![](../media/ex7-task1-6a.png)
-
-      ![](../media/ex7-task1-8.png)
-
-      - Click on **Authorize AzureAppService**.
-
-        ![](../media/n68.png)
-
-      - Provide the **GitHubUserPassword (1)** and then click on **Confirm (2)**
-
-        ![](../media/ad22.png)
-
-   - **Organization:** Select your assigned Github organization **(7)**.
-   - **Repository:** Select `devsecops-2 <did>` **(8)**.
-   - **Branch:** `Main` **(9)**.
-   - **Build presets:** Search for and select **React (detected) (10)**.
-   - **App location:** `/` **(11)**.
-
-      >**Note:** `/` refers to the root directory of the GitHub repository. Ensure that the location is specified appropriately as per your GitHub file structure.
-=======
    on:
      pull_request:
        branches:
@@ -418,7 +310,6 @@ Here is the solution guide, which provides all the specific, step-by-step direct
        steps:
          - name: Check out repository
            uses: actions/checkout@v2
-
    
          - name: Set up Node.js
            uses: actions/setup-node@v2
