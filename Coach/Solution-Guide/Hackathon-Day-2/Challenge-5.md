@@ -84,7 +84,9 @@ Go to https://microsoft.com/devicelogin (1) in the VM browser and copy the code 
 
 ### Task 2: Monitoring using Application Insights
 
-1. In the Azure Portal, navigate to the **contosotraders-<inject key="Deploymentid" enableCopy="false" />** **(1)** resource group and select the **Application Insights** resource with the name  **contoso-traders-aivalue** **(2)**.
+1. In the Azure Portal, navigate to the **contosotraders- XXXXXX****(1)** resource group and select the **Application Insights** resource with the name  **contoso-traders-aivalue** **(2)**.
+
+   **>Note:** XXXXXX refers to deployement id.
 
    ![](../media/cl4-t2-s1.png)
 

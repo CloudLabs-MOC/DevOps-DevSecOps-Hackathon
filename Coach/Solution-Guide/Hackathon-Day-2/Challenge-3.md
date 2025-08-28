@@ -26,19 +26,19 @@ In this task, you will use Dependabot to track the versions of the packages we u
 
 1. You should arrive at the `Dependabot alerts` blade in the `Security` tab.
 
-   ![GitHub Dependabot alerts in the Security tab.](../media/T1S3.png "GitHub Dependabot alerts")
+   ![GitHub Dependabot alerts in the Security tab.](../media/n67.png "GitHub Dependabot alerts")
 
 1. Sort the Dependabot alerts by `Package name`. Under the **Package** **(1)** dropdown menu, search for **nanoid** **(2)** by typing in the search box and selecting **nanoid** **(3)** vulnerability.
 
    ![](../media/n38.png)
 
-1. Select any of the `node-forge` Dependabot alert entries to see the alert details. After reviewing the alert, select **Review security update**.
+1. Select any of the  Dependabot alert entries to see the alert details. After reviewing the alert, select **Review security update**.
 
    ![](../media/n50.png)
 
    **Note:** If you see the Create Dependabot Security Update option, click on it. After it is created, select Review security update.
 
-   **Note:** If it is taking more than 6 minutes to  Create Dependabot Security Update, you can choose any one of the list.
+   **Note:** If it is taking more than 6 minutes to  Create Dependabot Security Update, you can choose any one of the list as shown in below picture if Nanoid is working good go ahead.
 
     ![](../media/n41.png)
 
@@ -48,12 +48,12 @@ In this task, you will use Dependabot to track the versions of the packages we u
    
 1. Click on **Merge pull request**, followed by **Confirm merge**. 
 
+
    ![](../media/n42.png)
 
-    
-   >**Note**: In case you see any errors with the merge request, retry steps 4 to 6 by selecting any other Dependabot alert.
+    >**Note**: In case you see any errors with the merge request, retry steps 4 to 6 by selecting any other Dependabot alert.
 
-1. Pull the latest changes from your GitHub repository to your local GitHub folder.
+1. Pull the latest changes from your GitHub repository to your local GitHub folder. The below commands should run in Command prompt.
 
    ```pwsh
    cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files  # This path may vary depending on how you set up your lab files repository
