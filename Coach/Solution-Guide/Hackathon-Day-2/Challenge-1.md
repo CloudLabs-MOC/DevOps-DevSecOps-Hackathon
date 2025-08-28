@@ -7,13 +7,43 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 ## Accessing GitHub
 
-1. To access and log into GitHub, open the edge browser from inside the environment and navigate to **[GitHub](https://github.com/)**.
+In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-2. Sign in to GitHub by clicking on the **Sign in** button in the top right corner of the GitHub home page.
+1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
 
-3. On the **Sign into GitHub tab**, you will see a login screen. Enter the following email/username, and then click on **Next**.
+   ```
+   https://github.com/login
+   ```
 
-4. Now enter the following password and click on **Sign in**.
+1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
+
+    - Email/Username: **odl-user-did_clabs** The Username is similar to this  make sure you have to replace the **did** with your **Deployement ID**. Deployement id you can find in Environment Tab.
+
+      ![](../media/01.png)
+
+1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
+
+    ![](../media/02.png)
+
+1. You'll see the **Sign in** tab. Here, enter your Azure Entra credentials:
+
+   - **Email/Username:** 
+
+       ![Enter Your Username](../media/03.png)
+
+1. Next, provide your password and click on **Sign in**
+
+   - **Password:** 
+
+      ![Enter Your Password](../media/04.png)
+
+1. On the **Stay Signed in?** pop-up, click on No.
+
+    ![](../media/n69.png)
+
+1. On the **Permission requested by** pop-up, click on **Accept**.
+
+      ![Enter Your Password](../media/06.png)
 
 ## Accessing the Azure Portal
 
@@ -86,41 +116,7 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
 
-   ```
-   https://github.com/login
-   ```
-
-1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
-
-    - Email/Username: **odl-user-did_clabs** The Username is similar to this  make sure you have to replace the **did** with your **Deployement ID**. Deployement id you can find in Environment Tab.
-
-      ![](../media/01.png)
-
-1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
-
-    ![](../media/02.png)
-
-1. You'll see the **Sign in** tab. Here, enter your Azure Entra credentials:
-
-   - **Email/Username:** 
-
-       ![Enter Your Username](../media/03.png)
-
-1. Next, provide your password and click on **Sign in**
-
-   - **Password:** 
-
-      ![Enter Your Password](../media/04.png)
-
-1. On the **Stay Signed in?** pop-up, click on No.
-
-    ![](../media/n69.png)
-
-1. On the **Permission requested by** pop-up, click on **Accept**.
-
-      ![Enter Your Password](../media/06.png)
 
 1. You are now successfully logged in to **GitHub** and have been redirected to the **GitHub homepage** On top right of the Github page click this **Icon** then select **Your organizations**.
 
