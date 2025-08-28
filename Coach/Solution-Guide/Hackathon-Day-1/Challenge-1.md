@@ -42,6 +42,100 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 In this task, you will login to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
 
+In this task, you will login to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
+
+1. In the LABVM desktop, open the **Microsoft Edge** browser.
+
+   ![](../media/23-7-25-g-1.png)
+
+   >**Note**: If you see any open PowerShell prompts running, please minimize them and proceed with the next steps.
+
+   ![](../media/minimise-screen.png)
+
+1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
+
+   ```
+   https://github.com/login
+   ```
+
+1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
+
+    - Email/Username: <inject key="GitHub User Name" enableCopy="true"/>`
+
+      ![](../media/01.png)
+
+1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
+
+    ![](../media/02.png)
+
+1. You'll see the **Sign in** tab. Here, enter your Azure Entra credentials:
+
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+       ![Enter Your Username](../media/03.png)
+
+1. Next, provide your password and click on **Sign in**
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+      ![Enter Your Password](../media/04.png)
+
+1. On the **Stay Signed in?** pop-up, click on No.
+
+    ![](../media/05.png)
+
+1. On the **Permission requested by** pop-up, click on **Accept**.
+
+      ![Enter Your Password](../media/06.png)
+
+1. On top right of the Github page click this **Icon** then select **Your organizations**.
+
+   ![](../media/07.png)
+
+   ![](../media/08.png)
+
+1. You are now successfully logged in to **GitHub** and have been redirected to the **GitHub homepage**.
+
+1. Selcet **New** to create a new repository
+
+   ![](../media/09.png)
+
+1. 
+
+1. Click on the **Copy link** button, then open a new tab in the Edge browser inside the LabVM. Paste the link into the address bar and press Enter. Ensure you're logged into GitHub, as described in the previous steps.
+
+      ```
+      https://github.com/new?template_owner=skills&template_name=copilot-codespaces-vscode&owner=%40me&name=skills-copilot-codespaces vscode&description=My+clone+repository&visibility=public
+      ```
+
+   <!-- For start course, run in JavaScript:
+      'https://github.com/new?' + new URLSearchParams({
+        template_owner: 'skills',
+        template_name: 'copilot-codespaces-vscode',
+        owner: '@me',
+        name: 'skills-copilot-codespaces-vscode',
+        description: 'My clone repository',
+        visibility: 'public',
+      }).toString()
+   -->
+
+1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
+
+    - Enter your Repository name as:
+
+      ```
+      devsecops-<inject key="Deployment-id" enableCopy="false"/>
+      ```
+
+      
+    - Then click **Create repository** **(3)** to continue
+
+      ![](../media/10.png)
+
+   
+   >**Note**: If you observe any repository existing with the same name, please make sure you delete the Repo and create a new one. Please follow steps 15 to 20. Otherwise, skip to step 21.
+=======
+
 1. In the LABVM desktop, open the **Microsoft Edge** browser.
 
    ![](../media/n27.png)
@@ -125,6 +219,7 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
       
     - Then click **Create repository** **(3)** to continue
+
 
       ![](../media/10.png)
 
@@ -352,7 +447,11 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
     
    The last task automated building and updating only one of the Docker images. In this task, we will update the workflow file with a more appropriate workflow for the structure of our repository. This task will end with    a file named `docker-publish.yml` that will rebuild and publish Docker images as their respective code is updated.
 
+
+
+=======
    
+
 ## Success criteria:
 To complete this challenge successfully:
 
