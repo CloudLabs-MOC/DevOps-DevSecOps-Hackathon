@@ -71,19 +71,9 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
     ![](../media1/Active-image5.png)
 
-## Solution Guide 
-
-### Task 1: Set up a GitHub repository
+## Accessing GitHub
 
 In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
-
-1. In the LABVM desktop, open the **Microsoft Edge** browser.
-
-   ![](../media/n27.png)
-
-   > **Note**: If you see any open PowerShell prompts running, please minimize them and proceed with the next steps.
-
-   ![](../media/n28.png)
 
 1. In a new tab, navigate to the **GitHub login** page by copying and pasting the following URL into the address bar:
 
@@ -93,33 +83,40 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
 
-   - Email/Username: <inject key="GitHub User Name" enableCopy="true"/>`
+    - Email/Username: **odl-user-did_clabs** The Username is similar to this  make sure you have to replace the **did** with your **Deployement ID**. Deployement id you can find in Environment Tab.
 
-     ![](../media/01.png)
+      ![](../media/01.png)
 
 1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
 
-   ![](../media/02.png)
+    ![](../media/02.png)
 
 1. You'll see the **Sign in** tab. Here, enter your Azure Entra credentials:
 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/Username:** 
 
-      ![Enter Your Username](../media/03.png)
+       ![Enter Your Username](../media/03.png)
 
 1. Next, provide your password and click on **Sign in**
 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Password:** 
 
-     ![Enter Your Password](../media/04.png)
+      ![Enter Your Password](../media/04.png)
 
 1. On the **Stay Signed in?** pop-up, click on No.
 
-   ![](../media/05.png)
+    ![](../media/n69.png)
 
 1. On the **Permission requested by** pop-up, click on **Accept**.
 
-   ![Enter Your Password](../media/06.png)
+      ![Enter Your Password](../media/06.png)
+
+## Solution Guide 
+
+### Task 1: Set up a GitHub repository
+
+In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
+
 
 1. On top right of the Github page click this **Icon** then select **Your organizations**.
 
@@ -135,11 +132,9 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
 
-   - Enter your Repository name as:
-
-     ```
-     devsecops-{Deployment-id}
-     ```
+   - Enter your Repository name as: **devsecops-did**
+   
+     >**Note:** did is refers to deployement id.
 
    - Then click **Create repository** **(3)** to continue
 
@@ -148,12 +143,13 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
-   ![](../media/cl1-t1-s12.png)
+   ![](../media/n64.png)
     
    
 1. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
 
    ![Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/2dg4.png "Quick setup screen")
+
 
    >**Note**: If the terminal is not open by default, please navigate to the terminal and click on new terminal.
 
@@ -167,7 +163,11 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
      
    ![](../media/cl1-t1-s15.png) 
      
-    > Note: This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1.
+
+    Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` 
+
+    **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
+
 
       ```pwsh
       git init
@@ -177,14 +177,18 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
       git remote add origin <your_github_repository-url>
       git push -u origin main
       ```
-     
-   - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
+
+     - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
 
        ![](../media/160625(03).png)
 
        ![](../media/ex2-t3.png)
        
    - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
+
+
+     ![](../media/n63.png)
+
 
 ### Task 2: Deploy Infrastructure
 
@@ -304,7 +308,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    
 1. Navigate back to the Actions tab and select the **contoso-traders-app-deployment** workflow. This workflow builds the Docker image, which is pushed to the container registry. The same image is pushed to the Azure container application.
 
-   ![](../media/2dgn124.png)
+   ![](../media/n26.png)
    
    ![](../media1/2dgn165.png)
    
@@ -314,19 +318,19 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    ![](../media/2dgn9.png) 
    
-2. Select the **contoso-traders-rg(XXXXXX)DeploymentID** resource group from the list.
+2. Select the **contoso-traders-rg XXXXXX** resource group from the list.
 
    ![](../media/2dgn135.png) 
 
    > **Note:** XXXXXX represents the Deployment ID, which can be found in the Environment section.
    
-3. Select the **contoso-traders-ui2<inject key="DeploymentID" enableCopy="false" />** Endpoint from the list of resources.
+3. Select the **contoso-traders-cdn XXXXXXX** Front Door from the list of resources.
 
-   ![](../media/2dgn127.png) 
+   ![](../media/S3.png) 
    
-4. Click on the **Endpoint hostname**. It'll open a browser tab where you will be able to verify that the Contoso Traders app has been hosted successfully.
+4. Once you opened the **Front Door** Just scroll dow under **properties** you can see the **Endpoint hostname** just copy it and paste in new tab.
 
-   ![](../media/2dgn128.png) 
+   ![](../media/S4.png) 
     
    ![](../media/2dgn162.png) 
     

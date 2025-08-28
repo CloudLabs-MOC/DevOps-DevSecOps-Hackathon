@@ -294,31 +294,23 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 ### Task 1: Submit Codebase Modifications to GitHub Repository
 
-1. In a new browser tab, open ```https://www.github.com/login```. From the **Environment** page **(1)**, navigate to **Licenses** **(2)** tab and **Copy** **(3)** the credentials. Use the same username and password to log into GitHub.
+1. Navigate GitHub Organization page and click on **New** to create new repository.
 
-   ![](../media/ad3.png) 
+   ![](../media/09.png)
 
-2. Once logged in, on the upper-right corner, expand the user **drop-down menu** **(1)** and select **Your repositories** **(2)**.
+1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
 
-   >**Note:** Make sure you have create repository in organiztion only.
+   - Enter your Repository name as: **devsecops-2 did**
+   
+     >**Note:** did is refers to deployement id.
 
-   ![The `New Repository` creation form in GitHub.](../media/2dg1.png "New Repository Creation Form")
+   - Then click **Create repository** **(3)** to continue
 
-3. Next to the search criteria, locate and select the **New** button.
-
-   ![The `New Repository` creation form in GitHub.](../media/ex2-t3-3-git.png "New Repository Creation Form")
-
-4. On the **Create a new repository** screen, name the repository ```devsecops-2``` **(1)**, select **Public** **(2)**, and click on the **Create repository** **(3)** button.
-
-   ![](../media/CL7-EX3-T1-S4.png) 
+     ![](../media/n70.png) 
 
 5. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
-   ![](../media/ex7-task1-3.png)
-
-6. From the GitHub username, note down the **Unique-ID** present in the Username. You'll need this in the upcoming steps.
-
-   ![](../media/cl1-t1-s13.png)
+   ![](../media/n64.png)
 
 7. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
 
@@ -343,8 +335,8 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
       git add .
       git commit -m "Initial commit"
       git branch -M main
-      git remote add origin-<Unique-ID> <your_github_repository-url>
-      git push -u origin-<Unique-ID> main
+      git remote add origin <your_github_repository-url>
+      git push -u origin main
       ```
      
    - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
@@ -371,13 +363,13 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 4. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes..** ***(4)***.
   
-   ![](../media/cl2-t1-s3.png)
+   ![](../media/c2t1s3.png)
 
-   ![](../media/ad-19.png) 
+   ![](../media/n65.png) 
 
 5. Navigate to the **Actions** ***(1)*** tab, here you can review the **workflow** ***(2)*** run.
     
-   ![](../media/cl2-t1-s4.png) 
+   ![](../media/c2t1s4.png) 
 
 6. Navigate to the **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
    
@@ -415,14 +407,14 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
       - Click on **Authorize AzureAppService**.
 
-        ![](../media/ad21.png)
+        ![](../media/n68.png)
 
       - Provide the **GitHubUserPassword (1)** and then click on **Confirm (2)**
 
         ![](../media/ad22.png)
 
    - **Organization:** Select your assigned Github organization **(7)**.
-   - **Repository:** Select `devsecops-2` **(8)**.
+   - **Repository:** Select `devsecops-2 did` **(8)**.
    - **Branch:** `Main` **(9)**.
    - **Build presets:** Search for and select **React (detected) (10)**.
    - **App location:** `/` **(11)**.
