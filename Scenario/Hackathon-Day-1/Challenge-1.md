@@ -93,15 +93,15 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
    
 1. Follow the steps below to create a new repository:
    
-    - Select **Cloudlabs Enterprises(1)** as the owner.
-    - Enter the **Repository name (2)** as below:
+   - Select **Cloudlabs Enterprises(1)** as the owner.
+   - Enter the **Repository name (2)** as below:
     
-      ```
-      devsecops-<inject key="Deployment ID"enableCopy="false"/>
-      ```
-    - Set the  repository visibility to **Private(3)**, 
+     ```
+     devsecops-<inject key="Deployment ID"enableCopy="false"/>
+     ```
+   - Set the  repository visibility to **Private(3)**, 
  
-    - Click on **Create repository (4)**.
+   - Click on **Create repository (4)**.
 
       ![](../media/github-repo-create-1.png)
 
