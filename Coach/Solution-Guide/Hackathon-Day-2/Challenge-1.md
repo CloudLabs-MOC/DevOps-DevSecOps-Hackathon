@@ -138,22 +138,19 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    - Enter your Repository name as: **devsecops-did**
    
-     >**Note:** did is refers to deployement id.
+     > **Note:** did is refers to deployement id.
 
    - Then click **Create repository** **(3)** to continue
 
-     ![](../media/10.png)
-
+     ![](../media1/github-repo-create-1.png)
 
 1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
-   ![](../media/n64.png)
+   ![](../media1/copy-git-url.png)
     
-   
 1. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
 
    ![Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/2dg4.png "Quick setup screen")
-
 
    >**Note**: If the terminal is not open by default, please navigate to the terminal and click on new terminal.
 
@@ -167,20 +164,26 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
      
    ![](../media/cl1-t1-s15.png) 
      
-
     Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` 
 
     **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
-
 
       ```pwsh
       git init
       git add .
       git commit -m "Initial commit"
       git branch -M main
+      git remote -v
+      git remote set-url origin <your_github_repository-url>
       git remote add origin <your_github_repository-url>
       git push -u origin main
       ```
+
+      > **Note**: If you see an error `git : fatal: detected dubious ownership in repository at 'C:/Workspaces/lab/DevOps-DevSecOps-Hackathon-lab-files'` run the fallowing command and rerun ablow command
+
+        ```
+        git config --global --add safe.directory C:/Workspaces/lab/DevOps-DevSecOps-Hackathon-lab-files
+        ```
 
      - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
 
@@ -190,15 +193,13 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
        
    - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
 
-
      ![](../media/n63.png)
-
 
 ### Task 2: Deploy Infrastructure
 
 1. In the GitHub repository, navigate to the setting and add github action secreat and variable. To create GitHub secrets, in your GitHub lab files repository, click on the **Settings** tab.
 
-   ![](./../media/cl1-t2-s2.png)
+   ![](../media1/cl1-t2-s2.png)
 
 2. Navigate to **Environment** **(1)**, click on **Service Principal Details** **(2)**, and copy the **Subscription ID**, **Tenant ID (Directory ID)**, **Application ID (Client ID)**, and **Secret Key (Client Secret)**.
 
@@ -218,7 +219,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 3. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **New repository secret** **(3)** button.
 
-   ![](../media/exe2-task4-step6-action-setup.png)
+   ![](../media1/exe2-task4-step6-action-setup.png)
 
 4. Under the **Actions Secrets/New secret** page, enter the below-mentioned details and click on **Add secret** **(3)**.
 
@@ -232,7 +233,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    - **Name:** Enter **SQLPASSWORD** ***(1)***
    - **Value:** Enter **Azure Password** ***(2)*** 
 
-      ![](../media/ex-task1-11.png)
+      ![](../media1/ex-task1-11.png)
 
       > **Note:** For **Azure Password**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.
       
@@ -242,14 +243,18 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    
    ![](../media/ex1-task1-9.png)
 
-7. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
+7. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **variables** **(3)** button and click on **New repository variable** **(4)**.
+
+   ![](../media1/ex1-task1-9new.png)
+
+8. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
    - **Name:** Enter **DEPLOYMENTREGION** ***(1)***
    - **Value:** Add the deployment region where you want to get the resources deployed. preferenced **eastus2, uksouth, australiaeast** **(2)**
    
      ![](../media/ex1-task1-10.png)
 
-8. To create another **Variable** click on **New repository variable**, under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
+9. To create another **Variable** click on **New repository variable**, under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
    - **Name:** Enter **SUFFIX** ***(1)***
    - **Value:** Create a secret to store the deployment ID **(2)**
@@ -260,7 +265,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
       ![](../media1/Deployment_ID.png)
      
-9. To run a workflow, perform the following steps and wait for the resources to be deployed within your Azure Portal:
+10. To run a workflow, perform the following steps and wait for the resources to be deployed within your Azure Portal:
       - Click on **Actions (1)** within your GitHub repository.
       - Select the workflow named **contoso-traders-provisioning-deployment (2)**.
       - Click on **Run workflow (3)**.
