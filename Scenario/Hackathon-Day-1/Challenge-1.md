@@ -77,6 +77,10 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
    ![](../media/github-loginb.png)
 
+1. On the **Permission requested by** pop-up, click on **Accept**.
+
+   ![](../media/github-06.png)
+
 1. You are now successfully logged in to GitHub.
 
 1. Click on **Github profile icon** on the top right corner and choose **Your Repositories** from the menu.
