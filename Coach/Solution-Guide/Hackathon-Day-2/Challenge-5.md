@@ -36,9 +36,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
    Connect-AzAccount -UseDeviceAuthentication
    ```
 
-1. Connect-AzAccount -UseDeviceAuthentication
-Go to https://microsoft.com/devicelogin (1) in the VM browser and copy the code (2).
-
+1. Connect-AzAccount -UseDeviceAuthentication Go to `https://microsoft.com/devicelogin` **(1)** in the VM browser and copy the **code** **(2)**.
 
     ![](../media/n55.png)
 
@@ -66,7 +64,7 @@ Go to https://microsoft.com/devicelogin (1) in the VM browser and copy the code 
 
    ![](../media/n60.png)
 
-   >**Note**: For <DeploymentID>, Navigate to Environment(1), click on Azure credentials (2), and copy (3)
+   >**Note**: For <DeploymentID>, Navigate to Environment (1), click on Azure credentials (2), and copy (3).
 
    ![](../media/n61.png)
 
@@ -84,15 +82,15 @@ Go to https://microsoft.com/devicelogin (1) in the VM browser and copy the code 
 
 ### Task 2: Monitoring using Application Insights
 
-1. In the Azure Portal, navigate to the **contosotraders- XXXXXX****(1)** resource group and select the **Application Insights** resource with the name  **contoso-traders-aivalue** **(2)**.
+1. In the Azure Portal, navigate to the **contoso-traders-rgXXXXXX** **(1)** resource group and select the **Application Insights** resource with the name  **contoso-traders-aiXXXXXX** **(2)**.
 
    **>Note:** XXXXXX refers to deployement id.
 
-   ![](../media/cl4-t2-s1.png)
+   ![](../media1/cl4-t2-s1.png)
 
-1. From the Overview of **contoso-traders-aivalue** Application Insights resource, you can set the **Show data for last** as per your requirement of monitoring insights.
+1. From the Overview of **contoso-traders-aiXXXXXX** Application Insights resource, you can set the **Show data for last** as per your requirement of monitoring insights.
 
-   ![](../media/cl4-t2-s2.png)
+   ![](../media1/cl4-t2-s2.png)
 
 1. In the first graph, you can see the number of failed requests for Application access.
 
