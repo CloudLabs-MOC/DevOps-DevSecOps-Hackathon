@@ -1,6 +1,6 @@
 # Microsoft Azure Hackathon: Accelerate Development with GitHub Copilot Trainer Guide
 
-<p align="right">Last updated August 28, 2025</p>
+<p align="right">Last updated September 25, 2025</p>
 
 ## Challenge 01: Continuous Integration and Deployment for Contoso Traders using GitHub Actions
 
@@ -8,7 +8,6 @@
 This challenge is designed to evaluate the attendee/user skills in creating a robust CI/CD pipeline leveraging GitHub Actions. It aims to assess your capability to not only establish a seamless pipeline but also to guarantee the successful deployment of the application. Through this challenge, the attendee/user will set up a GitHub repository, implement a CI/CD workflow using GitHub Actions, deploy a .NET application to Azure, and make rolling updates to the application.
 
 Here's the solution guide, which includes detailed step-by-step instructions required to complete the challenge.
-
 
 ## Accessing the Azure Portal
 
@@ -164,36 +163,36 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
      
    ![](../media/cl1-t1-s15.png) 
      
-    Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` 
+1. Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` 
 
-    **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
+   ```pwsh
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote -v
+   git remote set-url origin <your_github_repository-url>
+   git remote add origin <your_github_repository-url>
+   git push -u origin main
+   ```
 
-      ```pwsh
-      git init
-      git add .
-      git commit -m "Initial commit"
-      git branch -M main
-      git remote -v
-      git remote set-url origin <your_github_repository-url>
-      git remote add origin <your_github_repository-url>
-      git push -u origin main
-      ```
+   > **Note:** This step is done to initialize the folder as a Git repository, commit, and submit contents to the remote GitHub branch “main” in the lab files repository created in Step 1. 
 
-      > **Note**: If you see an error `git : fatal: detected dubious ownership in repository at 'C:/Workspaces/lab/DevOps-DevSecOps-Hackathon-lab-files'` run the fallowing command and rerun ablow command
+   > **Note**: If you see an error `git : fatal: detected dubious ownership in repository at 'C:/Workspaces/lab/DevOps-DevSecOps-Hackathon-lab-files'` run the fallowing command and rerun ablow command
 
-        ```
-        git config --global --add safe.directory C:/Workspaces/lab/DevOps-DevSecOps-Hackathon-lab-files
-        ```
+     ```
+     git config --global --add safe.directory C:/Workspaces/lab/DevOps-DevSecOps-Hackathon-lab-files
+     ```
 
-     - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
+1. If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
 
-       ![](../media/160625(03).png)
+   ![](../media/160625(03).png)
 
-       ![](../media/ex2-t3.png)
+   ![](../media/ex2-t3.png)
        
-   - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
+1. After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
 
-     ![](../media/n63.png)
+   ![](../media/n63.png)
 
 ### Task 2: Deploy Infrastructure
 
@@ -239,22 +238,18 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
       
       ![](../media/ad2.png)   
 
-6. To create Variables, under the **Actions secrets and variables** page, switch to **Variables (1)** and then click on **New repository variable (2)**.
-   
-   ![](../media/ex1-task1-9.png)
-
-7. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **variables** **(3)** button and click on **New repository variable** **(4)**.
+6. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **variables** **(3)** button and click on **New repository variable** **(4)**.
 
    ![](../media1/ex1-task1-9new.png)
 
-8. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
+7. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
    - **Name:** Enter **DEPLOYMENTREGION** ***(1)***
    - **Value:** Add the deployment region where you want to get the resources deployed. preferenced **eastus2, uksouth, australiaeast** **(2)**
    
      ![](../media/ex1-task1-10.png)
 
-9. To create another **Variable** click on **New repository variable**, under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
+8. To create another **Variable** click on **New repository variable**, under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
    - **Name:** Enter **SUFFIX** ***(1)***
    - **Value:** Create a secret to store the deployment ID **(2)**
@@ -265,13 +260,15 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
       ![](../media1/Deployment_ID.png)
      
-10. To run a workflow, perform the following steps and wait for the resources to be deployed within your Azure Portal:
-      - Click on **Actions (1)** within your GitHub repository.
-      - Select the workflow named **contoso-traders-provisioning-deployment (2)**.
-      - Click on **Run workflow (3)**.
-      - Finally, click on **Run workflow (4)**. Ensure that the branch is selected as **main**.
+9. To run a workflow, perform the following steps and wait for the resources to be deployed within your Azure Portal:
+   - Click on **Actions** **(1)** within your GitHub repository.
+   - Select the workflow named **contoso-traders-provisioning-deployment** **(2)**.
+   - Click on **Run workflow** **(3)**.
+   - Finally, click on **Run workflow** **(4)**. Ensure that the branch is selected as **main**.
 
-        ![](../media1/ex1-task1-15.png)
+     ![](../media1/ex1-task1-15new.png)
+
+     > **Note**: GitHub action will take around **10–15 minutes** to finish.
 
 ### Task 3: Set up CI/CD Workflow
 
@@ -283,7 +280,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    ![](../media/ex1-task1-13.png)  
 
-   >**Note:** XXXXXX represents the Deployment ID, which can be found in the Environment section.
+   > **Note:** XXXXXX represents the Deployment ID, which can be found in the Environment section.
    
 1. Select the **productsdb** SQL database from the list of resources.
 
@@ -291,11 +288,11 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    
 1. Under the Settings side blade, select **Connection strings** ***(1)*** and copy the **ADO.NET (SQL authentication)** ***(2)*** connection string from the ADO.NET tab. 
 
-   ![](../media/ado-sql-database.png)  
+   ![](../media1/ado-sql-database.png)  
  
 1. In your GitHub lab files repository, select the **Settings** tab from the lab files repository.
 
-   ![](../media/cl1-t1-s8.png)
+   ![](../media1/cl1-t1-s8.png)
    
 1. Under **Security**, expand **Secrets and variables** ***(1)*** by clicking the drop-down and selecting **Actions** ***(2)*** from the left navigation bar. Select the edit button for the created secret named **SQLPASSWORD** ***(3)***.
 
@@ -307,13 +304,13 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    
       ![](../media/ex1-task3-2.png)
    
-      >**Note:** Replace `{your_password}` with the ODL User Azure Password. Go to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.
+      > **Note:** Replace `{your_password}` with the ODL User Azure Password. Go to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.
       
-      ![](../media/ad2.png)   
+        ![](../media/ad2.png)   
       
 1. From your GitHub repository, select the **Actions** ***(1)*** tab. Select the **contoso-traders-app-deployment** ***(2)*** workflow from the side blade, Click on the  **drop-down** ***(3)*** next Run workflow button, and select **Run workflow** ***(4)***.
 
-   ![](../media1/2dgn159.png)
+   ![](../media1/2dgn159new.png)
    
 1. Navigate back to the Actions tab and select the **contoso-traders-app-deployment** workflow. This workflow builds the Docker image, which is pushed to the container registry. The same image is pushed to the Azure container application.
 
@@ -343,7 +340,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
     
    ![](../media/2dgn162.png) 
     
-   The last task automated building and updating only one of the Docker images. In this task, we will update the workflow file with a more appropriate workflow for the structure of our repository. This task will end with    a file named `docker-publish.yml` that will rebuild and publish Docker images as their respective code is updated.
+   The last task automated building and updating only one of the Docker images. In this task, we will update the workflow file with a more appropriate workflow for the structure of our repository. This task will end with a file named `docker-publish.yml` that will rebuild and publish Docker images as their respective code is updated.
 
    > **Note:** If you see the **Know your location** pop-up, click on **Block**.
 
