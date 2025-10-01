@@ -52,11 +52,15 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 **Note**: To perform this task, the GitHub repository should be public. If the repository visibility is private, please go to the settings of the repository and change the visibility to public.
 
    
-1. Select the **Settings** ***(1)*** tab from the GitHub browser tab. Click on **Advance security** ***(2)*** under the security side blade.
+1. Select the **Settings** **(1)** tab from the GitHub browser tab. Click on **Advance security** ***(2)*** under the security side blade.
 
-   ![](../media/.png)  
+   ![](../media/advance-security.jpg)  
 
 1. Enable **GitHub Advanced Security** for the repository by clicking on **Enable**.
+
+   ![](../media/ghas.jpg)  
+
+   ![](../media/ghas-2.jpg) 
    
 1. Click on the **Set up** **(1)** button to enable CodeQL analysis, and select the **Advanced** **(2)** option for creating a CodeQL Analysis YAML file.
 

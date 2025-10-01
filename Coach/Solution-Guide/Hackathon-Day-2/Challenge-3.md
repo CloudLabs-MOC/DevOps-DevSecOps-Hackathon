@@ -16,7 +16,7 @@ In this task, you will use Dependabot to track the versions of the packages we u
 
    > **Note**: Enabling the `Dependabot security updates` will also automatically enable `Dependency graph` and `Dependabot alerts`.
 
-   ![](../media/n37.png)
+   ![](../media/advance-security.jpg)
 
    > **Note**: The alerts for the repository may take some time to appear. The rest of the steps for this task rely on the alerts being present. You can continue with the next exercise, as this is an independent task and doesn't affect the lab. Please visit this task later and complete it.
 
@@ -68,7 +68,7 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
    ![](../media/n43.png)
     
-1. Select **Code security** from the sidebar and make sure **Secret scanning is enabled (1)**.
+1. Select **Code security** from the sidebar and make sure **Secret protection enabled (1)**.
 
    ![](../media/n44.png)   
     
