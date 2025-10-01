@@ -68,7 +68,8 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
    ![](../media/n43.png)
     
-1. Select **Code security** from the sidebar and make sure **Secret protection enabled (1)**.
+
+1. Select **Code security** from the sidebar and make sure **Secret protection is enabled (1)**.
 
    ![](../media/n44.png)   
     
