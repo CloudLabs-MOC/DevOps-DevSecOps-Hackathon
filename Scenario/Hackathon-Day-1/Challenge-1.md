@@ -83,9 +83,9 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 1. You are now successfully logged in to GitHub.
 
-1. Click on **Github profile icon** on the top right corner and choose **Your Repositories** from the menu.
+1. Click on **Github profile icon** on the top right corner and choose **Repositories** from the menu.
 
-   ![](../media/your-repo.png)
+   ![](../media/repos.jpg)
 
 1. Click on **New**
   
@@ -103,7 +103,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
  
    - Click on **Create repository (4)**.
 
-      ![](../media/github-repo-create-1.png)
+      ![](../media/devops-01.jpg)
 
 ## Challenge Objectives:
 

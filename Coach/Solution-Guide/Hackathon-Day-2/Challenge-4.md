@@ -300,9 +300,9 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
 
-   - Enter your Repository name as: **devsecops-2 did**
+   - Enter your Repository name as: **devsecops-2 [DID]**
    
-     >**Note:** did is refers to deployement id.
+     >**Note:** DID is refers to deployement id.
 
    - Then click **Create repository** **(3)** to continue
 
@@ -355,7 +355,13 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 2. Select the **settings** ***(1)*** tab from the GitHub browser tab. Click on **Advanced security** ***(2)*** under the security side blade.
 
-   ![](../media/ex2-task1-1a.png) 
+   ![](../media/advance-security.jpg) 
+
+1. Enable **GitHub Advanced Security** for the repository by clicking on **Enable**.
+
+   ![](../media/ghas.jpg)  
+
+   ![](../media/ghas-2.jpg) 
 
 3. Click on the **Set up** **(1)** button to enable CodeQL analysis, and select the **Advanced** **(2)** option for creating a CodeQL Analysis YAML file.
 
