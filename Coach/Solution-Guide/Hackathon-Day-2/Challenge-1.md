@@ -11,12 +11,11 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 ## Accessing the Azure Portal
 
->**Important:** You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Azure Password** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
+>**Important:** You can find the Username and Password within the environment by navigating to the **Environment** **(1)** tab in the left pane then copy the **Azure Username** **(2)** and **Temporary Access Pass** **(3)**, which will be required for signing into the Azure portal in later steps and you can record the **Deployment Id** **(4)**, which can be used to provide a unique name to the resources during deployment.
 
 >**Note:** Numbers and ID's values may vary. Kindly ignore values in screenshots and copy values from the **Environment** tab.
 
- ![](../media1/Active-image19.png)
- ![](../media1/Active-image(20).png)
+ ![](../media1/Active-image19new.png)
 
 1. To access the Azure portal, within labvm open **Microsoft Edge** and browser to the [Azure Portal](https://portal.azure.com/).
 
@@ -26,45 +25,19 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
      ![](../media1/Active-image1.png)
 
-      > **Note:** For **Email/Username**, Navigate to **Environment(1)**, click on **Azure credentials (2)**, and copy **Username (3)**.   
+      > **Note:** For **Email/Username**, Navigate to **Environment(1)**, click on **Azure credentials** **(2)**, and copy **Username** **(3)**.   
             
-      ![](../media/ad1.png)
+      ![](../media1/ad1.png)
 
 1. Now enter the following password and click on **Sign in**.
 
    - **Password:** 
 
-      ![](../media1/Active-image2.png)
+      ![](../media1/Active-image2new.png)
 
-      > **Note:** For **Password**, Navigate to **Environment(1)**, click on **Azure credentials (2)**, and copy **Password (3)**.   
+      > **Note:** For **Password**, Navigate to **Environment(1)**, click on **Azure credentials** **(2)**, and copy **Password** **(3)**.   
             
-      ![](../media/ad2.png)      
-
-1. When **Action Required** window pop up click on **Ask Later**.
-
-    ![](../media1/Active-image3.png)
-
-   >**NOTE:** If you don't have the Microsoft Authenticator app installed on your mobile device, select **Download** now and follow the steps.
-
-1. On the Set up your account page, select **Next.**
-
-   ![](../../../Scenario/media/mfa3.png)
-
-1. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code. Select **Next**.
-
-   ![](../../../Scenario/media/mfa4.png)
-
-1. On the Keep your account secure page. Enter the code, which is shown on the Authenticator app.
-
-   ![](../../../Scenario/media/mfa5.png)
-
-1. Once the code is entered. click **Next**
-
-   ![](../../../Scenario/media/mfa6.png)
-
-1. Select Done on the Success! page.
-
-   ![](../../../Scenario/media/mfa7.png)
+      ![](../media1/ad2.png)      
    
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
@@ -86,7 +59,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
 
-    - Email/Username: **odl-user-did_clabs** The Username is similar to this  make sure you have to replace the **did** with your **Deployement ID**. Deployement id you can find in Environment Tab.
+    - Email/Username: **odl-user-DID_clabs** The Username is similar to this  make sure you have to replace the **DID** with your **Deployement ID**. Deployement id you can find in Environment Tab.
 
       ![](../media/01.png)
 
@@ -120,18 +93,11 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 In this task, you will log in to an account on [GitHub](https://github.com) and use `git` to add lab files to a new repository.
 
-
-1. On top right of the Github page click this **Icon** then select **Your organizations**.
-
-   ![](../media/07.png)
-
-   ![](../media/08.png)
-
 1. You are now successfully logged in to **GitHub** and have been redirected to the **GitHub homepage**.
 
-1. Selcet **New** to create a new repository
+1. Click on **Create repository** to create the new repository.
 
-   ![](../media/09.png)
+   ![](../media1/09new.png)
 
 1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
 
@@ -141,7 +107,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    - Then click **Create repository** **(3)** to continue
 
-     ![](../media1/github-repo-create-1.png)
+     ![](../media1/github-repo-create-1new.png)
 
 1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
@@ -200,9 +166,9 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    ![](../media1/cl1-t2-s2.png)
 
-2. Navigate to **Environment** **(1)**, click on **Service Principal Details** **(2)**, and copy the **Subscription ID**, **Tenant ID (Directory ID)**, **Application ID (Client ID)**, and **Secret Key (Client Secret)**.
+2. Navigate to **Environment** **(1)**, click on **Service Principal Details** **(2)**, and copy the **Subscription ID**, **Tenant ID** **(Directory ID)**, **Application ID** **(Client ID)**, and **Secret Key** **(Client Secret)**.
 
-   ![](../media/ad7.png)
+   ![](../media1/ad7.png)
    
    - Replace the values that you copied in the below JSON. You will be using them in this step.
    - The Application ID refers to the Client ID, and the Secret Key corresponds to the Client Secret.
@@ -234,9 +200,9 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
       ![](../media1/ex-task1-11.png)
 
-      > **Note:** For **Azure Password**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.
+      > **Note:** For **Azure Password**, Navigate to **Environment** **(1)**, click on **Azure Credentials** **(2)**, and copy **Temporary Access Pass** **(3)**.
       
-      ![](../media/ad2.png)   
+      ![](../media1/ad2.png)   
 
 6. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **variables** **(3)** button and click on **New repository variable** **(4)**.
 
@@ -256,7 +222,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
   
      ![](../media/ex1-task1-12.png)
 
-      > **Note:** You can find the **Deployment ID** within the environment by navigating to the **Environment Details (1)**, click on **Azure Credentials (2)**, and copy **Deployment ID** **(3)**.
+      > **Note:** You can find the **Deployment ID** within the environment by navigating to the **Environment Details** **(1)**, click on **Azure Credentials** **(2)**, and copy **Deployment ID** **(3)**.
 
       ![](../media1/Deployment_ID.png)
      
@@ -274,7 +240,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. From the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-   ![](../media/2dgn9.png) 
+   ![](../media1/2dgn9.png) 
    
 1. Select the **contoso-traders-rgXXXXXX** resource group from the list.
 
@@ -286,9 +252,9 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    ![](../media/ex1-task1-14.png) 
    
-1. Under the Settings side blade, select **Connection strings** ***(1)*** and copy the **ADO.NET (SQL authentication)** ***(2)*** connection string from the ADO.NET tab. 
+1. Under the Settings side blade, select **Connection strings** ***(1)*** and copy the **ADO.NET** **(SQL authentication)** ***(2)*** connection string from the ADO.NET tab. 
 
-   ![](../media1/ado-sql-database.png)  
+   ![](../media1/ado-sql-databasenew.png)  
  
 1. In your GitHub lab files repository, select the **Settings** tab from the lab files repository.
 
@@ -300,13 +266,13 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
     
 1. Under the **Actions Secrets/Update secret** page, enter the below-mentioned details, and click on **Update secret.**
 
-   - **Value:** Paste the **ADO.NET (SQL authentication)** that you  have copied in the previous step.
+   - **Value:** Paste the **ADO.NET** **(SQL authentication)** that you  have copied in the previous step.
    
       ![](../media/ex1-task3-2.png)
    
-      > **Note:** Replace `{your_password}` with the ODL User Azure Password. Go to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.
+      > **Note:** Replace `{your_password}` with the ODL User Azure Password. Go to **Environment** **(1)**, click on **Azure Credentials** **(2)**, and copy **Temporary Access Pass** **(3)**.
       
-        ![](../media/ad2.png)   
+        ![](../media1/ad2.png)   
       
 1. From your GitHub repository, select the **Actions** ***(1)*** tab. Select the **contoso-traders-app-deployment** ***(2)*** workflow from the side blade, Click on the  **drop-down** ***(3)*** next Run workflow button, and select **Run workflow** ***(4)***.
 
@@ -322,7 +288,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. Navigate to Azure Portal, and click on **Resource groups** from the Navigate panel to see the resource groups.
 
-   ![](../media/2dgn9.png) 
+   ![](../media1/2dgn9.png) 
    
 2. Select the **contoso-traders-rg XXXXXX** resource group from the list.
 
