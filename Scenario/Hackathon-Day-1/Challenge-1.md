@@ -63,7 +63,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 1. Click on **Create repository** to create the new repository.
 
-   ![](../media1/09new.png)
+   ![](../media/09new.png)
    
 1. Follow the steps below to create a new repository:
    
@@ -77,7 +77,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
  
    - Click on **Create repository (4)**.
 
-      ![](../media1/github-repo-create-1.png)
+      ![](../media/github-repo-create-1new.png)
 
 ## Challenge Objectives:
 
