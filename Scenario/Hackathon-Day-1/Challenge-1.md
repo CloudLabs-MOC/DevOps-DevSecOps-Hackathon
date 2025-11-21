@@ -25,28 +25,6 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, click **Maybe Later** to skip the tour.
 
-   >**NOTE:** If you don't have the Microsoft Authenticator app installed on your mobile device, select **Download** now and follow the steps.
-
-1. On the Set up your account page, select **Next.**
-
-   ![](../media/mfa3.png)
-
-1. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code. Select **Next**.
-
-   ![](../media/mfa4.png)
-
-1. On the Keep your account secure page. Enter the code, which is shown on the Authenticator app.
-
-   ![](../media/mfa5.png)
-
-1. Once the code is entered. click **Next**
-
-   ![](../media/mfa6.png)
-
-1. Select Done on the Success! page.
-
-   ![](../media/mfa7.png)
-
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
@@ -83,13 +61,9 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 1. You are now successfully logged in to GitHub.
 
-1. Click on **Github profile icon** on the top right corner and choose **Repositories** from the menu.
+1. Click on **Create repository** to create the new repository.
 
-   ![](../media/repos.jpg)
-
-1. Click on **New**
-  
-   ![](../media/new-repo.png)
+   ![](../media1/09new.png)
    
 1. Follow the steps below to create a new repository:
    
@@ -103,7 +77,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
  
    - Click on **Create repository (4)**.
 
-      ![](../media/devops-01.jpg)
+      ![](../media1/github-repo-create-1.png)
 
 ## Challenge Objectives:
 
