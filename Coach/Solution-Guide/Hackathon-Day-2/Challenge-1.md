@@ -211,7 +211,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 7. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
 
    - **Name:** Enter **DEPLOYMENTREGION** ***(1)***
-   - **Value:** Add the deployment region where you want to get the resources deployed. preferenced **eastus2, uksouth, australiaeast** **(2)**
+   - **Value:** Add the deployment region where you want to get the resources deployed. preferenced **eastus2** **(2)**
    
      ![](../media/ex1-task1-10.png)
 
