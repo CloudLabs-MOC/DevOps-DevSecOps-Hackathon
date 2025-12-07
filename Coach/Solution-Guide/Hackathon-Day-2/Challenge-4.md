@@ -254,7 +254,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
    /tests
    ```
 
-   >**Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **WelcomePopup.test.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
+   > **Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **WelcomePopup.test.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
 
    ![Picture1](../media/ad18.png)
 
@@ -262,7 +262,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 3. Now create a new file named `WelcomePopup.test.js` under the path `ContosoTraders.Ui.Website.V2\src\components`.
 
-   >**Note:** If the file has already been created by Copilot, there is no need to create it again.
+   > **Note:** If the file has already been created by Copilot, there is no need to create it again.
 
    ![Picture1](../media/CL7-EX2-T1-S3.png)
 
@@ -409,7 +409,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
    - **Source:** Select **GitHub** **(5)**
    - **GitHub account:** Click on **Click here to login (6)**. Connect to your GitHub account, which has the `devsecops-2` repository with the React application files.
    
-      ![](../media1/ex7-task1-8.png.png)
+      ![](../media1/ex7-task1-8.png)
 
       - Click on **Authorize AzureAppService**.
 
