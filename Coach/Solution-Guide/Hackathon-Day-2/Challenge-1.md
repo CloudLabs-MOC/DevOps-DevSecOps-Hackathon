@@ -152,13 +152,13 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
 
-   ![](../media/160625(03).png)
+   ![](../media1/160625(03).png)
 
-   ![](../media/ex2-t3.png)
+   ![](../media1/ex2-t3.png)
        
 1. After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
 
-   ![](../media/n63.png)
+   ![](../media1/n63.png)
 
 ### Task 2: Deploy Infrastructure
 
@@ -182,7 +182,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
       }
       ```
 
-3. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **New repository secret** **(3)** button.
+3. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **New repository secret** **(3)** button under Repository secrets.
 
    ![](../media1/exe2-task4-step6-action-setup.png)
 
@@ -204,11 +204,11 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
       
       ![](../media1/ad2.png)   
 
-6. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **variables** **(3)** button and click on **New repository variable** **(4)**.
+6. Under **Security**, expand **Secrets and variables** **(1)** by clicking the drop-down and select **Actions** **(2)** blade from the left navigation bar. Select the **variables** **(3)** button and click on **New repository variable** **(4)** button under Repository secrets.
 
    ![](../media1/ex1-task1-9new.png)
 
-7. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)***.
+7. Under **Actions variables / New variable** , enter the below-mentioned details and click on **Add variable** ***(3)** button under Repository variables.
 
    - **Name:** Enter **DEPLOYMENTREGION** ***(1)***
    - **Value:** Add the deployment region where you want to get the resources deployed. preferenced **eastus2** **(2)**
