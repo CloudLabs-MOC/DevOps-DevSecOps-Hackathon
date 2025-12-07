@@ -53,7 +53,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/ad12.png)
 
-   >**Note:** If you don’t see any option here, you can click the icon at the bottom right and select **Sign in to use Copilot**.
+   > **Note:** If you don’t see any option here, you can click the icon at the bottom right and select **Sign in to use Copilot**.
 
    ![Picture1](../media/ad12a.png)
 
@@ -61,21 +61,25 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/cl7-ex1-t1-s3.png)
 
-1. On the **Select user to authorize** page in the edge browser, click on **Continue**
+1. On the **Select user to authorize** page in the edge browser, click on **Continue**.
 
    ![Picture1](../media/ad13.png)
+
+1. On the Authorize Visual Studio Code, click on **Authorize Visual-Studio-Code**.
+
+   ![Picture1](../media1/ad1716.png)
 
 1. You will encounter a pop-up prompt. Click **Open** to proceed.
 
    ![Picture1](../media/ex7-task1-0.4.png)
 
-   >**Note:** If you get another pop-up stating **Allow an extension to open this URI**, please click on **Open**.
+   > **Note:** If you get another pop-up stating **Allow an extension to open this URI**, please click on **Open**.
 
 1. You will be able to see in the bottom right corner that GitHub Copilot has been activated.
 
    ![Picture1](../media/cl7-ex1-t1-s8.png)
 
-   >**Note:** If the activation status of Github Copilot in the bottom right corner is not visible, try restarting Visual Studio Code to ensure that the activation status becomes visible in that location.
+   > **Note:** If the activation status of Github Copilot in the bottom right corner is not visible, try restarting Visual Studio Code to ensure that the activation status becomes visible in that location.
 
 1. Verify if **GitHub Copilot Chat** is installed. If it's installed, the chat window will open as shown below.
    
@@ -83,7 +87,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
    
 ### Task 2: Integrate an 'About Us' app component in React using GitHub Copilot
 
-  >**NOTE:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
+  > **NOTE:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
 
 1. In a new Visual Studio Code window, click on **File (1)** at the top left corner and then select **Open Folder.. (2)**.
 
@@ -107,7 +111,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. Within the **CHAT: GITHUB COPILOT** pane, type: `Help me create the new About Us" page in ContosoTraders.Ui.Website.V2\src` and observe the AI response. You can follow the instructions provided by GitHub Copilot towards successfully add the About Us page as a part of the sample React application that you have imported into VS Code.
 
-   >**Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **AboutUs.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
+   > **Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **AboutUs.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
 
    ![Picture1](../media/CL7-EX1-T2-S4a.png)
 
@@ -264,7 +268,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 4. Navigate back to the GitHub Copilot chat panel and copy the unit test that has been generated using Copilot for the `WelcomePopup` component. Ensure to paste these unit test cases within the newly created file - `WelcomePopup.test.js` under the `components` folder and save the file.
 
-   >**Note:** If the file has already been created by Copilot, you can skip this step. This step is only needed if the result appears in the Copilot chat window—then you'll need to copy and paste the generated code into your file.
+   > **Note:** If the file has already been created by Copilot, you can skip this step. This step is only needed if the result appears in the Copilot chat window—then you'll need to copy and paste the generated code into your file.
 
    ![Picture1](../media/CL7-EX2-T1-S4-a.png)
 
@@ -276,7 +280,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
    cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2\src\components
    ```
 
-   >**Note:** Ensure that your current working directory within the terminal has the `components` folder in its present path. In this scenario, the `components` folder is present inside the `/src` directory. 
+   > **Note:** Ensure that your current working directory within the terminal has the `components` folder in its present path. In this scenario, the `components` folder is present inside the `/src` directory. 
 
 6. To execute the unit test cases generated by GitHub Copilot, we need to run the `WelcomePopup.test.js` file using the following command within the terminal:
 
@@ -286,7 +290,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 7. Post execution of the above unit test, you must ensure to have a successful - `PASS` test runs with no errors. If you are presented with errors, please understand the intricacies of the error as mentioned within the terminal and work towards a successful unit test run.
 
-   >**Note:** You may need to scroll up in your output window to view the results.
+   > **Note:** You may need to scroll up in your output window to view the results.
 
    ![Picture1](../media/CL7-EX2-T1-S7.png)
 
@@ -302,7 +306,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    - Enter your Repository name as: **devsecops-2 [DID]**
    
-     >**Note:** DID is refers to deployement id.
+     > **Note:** DID is refers to deployement id.
 
    - Then click **Create repository** **(3)** to continue
 
@@ -379,13 +383,11 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 6. Navigate to the **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
    
-   ![](../media/cl2-t1-s5.png)
+   ![](../media1/cl2-t1-s5.png)
 
 7. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
    
-   ![](../media/ex7-task1-5.png)
-
-
+   ![](../media1/ex7-task1-5.png)
 
 ## Exercise 4: CI/CD Pipeline Setup and Infrastructure Deployment
 
@@ -393,7 +395,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 1. Log in to your Azure portal with the credentials provided in the **Environment** tab of the integrated CloudLabs Environment.
 
-2. In the global search bar, search for **Static Web Apps (1)** and select **Static Web Apps (2)**.
+2. In the global search bar, search for **Static Web Apps** **(1)** and select **Static Web Apps** **(2)**.
 
     ![](../media/ad20.png)
 
@@ -401,21 +403,19 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 4. In the **Basics tab** of the **Create Static Web App** page, enter the following details:
    - **Subscription:** Select the available subscription **(1)**.
-   - **Resource Group:** Create a new resource group named - **Static-Web-App (2)**.
+   - **Resource Group:** Create a new resource group named - **Static-Web-App** **(2)**.
    - **Name:** `React-Static-Web-App` **(3)**.
-   - **Plan type:** Select **Free (4)**.
-   - **Source:** Select **GitHub (5)**
+   - **Plan type:** Select **Free** **(4)**.
+   - **Source:** Select **GitHub** **(5)**
    - **GitHub account:** Click on **Click here to login (6)**. Connect to your GitHub account, which has the `devsecops-2` repository with the React application files.
    
-      ![](../media/ex7-task1-6a.png)
-
-      ![](../media/ex7-task1-8.png)
+      ![](../media1/ex7-task1-8.png.png)
 
       - Click on **Authorize AzureAppService**.
 
         ![](../media/n68.png)
 
-      - Provide the **GitHubUserPassword (1)** and then click on **Confirm (2)**
+      - Provide the **GitHubUserPassword** **(1)** and then click on **Confirm** **(2)**
 
         ![](../media/ad22.png)
 
@@ -429,7 +429,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
    
    - Leave the other fields at default and then click on **Review + create (12)**.
 
-     ![](../media/ex7-task1-7.png)
+     ![](../media1/ex7-task1-7.png)
 
    - Finally, click on **Create** on the **Review + create** page to create the static web app.     
 
@@ -441,11 +441,9 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 7. Navigate back to your `devsecops-2` repository on the GitHub portal and click on the **Actions** tab.
 
-    ![](../media/CL7-EX4-T1-S6.png)
-
 8. Ensure that your **Azure Static Web Apps CI/CD** workflow has a successful run status.
 
-    ![](../media/CL7-EX4-T1-S7.png)
+    ![](../media1/CL7-EX4-T1-S7.png)
 
 9. Navigate back to your Azure portal on the overview page of the recently created Static Web App and click on the **URL**
 
