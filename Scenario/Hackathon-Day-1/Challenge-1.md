@@ -96,8 +96,8 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
 
 2. **Deploy Infrastructure:**
    - In the GitHub repository, navigate to the settings and add GitHub action secret and variable as below.
-     - Create GitHub secrets with the same name as mentioned below.
-        - **SERVICEPRINCIPAL**: Create a secret to store service principal details. You can find the details in the Environment details tab of your environment.
+     - Create GitHub Repository secrets with the same name as mentioned below.
+        - **SERVICEPRINCIPAL**: Create a Repository secrets to store service principal details. You can find the details in the Environment details tab of your environment.
           - Below is the format that you need to use to create the secret for SPN, replace the values that you copied in the below JSON. 
       
             ```json
@@ -108,6 +108,8 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
                "subscriptionId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz"
             }
             ```
+
+            > **Hint**: Navigate to the Environment tab to view the Service Principal (Client ID, Tenant ID, etc.) details.
          
         - **SQLPASSWORD**: You need to enter any unique password with a combination of Alphanumeric letters. Your password must contain characters from three of the following categories – English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
      
