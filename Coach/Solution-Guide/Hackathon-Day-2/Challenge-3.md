@@ -34,26 +34,15 @@ In this task, you will use Dependabot to track the versions of the packages we u
 
    ![](../media/n38.png)
 
-1. Select any of the  Dependabot alert entries to see the alert details. After reviewing the alert, select **Review security update**.
-
-   ![](../media/n50.png)
-
-   **Note:** If you see the Create Dependabot Security Update option, click on it. After it is created, select Review security update.
-
-   **Note:** If it is taking more than 6 minutes to  Create Dependabot Security Update, you can choose any one of the list as shown in below picture if Nanoid is working good go ahead.
-
-    ![](../media/n41.png)
-
 1. Navigate to the **Pull Requests** ***(1)*** tab, find the Dependabot security patch pull request ***(2)***, and merge it to your main branch.
 
-   ![List of Pull Requests.](../media/cl3-t1-s6.png "Pull Requests")
+   ![List of Pull Requests.](../media1/cl3-t1-s6.png "Pull Requests")
    
 1. Click on **Merge pull request**, followed by **Confirm merge**. 
 
+    ![](../media/n42.png)
 
-   ![](../media/n42.png)
-
-    >**Note**: In case you see any errors with the merge request, retry steps 4 to 6 by selecting any other Dependabot alert.
+    > **Note**: In case you see any errors with the merge request, retry steps 4 to 6 by selecting any other Dependabot alert.
 
 1. Pull the latest changes from your GitHub repository to your local GitHub folder. The below commands should run in Command prompt.
 
@@ -70,7 +59,7 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
    ![](../media/n43.png)
     
-1. Select **Code security** from the sidebar and make sure **Secret protection is enabled (1)**.
+1. Select **Code security** from the sidebar and make sure **Secret protection is enabled** **(1)**.
 
    ![](../media/n44.png)   
     
@@ -78,11 +67,11 @@ In this task, you'll explore how secret scanning works and how it generates aler
 
    ![](../media/n45.png)    
    
-1. Click on **Add file (1)** and select the **create new file (2)** option.
+1. Click on **Add file** **(1)** and select the **create new file** **(2)** option.
 
    ![](../media/n46.png)    
    
-1. Add a new file with the name **build.docker-compose.yml (1)**, add the code mentioned below **commit** the file, then again commit changes. Here, you'll expose the **application ID** of a service principal.
+1. Add a new file with the name **build.docker-compose.yml** **(1)**, add the code mentioned below **commit** the file, then again commit changes. Here, you'll expose the **application ID** of a service principal.
 
    ```
    version: "3.4"
