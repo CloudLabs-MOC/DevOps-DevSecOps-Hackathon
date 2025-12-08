@@ -309,6 +309,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    The last task automated building and updating only one of the Docker images. In this task, we will update the workflow file with a more appropriate workflow for the structure of our repository. This task will end with a file named `docker-publish.yml` that will rebuild and publish Docker images as their respective code is updated.
 
    > **Note:** If you see the **Know your location** pop-up, click on **Block**.
+   > **Note:** The web application may not be accessible through the endpoint immediately. Please wait **10–15 minutes** for the application to be fully up and running.
 
 ## Success criteria:
 To complete this challenge successfully:
