@@ -15,13 +15,13 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 1. On the **Sign in to GitHub** tab, enter the provided **GitHub username** **(1)** in the input field, and click on **Sign in with your identity provider** to continue **(2)**.
 
-    - Email/Username: **odl-user-did_clabs** The Username is similar to this  make sure you have to replace the **did** with your **Deployement ID**. Deployement id you can find in Environment Tab.
+    - Email/Username: **odl-user-did_clabs** The Username is similar to this  make sure you replace **did** with your **Deployment ID**. The Deployment ID can be found in the **Environment** tab.
 
-      ![](../media/01.png)
+      ![GitHub sign-in screen showing username field](../media/01.png)
 
 1. Click on **Continue** on the **Single sign-on to CloudLabs Organizations** page to proceed.
 
-    ![](../media/02.png)
+    ![Single sign-on to CloudLabs Organizations page with Continue button](../media/02.png)
 
 1. You'll see the **Sign in** tab. Here, enter your Azure Entra credentials:
 
@@ -37,7 +37,7 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 1. On the **Stay Signed in?** pop-up, click on No.
 
-    ![](../media/n69.png)
+    ![Stay Signed in pop-up with No button](../media/n69.png)
 
 1. On the **Permission requested by** pop-up, click on **Accept**.
 
@@ -45,54 +45,54 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 
 ## Solution Guide
 
-## Task 1: Implement Code Scanning and CodeQL:
+### Task 1: Implement Code Scanning and CodeQL
 
 In this task, you'll configure Code scanning and explore CodeQL alerts. Code scanning is a feature that you use to analyze the code in a GitHub repository to find security vulnerabilities and coding errors. Any problems identified by the analysis are shown on GitHub.
 
 **Note**: To perform this task, the GitHub repository should be public. If the repository visibility is private, please go to the settings of the repository and change the visibility to public.
    
-1. Select the **Settings** **(1)** tab from the GitHub browser tab. Click on **Advance security** ***(2)*** under the security side blade.
+1. Select the **Settings** **(1)** tab from the GitHub browser tab. Click on **Advanced Security** ***(2)*** under the security side blade.
 
-   ![](../media1/advance-security.png)  
+   ![GitHub repository Settings tab showing Advanced Security option](../media1/advance-security.png)
 
 1. On the **Advanced Security** page, scroll down to the bottom and enable **GitHub Advanced Security** for the repository by clicking the **Enable** button.
 
-   ![](../media/ghas.jpg)  
+   ![Advanced Security page with Enable GitHub Advanced Security button](../media/ghas.jpg)
 
 1. In the “Enable GitHub Advanced Security for this repository?” pop-up, click **Enable GitHub Advanced Security for this repository**.
 
-   ![](../media/ghas-2.jpg) 
+   ![Enable GitHub Advanced Security for this repository pop-up](../media/ghas-2.jpg)
    
 1. On the **Advanced Security** page, scroll down and under **GitHub Advanced Security**, next to **CodeQL analysis**, click **Set up** **(1)**. Then, select the **Advanced** **(2)** option to create a CodeQL Analysis YAML file.
 
-   ![](../media/devops-devsecops-new-5.png)      
+   ![Advanced Security page showing CodeQL analysis Set up button with Advanced option](../media/devops-devsecops-new-5.png)
 
 1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes** ***(4)***.
   
-   ![](../media/c2t1s3.png)
+   ![Workflow editor showing codeql-analysis.yml filename and Commit changes button](../media/c2t1s3.png)
 
-   ![](../media/n65.png) 
+   ![Commit directly to main branch option selected](../media/n65.png)
 
 1. In the **GitHub repository**, navigate to the **Actions** **(1)** tab, where you can review the newly created and running **CodeQL Advanced workflow** **(2)**.
     
-   ![](../media1/c2t1s4.png) 
+   ![GitHub Actions tab showing CodeQL Advanced workflow running](../media1/c2t1s4.png)
   
 1. In the **GitHub repository**, navigate to the **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
    
-    ![](../media1/c2t1s5.png)
+    ![Security tab with View alerts link highlighted](../media1/c2t1s5.png)
   
 1. On the **Security overview** page, navigate to the **Code scanning** **(1)** section, where you can view the alerts generated from the code scanning analysis.
    
-   ![](../media1/ex-noalerta.png)
+   ![Code scanning section showing no alerts](../media1/ex-noalerta.png)
    
- ## Success criteria:
+## Success Criteria
 To complete this challenge successfully:
 
    - Verify the implementation of Implement Code Scanning and CodeQL.
    - Configure the Repository security advisories feature and create temporary private fork.
 
-## Additional Resources:
+## Additional Resources
 
 - Refer to [About GitHub's Advanced Security](https://docs.github.com/en/code-security/getting-started/github-security-features) for reference.
-- Refer to [About GitHub's Advanced Security](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql) for reference.
+- Refer to [About Code Scanning with CodeQL](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql) for reference.
 - Refer to [Code Scanning with GitHub CodeQL](https://learn.microsoft.com/en-us/training/modules/code-scanning-with-github-codeql/) for reference.
