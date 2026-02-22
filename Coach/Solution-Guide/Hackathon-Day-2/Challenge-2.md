@@ -53,7 +53,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
    
 1. Select the **Settings** **(1)** tab from the GitHub browser tab. Click on **Advance security** ***(2)*** under the security side blade.
 
-   ![](../media1/advance-security.jpg)  
+   ![](../media1/advance-security.png)  
 
 1. On the **Advanced Security** page, scroll down to the bottom and enable **GitHub Advanced Security** for the repository by clicking the **Enable** button.
 
