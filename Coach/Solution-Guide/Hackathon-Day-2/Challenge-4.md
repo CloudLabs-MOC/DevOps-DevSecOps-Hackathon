@@ -401,11 +401,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
       - Click on **Authorize AzureAppService**.
 
-        ![](../media/n68.png)
-
-      - Provide the **GitHubUserPassword** **(1)** and then click on **Confirm** **(2)**
-
-        ![](../media/ad22.png)
+        ![](../media1/n68.png)
 
    - **Organization:** Select your assigned Github organization **(7)**.
    - **Repository:** Select `devsecops-2 did` **(8)**.
@@ -431,7 +427,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 8. Ensure that your **Azure Static Web Apps CI/CD** workflow has a successful run status.
 
-    ![](../media1/CL7-EX4-T1-S7.png)
+    ![](../media1/CL7-EX4-T1-S7n.png)
 
 9. Navigate back to your Azure portal on the overview page of the recently created Static Web App and click on the **URL**
 
