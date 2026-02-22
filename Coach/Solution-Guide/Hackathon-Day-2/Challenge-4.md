@@ -16,14 +16,14 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
       > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Username (3)**.   
             
-      ![](../media/ad1.png)   
+      ![Environment tab showing Azure Credentials and Username fields](../media/ad1.png)
         
 1. Now enter the following password and click on **Sign in**.
    * **Password**: 
 
       > **Note**: For **Email/Username**, Navigate to **Environment (1)**, click on **Azure Credentials (2)**, and copy **Password (3)**.   
             
-      ![](../media/ad2.png)   
+      ![Environment tab showing Azure Credentials and Password fields](../media/ad2.png)
      
 1. If you see the pop-up **Stay Signed in?**, click No.
 
@@ -47,11 +47,11 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. To sign in to Copilot, click on **Signed out** **(1)** and select **Enable more AI features** **(2)**.
 
-   ![](../media1/enableaifetu.png)
+   ![VS Code showing Signed out button and Enable more AI features option](../media1/enableaifetu.png)
 
 1. In the **Enable more AI features** pop-up, select **Continue with GitHub**.
    
-   ![](../media1/signintocopilot.png)
+   ![Enable more AI features pop-up with Continue with GitHub button](../media1/signintocopilot.png)
 
 1. On the **Select user to authorize** page in the edge browser, click on **Continue**.
 
@@ -83,7 +83,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. In a new Visual Studio Code window, click on **File (1)** at the top left corner and then select **Open Folder.. (2)**.
 
-    ![](../media/ex4-task1-1.png)
+    ![VS Code File menu with Open Folder option highlighted](../media/ex4-task1-1.png)
 
 1. Navigate to **C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2/ (1)** within the file explorer, and then select the **ContosoTraders.Ui.Website.V2.Raw (2)** folder, and then click on **Select folder (3)**
 
@@ -230,7 +230,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
      ![Picture1](../media/CL7-EX1-T2-S15.png)
 
-## Exercise 2: Generate and run Unit Test cases using GitHub Copilot:
+## Exercise 2: Generate and run Unit Test cases using GitHub Copilot
 
 ### Task 1: Create and run test cases:
 
@@ -282,27 +282,27 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
 1. Navigate GitHub Organization page and click on **New** to create new repository.
 
-   ![](../media/09.png)
+   ![GitHub Organization page with New repository button highlighted](../media/09.png)
 
 1. On the **Create a new repository** tab, most fields will be pre-filled. Just update the **Owner** to **Cloudlabs-Enterprises** **(1)**, change the **Repository name** **(2)** as provided below to make it unique.
 
    - Enter your Repository name as: **devsecops-2 [DID]**
    
-     > **Note:** DID is refers to deployement id.
+     > **Note:** DID refers to Deployment ID.
 
    - Then click **Create repository** **(3)** to continue
 
-     ![](../media/n70.png) 
+     ![Create a new repository form with Owner, Repository name, and Create repository button highlighted](../media/n70.png)
 
-5. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
+4. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
-   ![](../media/n64.png)
+   ![Quick setup screen with HTTPS GitHub URL and copy button highlighted](../media/n64.png)
 
-7. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
+5. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
 
    ![imported-Quick setup screen is displayed with the copy button next to the GitHub URL textbox selected.](../media/2dg4.png "Quick setup screen")
 
-8. In Visual Studio Code, run the following commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
+6. In Visual Studio Code, run the following commands in the terminal to set your **email** and **username**, which Git uses for commits. Make sure to replace the GitHub account email and username.
    
      ```pwsh
      cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2
@@ -310,7 +310,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
      git config --global user.name "Your UserName"
      ```
      
-   ![](../media/ex7-task1-4.png) 
+   ![Terminal showing git config commands for email and username](../media/ex7-task1-4.png)
      
     Run the below-mentioned command in the terminal. Make sure to replace `your_github_repository-url` with the value you copied in step 5 and `Unique-ID` in step 6.
 
@@ -327,7 +327,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
      
    - If you are asked to authenticate your GitHub account, select **Sign in with your browser**, and you will be prompted with a pop-up window to authorize Git Credential Manager. Click on **Authorize git-ecosystem** to provide access.
 
-       ![](../media/ex2-t3.png)
+       ![Browser authentication pop-up for Git Credential Manager with Authorize git-ecosystem button](../media/ex2-t3.png)
        
    - After you are prompted with the message **Authorization Succeeded**, close the tab and continue with the next task.
 
@@ -341,41 +341,41 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 1. Select the **Settings** **(1)** tab from the GitHub browser tab. Click on **Advance security** ***(2)*** under the security side blade.
 
-   ![](../media1/advance-security.png)  
+   ![GitHub repository Settings tab showing Advanced Security option](../media1/advance-security.png)
 
 1. On the **Advanced Security** page, scroll down to the bottom and enable **GitHub Advanced Security** for the repository by clicking the **Enable** button.
 
-   ![](../media/ghas.jpg)  
+   ![Advanced Security page with Enable GitHub Advanced Security button](../media/ghas.jpg)
 
 1. In the “Enable GitHub Advanced Security for this repository?” pop-up, click **Enable GitHub Advanced Security for this repository**.
 
-   ![](../media/ghas-2.jpg) 
+   ![Enable GitHub Advanced Security for this repository pop-up](../media/ghas-2.jpg)
    
 1. On the **Advanced Security** page, scroll down and under **GitHub Advanced Security**, next to **CodeQL analysis**, click **Set up** **(1)**. Then, select the **Advanced** **(2)** option to create a CodeQL Analysis YAML file.
 
-   ![](../media/devops-devsecops-new-5.png)      
+   ![Advanced Security page showing CodeQL analysis Set up button with Advanced option](../media/devops-devsecops-new-5.png)
 
 1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes** ***(4)***.
   
-   ![](../media/c2t1s3.png)
+   ![Workflow editor showing codeql-analysis.yml filename and Commit changes button](../media/c2t1s3.png)
 
-   ![](../media/n65.png) 
+   ![Commit directly to main branch option selected](../media/n65.png)
 
 1. In the **GitHub repository**, navigate to the **Actions** **(1)** tab, where you can review the newly created and running **CodeQL Advanced workflow** **(2)**.
     
-   ![](../media1/c2t1s4.png) 
+   ![GitHub Actions tab showing CodeQL Advanced workflow running](../media1/c2t1s4.png)
 
 5. Navigate to the **Actions** ***(1)*** tab, here you can review the **workflow** ***(2)*** run.
     
-   ![](../media/c2t1s4.png) 
+   ![GitHub Actions tab showing workflow run](../media/c2t1s4.png)
 
 6. Navigate to the **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
    
-   ![](../media1/cl2-t1-s5n.png)
+   ![Security tab with View alerts link highlighted](../media1/cl2-t1-s5n.png)
 
 7. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
    
-   ![](../media1/ex7-task1-5n.png)
+   ![Code scanning section showing no code scanning alerts](../media1/ex7-task1-5n.png)
 
 ## Exercise 4: CI/CD Pipeline Setup and Infrastructure Deployment
 
@@ -385,7 +385,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 2. In the global search bar, search for **Static Web Apps** **(1)** and select **Static Web Apps** **(2)**.
 
-    ![](../media/ad20.png)
+    ![Azure portal global search showing Static Web Apps](../media/ad20.png)
 
 3. Click on **+ Create** to create a new Static Web App.
 
@@ -397,11 +397,11 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
    - **Source:** Select **GitHub** **(5)**
    - **GitHub account:** Click on **Click here to login (6)**. Connect to your GitHub account, which has the `devsecops-2` repository with the React application files.
    
-      ![](../media1/ex7-task1-8.png)
+      ![Create Static Web App Basics tab with GitHub source and organization fields](../media1/ex7-task1-8.png)
 
       - Click on **Authorize AzureAppService**.
 
-        ![](../media1/n68.png)
+        ![Authorize AzureAppService pop-up](../media1/n68.png)
 
    - **Organization:** Select your assigned Github organization **(7)**.
    - **Repository:** Select `devsecops-2 did` **(8)**.
@@ -413,43 +413,53 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
    
    - Leave the other fields at default and then click on **Review + create (12)**.
 
-     ![](../media1/ex7-task1-7.png)
+     ![Create Static Web App Basics tab showing repository, branch, and build preset fields](../media1/ex7-task1-7.png)
 
    - Finally, click on **Create** on the **Review + create** page to create the static web app.     
 
-     ![](../media/ad23.png)   
+     ![Review + create page with Create button highlighted](../media/ad23.png)
 
 6. Once the deployment is successful, click on **Go to resource**.
 
-    ![](../media/CL7-EX4-T1-S5.png)
+    ![Azure portal showing successful deployment with Go to resource button](../media/CL7-EX4-T1-S5.png)
 
 7. Navigate back to your `devsecops-2` repository on the GitHub portal and click on the **Actions** tab.
 
 8. Ensure that your **Azure Static Web Apps CI/CD** workflow has a successful run status.
 
-    ![](../media1/CL7-EX4-T1-S7n.png)
+    ![GitHub Actions tab showing Azure Static Web Apps CI/CD workflow with successful run](../media1/CL7-EX4-T1-S7n.png)
 
 9. Navigate back to your Azure portal on the overview page of the recently created Static Web App and click on the **URL**
 
-    ![](../media/CL7-EX4-T1-S8.png)
+    ![Azure Static Web App overview page with URL link highlighted](../media/CL7-EX4-T1-S8.png)
 
 10. The URL redirects you to a new browser tab with the React Application up and running.
 
-    ![](../media/CL7-EX4-T1-S9.png)
+    ![React application running in browser at the Static Web App URL](../media/CL7-EX4-T1-S9.png)
 
 11. Click on **Get Started** and scroll down within your static web app to view the integrated **About Us** page.
 
-    ![](../media/CL7-EX4-T1-S10.png)
+    ![React application with Get Started button and integrated About Us page visible](../media/CL7-EX4-T1-S10.png)
 
-## Success criteria:
+## Success Criteria
 To complete this challenge successfully:
 
 - Successful implementation of the new feature.
 - Accuracy and completeness of the generated unit tests with all successful passes.
 - Successful setup and execution of the CI/CD pipeline.
 
-## Additional Resources:
+## Additional Resources
 
 - Refer to [About GitHub Copilot Chat](https://docs.github.com/en/copilot/github-copilot-chat/about-github-copilot-chat) for reference.
 - Refer to [Copilot Chat writes Unit Tests](https://dev.to/this-is-learning/copilot-chat-writes-unit-tests-for-you-1c82) for reference.
 - Refer to [Using GitHub Copilot Chat in your IDE](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat-in-your-ide) for reference.
+
+## Troubleshooting
+
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| GitHub Copilot Chat does not appear or is not activated | Copilot may not be signed in or the extension may need a restart. | Click **Signed out** in the VS Code status bar → **Enable more AI features** → **Continue with GitHub**, then restart VS Code if needed. |
+| `npm run start` fails with a dependency error | Required Node modules may not be installed. | Run `npm i` in the project directory first, then retry `npm run start`. |
+| Unit tests fail with unexpected errors | Copilot-generated test code may reference APIs slightly differently than your codebase. | Review the error messages, adjust the test file to match your component's actual exports/props, and re-run `npm run test`. |
+| `git push` fails with `remote origin already exists` | A remote named `origin` was previously configured. | Run `git remote set-url origin <your_github_repository-url>` instead of `git remote add origin`. |
+| Azure Static Web App deployment workflow fails | The GitHub repository connection or build preset may be misconfigured. | Verify that **App location** is set to `/` and **Build preset** is **React**, then re-trigger the workflow from the **Actions** tab. |
