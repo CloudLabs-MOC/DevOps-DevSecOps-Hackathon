@@ -40,30 +40,22 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 1. Open **Visual Studio Code** from the desktop screen. 
 
    ![Picture1](../media/cl7-ex1-t1-s1.png)
-   
-1. In the left pane, click on **Extensions**. 
-
-   ![Picture1](../media/ex7-1.png)
-
-1. At the search bar of the Extensions type **Github (1)**, select the **Github Copilot (2)** Extension and then click on **Install (3).**
-
-   ![Picture1](../media/ex7-task1-0.1.png)
-   
-1. Once the installation is successful, a pop-up appears to sign in. Click on **Sign in to Use Copilot for Free**
-
-   ![Picture1](../media/ad12.png)
-
-   > **Note:** If you don’t see any option here, you can click the icon at the bottom right and select **Sign in to use Copilot**.
-
-   ![Picture1](../media/ad12a.png)
 
 1. If you get the popup, click on **Allow**.
 
    ![Picture1](../media/cl7-ex1-t1-s3.png)
 
+1. To sign in to Copilot, click on **Signed out** **(1)** and select **Enable more AI features** **(2)**.
+
+   ![](../media1/enableaifetu.png)
+
+1. In the **Enable more AI features** pop-up, select **Continue with GitHub**.
+   
+   ![](../media1/signintocopilot.png)
+
 1. On the **Select user to authorize** page in the edge browser, click on **Continue**.
 
-   ![Picture1](../media/ad13.png)
+   ![Picture1](../media1/nad13.png)
 
 1. On the Authorize Visual Studio Code, click on **Authorize Visual-Studio-Code**.
 
@@ -105,23 +97,21 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/CL7-EX1-T2-S3.png)
 
-1. Click on the **Copilot Chat** icon drop down **(1)** and select **Open Chat (2)**.   
+1. In the VS code click on the dropdown option next to the **Toggle Chat** icon drop down **(1)** and select **Open Chat (2)**.   
 
-   ![Picture1](../media/ad16.png)
+   ![Picture1](../media1/ad16.png)
 
 1. Within the **CHAT: GITHUB COPILOT** pane, type: `Help me create the new About Us" page in ContosoTraders.Ui.Website.V2\src` and observe the AI response. You can follow the instructions provided by GitHub Copilot towards successfully add the About Us page as a part of the sample React application that you have imported into VS Code.
 
    > **Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **AboutUs.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
 
-   ![Picture1](../media/CL7-EX1-T2-S4a.png)
+   ![Picture1](../media1/CL7-EX1-T2-S4a.png)
 
-   ![Picture1](../media/CL7-EX1-T2-S4.png)
+   > **Disclaimer:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
 
-    >**Disclaimer:** It should be noted that the code suggestions offered by GitHub Copilot might not exactly match the screenshots shown within the lab guide. GitHub Copilot is an AI-powered tool that generates code based on context and patterns, and its suggestions can be influenced by various factors. It is also important that you have the knowledge on operating and running React Application,s which may be needed as you proceed with this exercise.
+   > **Note:** However, due to the ease of execution of this challenge, you can open a new folder within VS Code and import the solution folder from the Windows file explorer with path `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\`. Select the **src** folder. This solution project has integrated the "About Us" page and unit test cases for the same.
 
-    >**Note:** However, due to the ease of execution of this challenge, you can open a new folder within VS Code and import the solution folder from the Windows file explorer with path `C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\`. Select the **src** folder. This solution project has integrated the "About Us" page and unit test cases for the same.
-
-    >**Note:** If you wish to continue to manually edit the raw project, follow the steps from step 7 or else you can directly can do from step 16.
+   > **Note:** If you wish to continue to manually edit the raw project, follow the steps from step 7 or else you can directly can do from step 16.
 
 1. Create a new file named `AboutUs.css` **(1)** in your `src` directory ie., within the path `ContosoTraders.Ui.Website.V2\src\` and then add the following code **(2)**:
 
@@ -251,14 +241,14 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 2. Select all code lines `[CTRL+A]` of `WelcomePopup.js` file **(1)** and then paste the following prompt **(2)** within the GitHub Copilot Chat Panel and press enter:
 
    ```
-   /tests
+   /tests create a tasts case file and add test code code
    ```
 
    > **Note:** There is a possibility that Copilot Chat not only provides suggestions but may also automatically generate required files such as **WelcomePopup.test.js**. If that happens, you will need to click **Keep** to accept and retain the changes.
 
-   ![Picture1](../media/ad18.png)
+   ![Picture1](../media1/ad18.png)
 
-   ![Picture1](../media/ad18a.png)
+   ![Picture1](../media1/ad18a.png)
 
 3. Now create a new file named `WelcomePopup.test.js` under the path `ContosoTraders.Ui.Website.V2\src\components`.
 
@@ -266,15 +256,7 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/CL7-EX2-T1-S3.png)
 
-4. Navigate back to the GitHub Copilot chat panel and copy the unit test that has been generated using Copilot for the `WelcomePopup` component. Ensure to paste these unit test cases within the newly created file - `WelcomePopup.test.js` under the `components` folder and save the file.
-
-   > **Note:** If the file has already been created by Copilot, you can skip this step. This step is only needed if the result appears in the Copilot chat window—then you'll need to copy and paste the generated code into your file.
-
-   ![Picture1](../media/CL7-EX2-T1-S4-a.png)
-
-   ![Picture1](../media/CL7-EX2-T1-S4-b.png)
-
-5. Once ready with the test cases, open a new terminal within Visual Studio Code, and navigate to the following path/directory by running the below command within the terminal:
+4. Once ready with the test cases, open a new terminal within Visual Studio Code, and navigate to the following path/directory by running the below command within the terminal:
 
    ```
    cd C:\Workspaces\lab\DevOps-DevSecOps-Hackathon-lab-files-2\src\ContosoTraders.Ui.Website.V2\src\components
@@ -357,25 +339,31 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 1. Log in to GitHub where the `devsecops-2` repository was created.
 
-2. Select the **settings** ***(1)*** tab from the GitHub browser tab. Click on **Advanced security** ***(2)*** under the security side blade.
+1. Select the **Settings** **(1)** tab from the GitHub browser tab. Click on **Advance security** ***(2)*** under the security side blade.
 
-   ![](../media/advance-security.jpg) 
+   ![](../media1/advance-security.png)  
 
-1. Enable **GitHub Advanced Security** for the repository by clicking on **Enable**.
+1. On the **Advanced Security** page, scroll down to the bottom and enable **GitHub Advanced Security** for the repository by clicking the **Enable** button.
 
    ![](../media/ghas.jpg)  
 
+1. In the “Enable GitHub Advanced Security for this repository?” pop-up, click **Enable GitHub Advanced Security for this repository**.
+
    ![](../media/ghas-2.jpg) 
+   
+1. On the **Advanced Security** page, scroll down and under **GitHub Advanced Security**, next to **CodeQL analysis**, click **Set up** **(1)**. Then, select the **Advanced** **(2)** option to create a CodeQL Analysis YAML file.
 
-3. Click on the **Set up** **(1)** button to enable CodeQL analysis, and select the **Advanced** **(2)** option for creating a CodeQL Analysis YAML file.
+   ![](../media/devops-devsecops-new-5.png)      
 
-   ![](../media/ex2-task1-2.png)     
-
-4. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes..** ***(4)***.
+1. Update the workflow name to **codeql-analysis.yml** ***(1)*** and review the yaml file. Select **Commit changes** ***(2)***, then select **Commit directly to the main branch** ***(3)***, and click on **Commit changes** ***(4)***.
   
    ![](../media/c2t1s3.png)
 
    ![](../media/n65.png) 
+
+1. In the **GitHub repository**, navigate to the **Actions** **(1)** tab, where you can review the newly created and running **CodeQL Advanced workflow** **(2)**.
+    
+   ![](../media1/c2t1s4.png) 
 
 5. Navigate to the **Actions** ***(1)*** tab, here you can review the **workflow** ***(2)*** run.
     
@@ -383,11 +371,11 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 6. Navigate to the **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
    
-   ![](../media1/cl2-t1-s5.png)
+   ![](../media1/cl2-t1-s5n.png)
 
 7. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
    
-   ![](../media1/ex7-task1-5.png)
+   ![](../media1/ex7-task1-5n.png)
 
 ## Exercise 4: CI/CD Pipeline Setup and Infrastructure Deployment
 
