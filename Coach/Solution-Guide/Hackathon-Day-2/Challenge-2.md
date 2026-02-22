@@ -50,19 +50,20 @@ Here's the solution guide, which includes detailed step-by-step instructions req
 In this task, you'll configure Code scanning and explore CodeQL alerts. Code scanning is a feature that you use to analyze the code in a GitHub repository to find security vulnerabilities and coding errors. Any problems identified by the analysis are shown on GitHub.
 
 **Note**: To perform this task, the GitHub repository should be public. If the repository visibility is private, please go to the settings of the repository and change the visibility to public.
-
    
 1. Select the **Settings** **(1)** tab from the GitHub browser tab. Click on **Advance security** ***(2)*** under the security side blade.
 
-   ![](../media/advance-security.jpg)  
+   ![](../media1/advance-security.jpg)  
 
-1. Enable **GitHub Advanced Security** for the repository by clicking on **Enable**.
+1. On the **Advanced Security** page, scroll down to the bottom and enable **GitHub Advanced Security** for the repository by clicking the **Enable** button.
 
    ![](../media/ghas.jpg)  
 
+1. In the “Enable GitHub Advanced Security for this repository?” pop-up, click **Enable GitHub Advanced Security for this repository**.
+
    ![](../media/ghas-2.jpg) 
    
-1. Click on the **Set up** **(1)** button to enable CodeQL analysis, and select the **Advanced** **(2)** option for creating a CodeQL Analysis YAML file.
+1. On the **Advanced Security** page, scroll down and under **GitHub Advanced Security**, next to **CodeQL analysis**, click **Set up** **(1)**. Then, select the **Advanced** **(2)** option to create a CodeQL Analysis YAML file.
 
    ![](../media/devops-devsecops-new-5.png)      
 
@@ -72,17 +73,17 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
    ![](../media/n65.png) 
 
-1. Navigate to the **Actions** ***(1)*** tab, here you can review the **workflow** ***(2)*** run.
+1. In the **GitHub repository**, navigate to the **Actions** **(1)** tab, where you can review the newly created and running **CodeQL Advanced workflow** **(2)**.
     
-   ![](../media/c2t1s4.png) 
+   ![](../media1/c2t1s4.png) 
   
-1. Navigate to the **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
+1. In the **GitHub repository**, navigate to the **Security** ***(1)*** tab and click on **View alerts** ***(2)***.
    
-    ![](../media/c2t1s5.png)
+    ![](../media1/c2t1s5.png)
   
-1. You will be navigated to the **Code scanning** section. You’ll be able to see the alerts generated from the code scanning.
+1. On the **Security overview** page, navigate to the **Code scanning** **(1)** section, where you can view the alerts generated from the code scanning analysis.
    
-   ![](../media/ex-noalerta.png)
+   ![](../media1/ex-noalerta.png)
    
  ## Success criteria:
 To complete this challenge successfully:
