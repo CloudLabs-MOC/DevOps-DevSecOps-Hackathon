@@ -1,6 +1,6 @@
 # Microsoft Azure Hackathon: Accelerate Development with GitHub Copilot Trainer Guide
 
-<p align="right">Last updated January 23, 2026</p>
+<p align="right">Last updated February 22, 2026</p>
 
 ## Challenge 01: Continuous Integration and Deployment for Contoso Traders using GitHub Actions
 
@@ -111,7 +111,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. On the **Quick setup** screen, copy the **HTTPS** GitHub URL for your new repository and **save it** in a notepad for future use.
 
-   ![](../media1/copy-git-url.png)
+   ![](../media1/copy-git-url1.png)
     
 1. Navigate back to the **Visual Studio Code** application in which the terminal is already open. In the terminal, click on the **drop-down** button and select **PowerShell** to open a fresh PowerShell terminal tab.
 
@@ -164,7 +164,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
 1. In the GitHub repository, navigate to the setting and add github action secreat and variable. To create GitHub secrets, in your GitHub lab files repository, click on the **Settings** tab.
 
-   ![](../media1/cl1-t2-s2.png)
+   ![](../media1/repo-setting.png)
 
 2. Navigate to **Environment** **(1)**, click on **Service Principal Details** **(2)**, and copy the **Subscription ID**, **Tenant ID** **(Directory ID)**, **Application ID** **(Client ID)**, and **Secret Key** **(Client Secret)**.
 
@@ -232,7 +232,7 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    - Click on **Run workflow** **(3)**.
    - Finally, click on **Run workflow** **(4)**. Ensure that the branch is selected as **main**.
 
-     ![](../media1/ex1-task1-15new.png)
+     ![](../media1/run-contoso-provision.png)
 
      > **Note**: GitHub action will take around **10–15 minutes** to finish.
 
@@ -256,9 +256,9 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    ![](../media1/ado-sql-databasenew.png)  
  
-1. In your GitHub lab files repository, select the **Settings** tab from the lab files repository.
+1. Navigate back to GitHub lab files repository, select the **Settings** tab from the lab files repository.
 
-   ![](../media1/cl1-t1-s8.png)
+   ![](../media1/repo-setting.png)
    
 1. Under **Security**, expand **Secrets and variables** ***(1)*** by clicking the drop-down and selecting **Actions** ***(2)*** from the left navigation bar. Select the edit button for the created secret named **SQLPASSWORD** ***(3)***.
 
@@ -274,9 +274,9 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
       
         ![](../media1/ad2.png)   
       
-1. From your GitHub repository, select the **Actions** ***(1)*** tab. Select the **contoso-traders-app-deployment** ***(2)*** workflow from the side blade, Click on the  **drop-down** ***(3)*** next Run workflow button, and select **Run workflow** ***(4)***.
+1. On the GitHub repository, select the **Actions** ***(1)*** tab. Select the **contoso-traders-app-deployment** ***(2)*** workflow from the side blade, Click on the  **drop-down** ***(3)*** next Run workflow button, and select **Run workflow** ***(4)***.
 
-   ![](../media1/2dgn159new.png)
+   ![](../media1/traders-action.png)
    
 1. Navigate back to the Actions tab and select the **contoso-traders-app-deployment** workflow. This workflow builds the Docker image, which is pushed to the container registry. The same image is pushed to the Azure container application.
 
@@ -290,13 +290,13 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
 
    ![](../media1/2dgn9.png) 
    
-2. Select the **contoso-traders-rg XXXXXX** resource group from the list.
+2. Select the **contoso-traders-rgXXXXXX** resource group from the list.
 
    ![](../media/2dgn135.png) 
 
    > **Note:** XXXXXX represents the Deployment ID, which can be found in the Environment section.
    
-3. Select the **contoso-traders-cdn XXXXXXX** Front Door from the list of resources.
+3. Select the **contoso-traders-cdnXXXXXXX** Front Door from the list of resources.
 
    ![](../media/S3.png) 
    
