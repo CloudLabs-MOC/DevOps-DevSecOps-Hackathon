@@ -41,10 +41,6 @@ This is the solution guide that contains all of the comprehensive, step-by-step 
 
    ![Picture1](../media/cl7-ex1-t1-s1.png)
 
-1. If you get the popup, click on **Allow**.
-
-   ![Picture1](../media/cl7-ex1-t1-s3.png)
-
 1. To sign in to Copilot, click on **Signed out** **(1)** and select **Enable more AI features** **(2)**.
 
    ![VS Code showing Signed out button and Enable more AI features option](../media1/enableaifetu.png)
