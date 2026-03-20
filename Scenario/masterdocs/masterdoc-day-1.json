@@ -5,35 +5,35 @@
         "BaseURL": "https://github.com/CloudLabs-MOC/Intro-to-Intelligent-Apps-Challenge-lab",
         "Files": [
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/README.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/README.md",
                 "Order": 1
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Use-Case.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Use-Case.md",
                 "Order": 2
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/prerequisites.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/prerequisites.md",
                 "Order": 3
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-1.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-1.md",
                 "Order": 4
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-2.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-2.md",
                 "Order": 5
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-3.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-3.md",
                 "Order": 6
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-4.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-4.md",
                 "Order": 7
             },
             {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-5.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DevOps-DevSecOps-Hackathon/main/Scenario/Hackathon-Day-1/Challenge-5.md",
                 "Order": 8
             }
         ]
