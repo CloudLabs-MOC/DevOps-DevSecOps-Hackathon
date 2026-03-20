@@ -257,6 +257,32 @@ In this task, you will login to an account on [GitHub](https://github.com) and u
 
          ![](../media/n35.png)
 
+    > Note : If you are getting error regarding to the Quota Issues as shown in the bellow image please follow below steps.
+
+      ![](../media/239.png)
+
+      - In your repository, click on the **iac** folder to view the infrastructure files.
+
+        ![](../media/234.png)
+
+      - Select the **createResources.bicep** file from the list to open it.
+
+         ![](../media/235.png)
+
+      - Click on the **Edit (pencil) icon** to start modifying the Bicep file.
+
+         ![](../media/236.png)
+      
+      - Click `ctrl+f` and search **P1** and hit enter.
+      
+         ![](../media/237.png)
+
+      - In SKU **Name** Replace **P1V3** with **b3** and commit the changes.
+
+         ![](../media/238.png)
+
+      - Navigate to the **Actions** tab, select the **contoso-traders-provisioning-deployment** workflow, click **Run workflow**, ensure the branch is set to **main**, and click **Run workflow** again.
+
 ### Task 3: Setup CI/CD Workflow
 
 1. From the Azure Portal Dashboard, click on Resource Groups from the Navigate panel to see the resource groups.
