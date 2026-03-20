@@ -121,6 +121,29 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
        >**Hint**: You can also find the deployment ID and the Azure AD password within the environment details tab of your integrated lab guide.
  
    -  Run the workflow named `contoso-traders-provisioning-deployment` using GitHub Actions.
+
+   > Note : If you are getting error regarding to the Quota Issues as shown in the bellow image please follow below steps.
+
+
+      - In your repository, click on the **iac** folder to view the infrastructure files.
+
+      - Select the **createResources.bicep** file from the list to open it.
+
+         ![](../media/235.png)
+
+      - Click on the **Edit (pencil) icon** to start modifying the Bicep file.
+
+         ![](../media/236.png)
+      
+      - Click `ctrl+f` and search **P1** and hit enter.
+      
+         ![](../media/237.png)
+
+      - In SKU **Name** Replace **P1V3** with **b3** and commit the changes.
+
+         ![](../media/238.png)
+
+      - Navigate to the **Actions** tab, select the **contoso-traders-provisioning-deployment** workflow, click **Run workflow**, ensure the branch is set to **main**, and click **Run workflow** again.
       
 3. **Setup CI/CD Workflow:**
 
