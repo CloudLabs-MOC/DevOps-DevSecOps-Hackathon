@@ -137,6 +137,8 @@ In this task, you will log in to an account on [GitHub](https://github.com) and 
    git add .
    git commit -m "Initial commit"
    git branch -M main
+   git remote -v
+   git remote set-url origin <your_github_repository-url>
    git remote add origin <your_github_repository-url>
    git push -u origin main
    ```
