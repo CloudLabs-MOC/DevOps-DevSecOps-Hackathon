@@ -1,6 +1,6 @@
 # Microsoft Azure Hackathon: Accelerate Development with GitHub Copilot Trainer Guide
 
-<p align="right">Last updated February 22, 2026</p>
+<p align="right">Last updated March 20, 2026</p>
 
 ## Challenge 01: Continuous Integration and Deployment for Contoso Traders using GitHub Actions
 
