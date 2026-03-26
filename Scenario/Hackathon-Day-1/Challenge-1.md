@@ -122,8 +122,7 @@ You are a DevOps engineer tasked with setting up a robust Continuous Integration
  
    -  Run the workflow named `contoso-traders-provisioning-deployment` using GitHub Actions.
 
-   > Note : If you are getting error regarding to the Quota Issues as shown in the bellow image please follow below steps.
-
+      > Note : If you are getting error regarding to the Quota Issues as shown in the bellow image please follow below steps.
 
       - In your repository, click on the **iac** folder to view the infrastructure files.
 
