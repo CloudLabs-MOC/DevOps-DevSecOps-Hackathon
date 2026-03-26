@@ -385,9 +385,7 @@ In this task, you'll configure Code scanning and explore CodeQL alerts. Code sca
 
 7. You will be navigated to the **Code scanning** section. You'll be able to visualize the **No code scanning alerts here!**.
    
-   ![](../media/ex7-task1-5.png)
-
-
+   ![](../media/code-scanning.png)
 
 ## Exercise 4: CI/CD Pipeline Setup and Infrastructure Deployment
 
